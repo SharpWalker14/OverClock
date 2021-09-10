@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Detecting : MonoBehaviour
+public class Detector : MonoBehaviour
 {
     public bool tocado;
     public GameObject objetoRegistrado;

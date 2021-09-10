@@ -6,15 +6,17 @@ using UnityEngine.AI;
 public class MovimientoEnemigo : MonoBehaviour
 {
     private NavMeshAgent ia;
-    public Detecting deteccion;
 
 
 
 
     public GameObject[] puntoPatrulla;
+
+
     public GameObject patrullero;
     private int patrullajePasado, numeroPatrulla, proximidad;
     private GameObject[] guardarPatrulla;
+    public Detector deteccion;
     private bool candado=true;
     // Start is called before the first frame update
     void Start()
