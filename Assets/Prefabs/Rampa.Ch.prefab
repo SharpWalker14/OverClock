@@ -201,7 +201,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5203566754549358896}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rampa.Ch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
