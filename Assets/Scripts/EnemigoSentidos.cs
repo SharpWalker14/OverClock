@@ -11,12 +11,11 @@ public class EnemigoSentidos : MonoBehaviour
     private RaycastHit pared, piso, objetivoCuerpo;
     private Vector3 mirar;
     private float rotacionY, rotacionX, comienzoMirador, intentaMuro, intentaObjetivo, alcanceTotal;
-    private GameObject objetivo;
-
+    [HideInInspector]
+    public GameObject objetivo;
 
     public GameObject[] puntosRango;
-    
-    //[HideInInspector]
+    [HideInInspector]
     public bool muerto, detectar;
 
     // Start is called before the first frame update
@@ -30,7 +29,7 @@ public class EnemigoSentidos : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (muerto == false)
+        if (objetivo != null)
         {
             Mirar();
             Sentidos();
@@ -88,7 +87,6 @@ public class EnemigoSentidos : MonoBehaviour
 
     void OnDrawGizmos()
     {
-        Transform rangos;
         Gizmos.color = Color.blue;
         Vector3 dibujo;
 

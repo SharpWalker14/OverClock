@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Punto de patrulla
+  - "Ataque enemigo b\xE1sico"
   layers:
   - Default
   - TransparentFX

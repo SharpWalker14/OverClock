@@ -5,9 +5,12 @@ using UnityEngine.AI;
 
 public class MovimientoEnemigo : MonoBehaviour
 {
-    private NavMeshAgent ia;
-
-
+    [HideInInspector]
+    public NavMeshAgent inteligencia;
+    private bool tranquilo = true;
+    [HideInInspector]
+    public float guardarVelocidad;
+    public EnemigoSentidos radar;
 
 
     public GameObject[] puntoPatrulla;
@@ -16,13 +19,15 @@ public class MovimientoEnemigo : MonoBehaviour
     public GameObject patrullero;
     private int patrullajePasado, numeroPatrulla, proximidad;
     private GameObject[] guardarPatrulla;
-    public Detector deteccion;
-    private bool candado=true;
+    public Detector deteccionPatrulla;
+    private bool candado = true;
     // Start is called before the first frame update
     void Start()
     {
+        tranquilo = true;
         numeroPatrulla = 0;
-        ia = GetComponent<NavMeshAgent>();
+        inteligencia = GetComponent<NavMeshAgent>();
+        guardarVelocidad = inteligencia.speed;
         patrullero.transform.parent = null;
         candado = true;
     }
@@ -30,29 +35,43 @@ public class MovimientoEnemigo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Movimiento();
-        
+        if (radar.objetivo != null)
+        {
+            Movimiento();
+        }
     }
 
     void Movimiento()
     {
-        if (numeroPatrulla > puntoPatrulla.Length - 1)
+        if (tranquilo)
         {
-            numeroPatrulla = 0;
-            proximidad = numeroPatrulla + 1;
-            if (proximidad > puntoPatrulla.Length - 1)
+            if (numeroPatrulla > puntoPatrulla.Length - 1)
             {
-                proximidad = 0;
+                numeroPatrulla = 0;
+                proximidad = numeroPatrulla + 1;
+                if (proximidad > puntoPatrulla.Length - 1)
+                {
+                    proximidad = 0;
+                }
+            }
+            if (puntoPatrulla.Length != 0)
+            {
+                inteligencia.SetDestination(puntoPatrulla[numeroPatrulla].transform.position);
+                if (puntoPatrulla[numeroPatrulla] == deteccionPatrulla.objetoRegistrado)
+                {
+                    numeroPatrulla += 1;
+                }
+            }
+            if (radar.detectar)
+            {
+                tranquilo = false;
             }
         }
-        if (puntoPatrulla.Length != 0)
+        else
         {
-            ia.SetDestination(puntoPatrulla[numeroPatrulla].transform.position);
-            if (puntoPatrulla[numeroPatrulla] == deteccion.objetoRegistrado)
-            {
-                numeroPatrulla += 1;
-            }
+            inteligencia.SetDestination(radar.objetivo.transform.position);
         }
+
     }
 
     #region GizmosNoTocar
