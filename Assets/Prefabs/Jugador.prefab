@@ -360,6 +360,7 @@ GameObject:
   - component: {fileID: 5895078719145607784}
   - component: {fileID: 6232343830368536966}
   - component: {fileID: 5936406053265551676}
+  - component: {fileID: 7758225727598010718}
   m_Layer: 8
   m_Name: Escopeta
   m_TagString: Untagged
@@ -452,7 +453,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4135791681757682945}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd8e353adb3174a4490bab062f192052, type: 3}
   m_Name: 
@@ -463,6 +464,20 @@ MonoBehaviour:
   espera: 0
   cartucho: {fileID: 3470779612578740503, guid: 9329730f3ce38f74b9c644ef4eab0169, type: 3}
   "ca\xF1on": {fileID: 7861902106476354561}
+--- !u!114 &7758225727598010718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4135791681757682945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85f08cf849a5c3a41913de9f4a73549c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  impactoDeBala: {fileID: 3468912289624738958, guid: ecbaceee2f4329d40a47e0b70674cdef, type: 3}
+  espera: 3
 --- !u!1 &7261114684675663538
 GameObject:
   m_ObjectHideFlags: 0
