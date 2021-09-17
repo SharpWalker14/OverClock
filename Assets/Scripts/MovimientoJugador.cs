@@ -19,7 +19,8 @@ public class MovimientoJugador : MonoBehaviour
 
     void Start()
     {
-        
+        gameObject.transform.parent = null;
+
     }
 
     void Update()

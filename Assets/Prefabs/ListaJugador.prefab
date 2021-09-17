@@ -321,7 +321,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1562092511166271379}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &293971964
 MonoBehaviour:
@@ -903,7 +903,7 @@ GameObject:
   - component: {fileID: 2828007403714214066}
   - component: {fileID: 8171468167559788719}
   m_Layer: 8
-  m_Name: Personajes
+  m_Name: Jugador
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -924,7 +924,7 @@ Transform:
   - {fileID: 4368576420738631411}
   - {fileID: 828055154177783592}
   m_Father: {fileID: 1562092511166271379}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!143 &7584353362690960908
 CharacterController:
@@ -987,9 +987,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1562092511166271379}
-  m_Layer: 8
-  m_Name: Jugador
-  m_TagString: Player
+  m_Layer: 0
+  m_Name: ListaJugador
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1006,8 +1006,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1796070962226041463}
-  - {fileID: 3483176941321734887}
   - {fileID: 293971965}
+  - {fileID: 3483176941321734887}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1170,15 +1170,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85f08cf849a5c3a41913de9f4a73549c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rangoDisparo: 0
-  impactoBala: {fileID: 0}
-  laser: {fileID: 0}
-  "ca\xF1on": {fileID: 0}
-  espera: 3
-  "da\xF1o": 0
-  disparos: 0
-  dispersionBalas: 0
-  duracionLaser: 0.3
+  rangoDisparo: 50
+  impactoBala: {fileID: 3468912289624738958, guid: ecbaceee2f4329d40a47e0b70674cdef, type: 3}
+  laser: {fileID: 199096991623134442, guid: 067e42a4942baa8409f9d4a633bb098a, type: 3}
+  "ca\xF1on": {fileID: 8810364097502344525}
+  espera: 1.5
+  "da\xF1o": 15
+  disparos: 5
+  dispersionBalas: 6
+  duracionLaser: 0.09
 --- !u!1 &2443605112236983921
 GameObject:
   m_ObjectHideFlags: 0
@@ -1391,7 +1391,7 @@ GameObject:
   - component: {fileID: 6209319539712841108}
   - component: {fileID: 6054599490139051610}
   - component: {fileID: 5991098238364160670}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: "C\xE1psula"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
