@@ -7,7 +7,7 @@ public class MovimientoJugador : MonoBehaviour
     public CharacterController controlador;
 
     public float velocidadMovimiento = 10f;
-    public float gravedad = -10f;
+    public float gravedad = -15f;
     public float saltoAltura = 3f;
 
     public Transform controlSuelo;

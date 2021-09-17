@@ -16,10 +16,9 @@ public class Estados : MonoBehaviour
     {
         
     }
-
     public void CambioDeVida(int valor)
     {
-        vida += valor;
+        vida -= valor;
         if (vida <= 0)
         {
             Destroy(gameObject);

@@ -903,7 +903,7 @@ GameObject:
   - component: {fileID: 2828007403714214066}
   - component: {fileID: 8171468167559788719}
   m_Layer: 8
-  m_Name: Jugador
+  m_Name: Personajes
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -917,13 +917,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 939626104005307228}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 352.6, y: 112.3, z: 19.2}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 9144536196087521547}
   - {fileID: 4368576420738631411}
   - {fileID: 828055154177783592}
-  - {fileID: 7508234977342646839}
   m_Father: {fileID: 1562092511166271379}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -959,7 +958,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controlador: {fileID: 7584353362690960908}
   velocidadMovimiento: 6
-  gravedad: -10
+  gravedad: -15
   saltoAltura: 3
   controlSuelo: {fileID: 828055154177783592}
   distanciaSuelo: 0.4
@@ -1070,13 +1069,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2181496991032585837}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.664, y: 0, z: 0.665}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0.66400146, y: -0.3, z: 0.6650009}
   m_LocalScale: {x: 1, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 8810364097502344525}
-  m_Father: {fileID: 3483176941321734887}
-  m_RootOrder: 3
+  m_Father: {fileID: 4368576420738631411}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!33 &6169341111846460437
 MeshFilter:
@@ -1171,8 +1170,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85f08cf849a5c3a41913de9f4a73549c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  impactoDeBala: {fileID: 3468912289624738958, guid: ecbaceee2f4329d40a47e0b70674cdef, type: 3}
+  rangoDisparo: 0
+  impactoBala: {fileID: 0}
+  laser: {fileID: 0}
+  "ca\xF1on": {fileID: 0}
   espera: 3
+  "da\xF1o": 0
+  disparos: 0
+  dispersionBalas: 0
+  duracionLaser: 0.3
 --- !u!1 &2443605112236983921
 GameObject:
   m_ObjectHideFlags: 0
@@ -1500,7 +1506,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 7508234977342646839}
   m_Father: {fileID: 3483176941321734887}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
