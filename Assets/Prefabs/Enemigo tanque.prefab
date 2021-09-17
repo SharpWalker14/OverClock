@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 2011522951720470010}
   - component: {fileID: 2011522951720470009}
   - component: {fileID: 2011522951720470008}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -288,7 +288,7 @@ GameObject:
   - component: {fileID: 2011522952335717912}
   - component: {fileID: 2011522952335717911}
   - component: {fileID: 2011522952335717910}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -573,6 +573,7 @@ GameObject:
   - component: {fileID: 1979137621379523794}
   - component: {fileID: 2011522952988760949}
   - component: {fileID: 2011522952988760950}
+  - component: {fileID: 561808716276777744}
   m_Layer: 0
   m_Name: Enemigo tanque
   m_TagString: Untagged
@@ -667,6 +668,20 @@ MonoBehaviour:
   "da\xF1o": 15
   deteccionAtaque: {fileID: 2011522952600136950}
   movimiento: {fileID: 2011522952988760949}
+--- !u!136 &561808716276777744
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011522952988760946}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &2011522953435942026
 GameObject:
   m_ObjectHideFlags: 0
