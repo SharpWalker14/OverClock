@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ValorSalud : MonoBehaviour
 {
-    // Para tarea de HUD de tarea (Si es jugador), hacer que manipule el variable tarea para el UI
+    // En el HUD tiene que mostrar lo que es la variable vida (Si es jugador).
     public int vida;
     public bool jugador;
     private GameObject objetivo;

@@ -5,7 +5,7 @@ using UnityEngine;
 public class TiempoJugador : MonoBehaviour
 {
     public float tiempoMaximo;
-    // Para tarea de HUD de tiempo, hacer que manipule el variable tiempo para el UI
+    // En el HUD mostrar la variable tiempo.
     public float tiempo;
     public ValorSalud salud;
     // Start is called before the first frame update
