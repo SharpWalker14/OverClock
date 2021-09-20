@@ -31,7 +31,7 @@ public class AtaqueEnemigo : MonoBehaviour
         }
         if (deteccionAtaque.tocado&&preparaAtaque)
         {
-            deteccionAtaque.objetoRegistrado.GetComponent<Estados>().CambioDeVida(daño);
+            deteccionAtaque.objetoRegistrado.GetComponent<ValorSalud>().CambioDeVida(daño);
             conteoAtaque = 0;
             preparaAtaque = false;
         }

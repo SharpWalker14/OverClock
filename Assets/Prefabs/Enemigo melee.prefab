@@ -102,6 +102,7 @@ GameObject:
   - component: {fileID: 1945321189596318268}
   - component: {fileID: 1945321189596318271}
   - component: {fileID: 7478808142850078982}
+  - component: {fileID: 7000252759117439697}
   m_Layer: 0
   m_Name: Enemigo melee
   m_TagString: Untagged
@@ -163,6 +164,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vida: 40
+  jugador: 0
+  regalo: {fileID: 7000252759117439697}
 --- !u!114 &1945321189596318268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,6 +213,19 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &7000252759117439697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945321189596318267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ee2c4ddd14f7d24aa8484e9bd9cf4e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  valor: 5
 --- !u!1 &1945321189609392868
 GameObject:
   m_ObjectHideFlags: 0

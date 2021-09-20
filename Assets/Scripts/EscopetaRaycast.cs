@@ -33,9 +33,9 @@ public class EscopetaRaycast : MonoBehaviour
 
                 if (Physics.Raycast(camara.position, DireccionDeBalas(), out golpe, rangoDisparo, ~(1 << 9)))
                 {
-                    if (golpe.collider.GetComponent<Estados>() != null)
+                    if (golpe.collider.GetComponent<ValorSalud>() != null)
                     {
-                        golpe.collider.GetComponent<Estados>().CambioDeVida(daño);
+                        golpe.collider.GetComponent<ValorSalud>().CambioDeVida(daño);
                     }
                     GameObject efectoDeBala = Instantiate(impactoBala, golpe.point, Quaternion.identity) as GameObject;
                     Destroy(efectoDeBala, 1);
