@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CámaraPrimeraPersona : MonoBehaviour
 {
-    public float sensibilidad = 100f;
+    public float sensibilidad = ControladorDeJuego.sensibilidadMouse;
     public Transform jugadorGráficos;
     float rotaciónX = 0f;
     
