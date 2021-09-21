@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Punto de patrulla
   - "Ataque enemigo b\xE1sico"
+  - CharcoAcido
   layers:
   - Default
   - TransparentFX

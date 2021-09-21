@@ -8,6 +8,8 @@ public class ValorSalud : MonoBehaviour
     public int vida;
     public bool jugador;
     private GameObject objetivo;
+    public GameObject charcoAcido;
+    public bool enemigodSuicida;
     public ValorTiempoEnemigo regalo;
     // Start is called before the first frame update
     void Start()
@@ -32,12 +34,22 @@ public class ValorSalud : MonoBehaviour
             {
                 objetivo.GetComponent<TiempoJugador>().ObtenerTiempo(regalo.valor);
             }
+
+            int charcos = 0;
+            if (enemigodSuicida == true && charcos == 0)
+            {
+                Vector3 Acido = new Vector3(transform.position.x, transform.position.y - 0.03f, transform.position.z);
+
+                Instantiate(charcoAcido, Acido, transform.rotation);
+                
+                charcos += 1;
+            }
             Destroy(gameObject);
         }
     }
-    void OnTriggerEnter(Collider col)
+
+    void OnTriggerStay(Collider col)
     {
-
+ 
     }
-
 }

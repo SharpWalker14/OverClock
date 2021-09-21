@@ -540,7 +540,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vida: 10
   jugador: 0
-  regalo: {fileID: 0}
+  regalo: {fileID: 3323983584919452558}
 --- !u!114 &6275094920765605091
 MonoBehaviour:
   m_ObjectHideFlags: 0
