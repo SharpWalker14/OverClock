@@ -33,7 +33,7 @@ public class TiempoJugador : MonoBehaviour
         }
     }
 
-    public void ObtenerTiempo(int valor)
+    public void ObtenerTiempo(float valor)
     {
         tiempo += valor;
     }

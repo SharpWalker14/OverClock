@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class ValorTiempoEnemigo : MonoBehaviour
 {
-    public int valor;
+    public float valor;
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class ValorSalud : MonoBehaviour
 {
     // En el HUD tiene que mostrar lo que es la variable vida (Si es jugador).
-    public int vida;
+    public float vida;
     public bool jugador;
     private GameObject objetivo;
     public GameObject charcoAcido;
@@ -25,7 +25,7 @@ public class ValorSalud : MonoBehaviour
     {
         
     }
-    public void CambioDeVida(int valor)
+    public void CambioDeVida(float valor)
     {
         vida -= valor;
         if (vida <= 0)

@@ -18,12 +18,14 @@ public class MovimientoEnemigo : MonoBehaviour
 
     public GameObject patrullero;
     private int patrullajePasado, numeroPatrulla, proximidad;
-    private GameObject[] guardarPatrulla;
+    [HideInInspector]
+    public GameObject[] guardarPatrulla;
     public Detector deteccionPatrulla;
     private bool candado = true;
     // Start is called before the first frame update
     void Start()
     {
+        ControlPatrullas();
         tranquilo = true;
         numeroPatrulla = 0;
         inteligencia = GetComponent<NavMeshAgent>();
@@ -84,6 +86,7 @@ public class MovimientoEnemigo : MonoBehaviour
             candado = false;
         }
         ControlarPuntos();
+        ControlPatrullas();
         for (int i = 0; i < puntoPatrulla.Length; i++)
         {
             if (puntoPatrulla[i] != null)
@@ -134,6 +137,15 @@ public class MovimientoEnemigo : MonoBehaviour
                 }
             }
             patrullajePasado = puntoPatrulla.Length;
+        }
+    }
+
+    void ControlPatrullas()
+    {
+        for (int i = 0; i < guardarPatrulla.Length; i++)
+        {
+            puntoPatrulla[i] = GameObject.Find(gameObject.name + "/" + patrullero.name + "/Punto de Patrulla " + i);
+            guardarPatrulla[i] = GameObject.Find(gameObject.name + "/" + patrullero.name + "/Punto de Patrulla " + i);
         }
     }
 

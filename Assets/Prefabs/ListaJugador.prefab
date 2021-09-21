@@ -1056,6 +1056,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vida: 100
   jugador: 0
+  charcoAcido: {fileID: 0}
+  enemigodSuicida: 0
   regalo: {fileID: 0}
 --- !u!114 &6145628480073578907
 MonoBehaviour:
