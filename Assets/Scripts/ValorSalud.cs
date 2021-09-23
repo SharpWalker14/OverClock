@@ -12,7 +12,6 @@ public class ValorSalud : MonoBehaviour
     public bool enemigodSuicida;
     public ValorTiempoEnemigo regalo;
     public bool explosion;
-    // Start is called before the first frame update
     void Start()
     {
         if (jugador == false)
@@ -21,7 +20,6 @@ public class ValorSalud : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         DañoExplosion();

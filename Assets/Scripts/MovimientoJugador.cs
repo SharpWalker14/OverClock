@@ -17,6 +17,8 @@ public class MovimientoJugador : MonoBehaviour
     Vector3 velocidad;
     bool enSuelo;
 
+    public bool inmovilizado = false;
+
     void Start()
     {
         gameObject.transform.parent = null;
@@ -25,6 +27,7 @@ public class MovimientoJugador : MonoBehaviour
 
     void Update()
     {
+        //Comprobar si estás en el suelo
         enSuelo = Physics.CheckSphere(controlSuelo.position, distanciaSuelo, sueloFiltro);
         
         if(enSuelo && velocidad.y < 0)
@@ -35,13 +38,16 @@ public class MovimientoJugador : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
         Vector3 movimiento = transform.right * x + transform.forward * z;
-
-        controlador.Move(movimiento * velocidadMovimiento * Time.deltaTime);
-
-        if(Input.GetButton("Jump") && enSuelo)
+        if(!inmovilizado)
         {
-            velocidad.y = Mathf.Sqrt(saltoAltura * -2f * gravedad);
+            controlador.Move(movimiento * velocidadMovimiento * Time.deltaTime);
+
+            if (Input.GetButton("Jump") && enSuelo)
+            {
+                velocidad.y = Mathf.Sqrt(saltoAltura * -2f * gravedad);
+            }
         }
+
         velocidad.y += gravedad * Time.deltaTime;
 
         controlador.Move(velocidad * Time.deltaTime);
