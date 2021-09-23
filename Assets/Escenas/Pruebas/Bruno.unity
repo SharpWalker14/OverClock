@@ -660,11 +660,19 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2052414420174409613, guid: 2f4ad44d3b480d4448433fc566f45673, type: 3}
+      propertyPath: vida
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 2052414420174409613, guid: 2f4ad44d3b480d4448433fc566f45673, type: 3}
       propertyPath: enemigodSuicida
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6015069486993247171, guid: 2f4ad44d3b480d4448433fc566f45673, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015069486993247174, guid: 2f4ad44d3b480d4448433fc566f45673, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6015069487381888066, guid: 2f4ad44d3b480d4448433fc566f45673, type: 3}

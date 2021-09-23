@@ -1287,8 +1287,8 @@ MonoBehaviour:
   impactoBala: {fileID: 3468912289624738958, guid: ecbaceee2f4329d40a47e0b70674cdef, type: 3}
   laser: {fileID: 199096991623134442, guid: 067e42a4942baa8409f9d4a633bb098a, type: 3}
   "ca\xF1on": {fileID: 8810364097502344525}
-  espera: 1.5
-  "da\xF1o": 15
+  espera: 0.5
+  "da\xF1o": 24
   disparos: 5
   dispersionBalas: 6
   duracionLaser: 0.09

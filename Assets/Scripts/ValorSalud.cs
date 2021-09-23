@@ -11,6 +11,7 @@ public class ValorSalud : MonoBehaviour
     public GameObject charcoAcido;
     public bool enemigodSuicida;
     public ValorTiempoEnemigo regalo;
+    public bool explosion;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +24,7 @@ public class ValorSalud : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        DañoExplosion();
     }
     public void CambioDeVida(float valor)
     {
@@ -38,18 +39,34 @@ public class ValorSalud : MonoBehaviour
             int charcos = 0;
             if (enemigodSuicida == true && charcos == 0)
             {
+                charcos += 1;
                 Vector3 Acido = new Vector3(transform.position.x, transform.position.y - 0.03f, transform.position.z);
 
                 Instantiate(charcoAcido, Acido, transform.rotation);
-                
-                charcos += 1;
             }
             Destroy(gameObject);
         }
     }
 
+    public void DañoExplosion()
+    {
+        if (explosion == true)
+        {
+            vida -= 8;
+            explosion = false;
+        }
+    }
+
     void OnTriggerStay(Collider col)
     {
- 
+        
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (jugador == true && other.gameObject.tag == "Explosion" && explosion == false)
+        {
+            explosion = true;
+        }
     }
 }
