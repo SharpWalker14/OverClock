@@ -139,7 +139,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 6.5
+  m_Speed: 1
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -165,7 +165,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vida: 40
   jugador: 0
+  charcoAcido: {fileID: 0}
+  enemigodSuicida: 0
   regalo: {fileID: 7000252759117439697}
+  explosion: 0
 --- !u!114 &1945321189596318268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,6 +186,7 @@ MonoBehaviour:
   radar: {fileID: 1945321188935163333}
   puntoPatrulla: []
   patrullero: {fileID: 1945321190796177007}
+  guardarPatrulla: []
   deteccionPatrulla: {fileID: 1945321189609392889}
 --- !u!114 &1945321189596318271
 MonoBehaviour:
@@ -196,7 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eee5fa8fa3df3bf4ebea323e6cf339cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "da\xF1o": 10
+  "da\xF1o": 5
   deteccionAtaque: {fileID: 1945321189712592319}
   movimiento: {fileID: 1945321189596318268}
 --- !u!136 &7478808142850078982
@@ -225,7 +229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ee2c4ddd14f7d24aa8484e9bd9cf4e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valor: 5
+  valor: 2
 --- !u!1 &1945321189609392868
 GameObject:
   m_ObjectHideFlags: 0

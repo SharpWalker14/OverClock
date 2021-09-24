@@ -1042,6 +1042,9 @@ MonoBehaviour:
   sueloFiltro:
     serializedVersion: 2
     m_Bits: 64
+  velocidad: {x: 0, y: 0, z: 0}
+  enSuelo: 0
+  inmovilizado: 0
 --- !u!114 &8171468167559788719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1055,7 +1058,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vida: 100
-  jugador: 0
+  jugador: 1
   charcoAcido: {fileID: 0}
   enemigodSuicida: 0
   regalo: {fileID: 0}
@@ -1290,7 +1293,7 @@ MonoBehaviour:
   "ca\xF1on": {fileID: 8810364097502344525}
   espera: 0.5
   "da\xF1o": 24
-  disparos: 5
+  disparos: 7
   dispersionBalas: 6
   duracionLaser: 0.09
 --- !u!1 &2443605112236983921

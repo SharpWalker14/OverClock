@@ -8,9 +8,11 @@ public class TiempoJugador : MonoBehaviour
     // En el HUD mostrar la variable tiempo.
     public float tiempo;
     public ValorSalud salud;
+    private bool muerte;
     // Start is called before the first frame update
     void Start()
     {
+        muerte = false;
         tiempo = tiempoMaximo;
     }
 
@@ -22,14 +24,18 @@ public class TiempoJugador : MonoBehaviour
 
     void CuentaRegresiva()
     {
-        tiempo -= Time.deltaTime;
-        if (tiempo <= 0)
+        if (muerte == false)
         {
-            salud.CambioDeVida(-salud.vida);
-        }
-        if (tiempo > tiempoMaximo)
-        {
-            tiempo = tiempoMaximo;
+            tiempo -= Time.deltaTime;
+            if (tiempo <= 0)
+            {
+                salud.CambioDeVida(-salud.vida);
+                muerte = true;
+            }
+            if (tiempo > tiempoMaximo)
+            {
+                tiempo = tiempoMaximo;
+            }
         }
     }
 

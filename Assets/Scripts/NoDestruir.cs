@@ -17,6 +17,8 @@ public class NoDestruir : MonoBehaviour
             }
         }*/
         DontDestroyOnLoad(gameObject);
+        sensibilidadMouse = 70;
+        volumen = 0.5f;
     }
 
     // Update is called once per frame

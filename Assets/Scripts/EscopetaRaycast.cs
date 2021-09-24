@@ -26,7 +26,11 @@ public class EscopetaRaycast : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && esperaTiempo >= espera)
+        Disparo();
+    }
+    void Disparo()
+    {
+        if (Input.GetButtonDown("Fire1") && esperaTiempo >= espera && Time.timeScale != 0f)
         {
             for (int i = 0; i < disparos; i++)
             {
@@ -35,14 +39,14 @@ public class EscopetaRaycast : MonoBehaviour
                 {
                     if (golpe.collider.GetComponent<ValorSalud>() != null)
                     {
-                        golpe.collider.GetComponent<ValorSalud>().CambioDeVida(daño);
+                        golpe.collider.GetComponent<ValorSalud>().CambioDeVida(-daño);
                     }
                     GameObject efectoDeBala = Instantiate(impactoBala, golpe.point, Quaternion.identity) as GameObject;
                     Destroy(efectoDeBala, 1);
 
                     CrearLaser(golpe.point);
                 }
-                
+
 
                 else
                 {
@@ -51,11 +55,9 @@ public class EscopetaRaycast : MonoBehaviour
                 esperaTiempo = 0;
             }
         }
-
         else if (esperaTiempo >= 0 && esperaTiempo <= espera)
         {
             esperaTiempo += 1 * Time.deltaTime;
-
         }
     }
 

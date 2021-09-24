@@ -7,6 +7,11 @@ public class Pausa : MonoBehaviour
     public static bool juegoPausado = false;
     public GameObject pausaMenu;
 
+    void Start()
+    {
+        juegoPausado = false;
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))

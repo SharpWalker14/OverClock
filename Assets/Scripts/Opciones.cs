@@ -16,6 +16,8 @@ public class Opciones : MonoBehaviour
     {
         nucleo = GameObject.FindGameObjectWithTag("Datos");
         datos = nucleo.GetComponent<NoDestruir>();
+        sensibilidadSlider.value = datos.sensibilidadMouse;
+        volumenSlider.value = datos.volumen;
     }
 
     // Update is called once per frame

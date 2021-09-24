@@ -26,7 +26,7 @@ public class ValorSalud : MonoBehaviour
     }
     public void CambioDeVida(float valor)
     {
-        vida -= valor;
+        vida += valor;
         if (vida <= 0)
         {
             if (jugador == false)

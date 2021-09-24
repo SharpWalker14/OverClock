@@ -9,7 +9,10 @@ public class DetectarUnico : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        objetivo=GameObject.FindGameObjectWithTag("Datos");
+        Time.timeScale = 1f;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        objetivo =GameObject.FindGameObjectWithTag("Datos");
         if (objetivo == null)
         {
             Instantiate(noDestruible);

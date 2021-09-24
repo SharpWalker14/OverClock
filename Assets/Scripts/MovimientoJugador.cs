@@ -14,8 +14,8 @@ public class MovimientoJugador : MonoBehaviour
     public float distanciaSuelo = 0.4f;
     public LayerMask sueloFiltro;
 
-    Vector3 velocidad;
-    bool enSuelo;
+    public Vector3 velocidad;
+    public bool enSuelo;
 
     public bool inmovilizado = false;
 
@@ -33,9 +33,9 @@ public class MovimientoJugador : MonoBehaviour
     }
     void Movimiento()
     {
-                enSuelo = Physics.CheckSphere(controlSuelo.position, distanciaSuelo, sueloFiltro);
-        
-        if(enSuelo && velocidad.y < 0)
+        enSuelo = Physics.CheckSphere(controlSuelo.position, distanciaSuelo, sueloFiltro);
+
+        if (enSuelo && velocidad.y < 0)
         {
             velocidad.y = -2f;
         }
@@ -52,7 +52,7 @@ public class MovimientoJugador : MonoBehaviour
                 velocidad.y = Mathf.Sqrt(saltoAltura * -2f * gravedad);
             }
         }
-
+        
         velocidad.y += gravedad * Time.deltaTime;
 
         controlador.Move(velocidad * Time.deltaTime);
