@@ -8,6 +8,7 @@ TagManager:
   - "Ataque enemigo b\xE1sico"
   - CharcoAcido
   - Explosion
+  - Datos
   layers:
   - Default
   - TransparentFX

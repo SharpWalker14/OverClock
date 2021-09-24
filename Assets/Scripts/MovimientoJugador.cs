@@ -27,8 +27,13 @@ public class MovimientoJugador : MonoBehaviour
 
     void Update()
     {
+        Movimiento();
         //Comprobar si estás en el suelo
-        enSuelo = Physics.CheckSphere(controlSuelo.position, distanciaSuelo, sueloFiltro);
+
+    }
+    void Movimiento()
+    {
+                enSuelo = Physics.CheckSphere(controlSuelo.position, distanciaSuelo, sueloFiltro);
         
         if(enSuelo && velocidad.y < 0)
         {
