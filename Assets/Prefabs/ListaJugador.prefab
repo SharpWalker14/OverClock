@@ -1029,7 +1029,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 939626104005307228}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 3.5
@@ -1058,8 +1058,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controlador: {fileID: 7584353362690960908}
   velocidadMovimiento: 6
-  gravedad: -15
-  saltoAltura: 3
+  gravedad: -10
+  saltoAltura: 2.5
   controlSuelo: {fileID: 828055154177783592}
   distanciaSuelo: 0.4
   sueloFiltro:
