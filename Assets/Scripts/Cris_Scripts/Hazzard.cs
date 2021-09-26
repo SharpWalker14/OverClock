@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Hazzard : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class Hazzard : MonoBehaviour
     {
         Vision();
         Atracción();
+        Muerte();
     }
 
     void Vision()
@@ -39,13 +41,23 @@ public class Hazzard : MonoBehaviour
     {
         if(enRangoVisíon)
         {
-            jugadorM.inmovilizado = true;
+            jugadorObj.GetComponent<MovimientoJugador>().enabled = false;
+            jugadorObj.GetComponent<NavMeshAgent>().destination = new Vector3 (transform.position.x, jugadorObj.transform.position.y, transform.position.z + 2);
+        }
+    }
+
+    void Muerte()
+    {
+        if(Input.GetKey(KeyCode.F))
+        {
+            jugadorObj.GetComponent<MovimientoJugador>().enabled = true;
+            Destroy(gameObject);
         }
     }
 
     void OnDrawGizmos()
     {
-        Gizmos.color = Color.green;
+        Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, rangoDeteccion);
     }
 }
