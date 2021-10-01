@@ -462,7 +462,7 @@ GameObject:
   - component: {fileID: 2011522952600136951}
   - component: {fileID: 2011522952600136950}
   - component: {fileID: 2011522952600136949}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Area de ataque
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -575,7 +575,7 @@ GameObject:
   - component: {fileID: 2011522952988760950}
   - component: {fileID: 561808716276777744}
   - component: {fileID: 4220456277702554275}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Enemigo tanque
   m_TagString: Untagged
   m_Icon: {fileID: 0}

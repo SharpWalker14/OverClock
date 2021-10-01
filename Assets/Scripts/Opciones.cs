@@ -38,8 +38,7 @@ public class Opciones : MonoBehaviour
         //sensibilidadSlider.value = ControladorDeJuego.sensibilidadMouse;
         datos.sensibilidadMouse = sensibilidadSlider.value;
         datos.volumen = volumenSlider.value;
-        sensibilidadTexto.text = "" + (sensibilidadSlider.value - (sensibilidadSlider.value % 0.01) + 0.01);
-        volumenTexto.text = "" + (((volumenSlider.value+0.001) - ((volumenSlider.value+0.001) % 0.01)) * 100)+"%";
+        sensibilidadTexto.text = "" + sensibilidadSlider.value;
     }
 
 
