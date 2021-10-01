@@ -12,8 +12,12 @@ public class ValorSalud : MonoBehaviour
     public bool enemigodSuicida;
     public ValorTiempoEnemigo regalo;
     public bool explosion;
+
+    private int intentos, charcos;
     void Start()
     {
+        intentos = 0;
+        charcos = 0;
         if (jugador == false)
         {
             objetivo = GameObject.FindGameObjectWithTag("Player");
@@ -29,12 +33,12 @@ public class ValorSalud : MonoBehaviour
         vida += valor;
         if (vida <= 0)
         {
-            if (jugador == false)
+            if (jugador == false && intentos == 0)
             {
+                intentos++;
                 objetivo.GetComponent<TiempoJugador>().ObtenerTiempo(regalo.valor);
             }
 
-            int charcos = 0;
             if (enemigodSuicida == true && charcos == 0)
             {
                 charcos += 1;
