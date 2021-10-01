@@ -22,6 +22,6 @@ public class HUDJugador : MonoBehaviour
     {
         vidaHUD.fillAmount = vidaJugador.vida / 100;
         tiempoHUD.fillAmount = tiempoJugador.tiempo / tiempoJugador.tiempoMaximo;
-        tiempoTexto.text = ""+ tiempoJugador.tiempo;
+        tiempoTexto.text = "" + (tiempoJugador.tiempo - (tiempoJugador.tiempo % 1));
     }
 }

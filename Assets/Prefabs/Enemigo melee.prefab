@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 1945321189596318271}
   - component: {fileID: 7478808142850078982}
   - component: {fileID: 7000252759117439697}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Enemigo melee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -319,7 +319,7 @@ GameObject:
   - component: {fileID: 1945321189712592318}
   - component: {fileID: 1945321189712592319}
   - component: {fileID: 1945321189712592316}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Area de ataque
   m_TagString: Untagged
   m_Icon: {fileID: 0}

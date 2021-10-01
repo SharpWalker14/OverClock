@@ -9,6 +9,8 @@ TagManager:
   - CharcoAcido
   - Explosion
   - Datos
+  - Enemigo
+  - Suelo
   layers:
   - Default
   - TransparentFX
@@ -20,8 +22,8 @@ TagManager:
   - Pared
   - Jugador
   - Modelo
-  - 
-  - 
+  - Enemigo
+  - Rango
   - 
   - 
   - 

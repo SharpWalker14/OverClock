@@ -478,7 +478,7 @@ GameObject:
   - component: {fileID: 6275094920765605088}
   - component: {fileID: 6089584531512605158}
   - component: {fileID: 3323983584919452558}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Enemigo base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -540,7 +540,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vida: 10
   jugador: 0
+  charcoAcido: {fileID: 0}
+  enemigodSuicida: 0
   regalo: {fileID: 3323983584919452558}
+  explosion: 0
 --- !u!114 &6275094920765605091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -558,6 +561,7 @@ MonoBehaviour:
   radar: {fileID: 6275094920218743578}
   puntoPatrulla: []
   patrullero: {fileID: 6275094920101912752}
+  guardarPatrulla: []
   deteccionPatrulla: {fileID: 6275094921155118118}
 --- !u!114 &6275094920765605088
 MonoBehaviour:
@@ -723,7 +727,7 @@ GameObject:
   - component: {fileID: 6275094921185702753}
   - component: {fileID: 6275094921185702752}
   - component: {fileID: 6275094921185702755}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Area de ataque
   m_TagString: Untagged
   m_Icon: {fileID: 0}
