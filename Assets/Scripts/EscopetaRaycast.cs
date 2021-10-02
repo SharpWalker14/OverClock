@@ -30,7 +30,7 @@ public class EscopetaRaycast : MonoBehaviour
     }
     void Disparo()
     {
-        if (Input.GetButtonDown("Fire1") && esperaTiempo >= espera && Time.timeScale != 0f)
+        if (Input.GetMouseButtonDown(0) && esperaTiempo >= espera && Time.timeScale != 0f)
         {
             for (int i = 0; i < disparos; i++)
             {

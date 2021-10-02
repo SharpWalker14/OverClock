@@ -48,13 +48,17 @@ public class ValorSalud : MonoBehaviour
             }
             Destroy(gameObject);
         }
+        if (jugador == true)
+        {
+            GetComponent<FeedbackDaño>().Inicia();
+        }
     }
 
     public void DañoExplosion()
     {
         if (explosion == true)
         {
-            vida -= 8;
+            vida -= GetComponent<CharcoAcido>().dañoExplosion;
             explosion = false;
         }
     }

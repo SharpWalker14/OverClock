@@ -47,7 +47,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -221,8 +221,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.9056604, g: 0.80838263, b: 0.44705883, a: 1}
-      maxColor: {r: 0.9719956, g: 1, b: 0, a: 1}
+      minColor: {r: 0.4716981, g: 0.4716981, b: 0.4716981, a: 1}
+      maxColor: {r: 0.4056604, g: 0.4056604, b: 0.4056604, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}

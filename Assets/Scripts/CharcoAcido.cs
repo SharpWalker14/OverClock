@@ -6,7 +6,7 @@ public class CharcoAcido : MonoBehaviour
 {
     public float tiempoDeRelentizar;
     public GameObject player;
-    public int dañoCharcoAcido;
+    public float dañoExplosion;
     public GameObject explosion;
     public bool contacto;
     private float velocidadJugGuar;

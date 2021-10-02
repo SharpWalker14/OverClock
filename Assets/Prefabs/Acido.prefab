@@ -127,7 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tiempoDeRelentizar: 0
   player: {fileID: 0}
-  "da\xF1oCharcoAcido": 5
+  "da\xF1oExplosion": 16
   explosion: {fileID: 3633423135568835444}
   contacto: 0
 --- !u!1 &3633423135568835444
