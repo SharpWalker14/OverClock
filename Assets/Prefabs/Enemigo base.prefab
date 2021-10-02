@@ -727,6 +727,7 @@ GameObject:
   - component: {fileID: 6275094921185702753}
   - component: {fileID: 6275094921185702752}
   - component: {fileID: 6275094921185702755}
+  - component: {fileID: 2243081770942509494}
   m_Layer: 9
   m_Name: Area de ataque
   m_TagString: Untagged
@@ -792,3 +793,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!135 &2243081770942509494
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6275094921185702757}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 1.25, z: 0}

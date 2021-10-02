@@ -24,6 +24,11 @@ public class NoDestruir : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Ajustador();
+    }
+
+    void Ajustador()
+    {
+        Screen.fullScreenMode = FullScreenMode.Windowed;
     }
 }

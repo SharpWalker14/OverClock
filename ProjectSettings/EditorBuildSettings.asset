@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: "Assets/Escenas/PreProducci\xF3n/Men\xFAPrincipal.unity"
     guid: 254ea578978a96c46a2abef0245ae802
   - enabled: 1
+    path: "Assets/Escenas/PreProducci\xF3n/Controles.unity"
+    guid: 7589e296afd90c6479da670be358dccd
+  - enabled: 1
     path: "Assets/Escenas/PreProducci\xF3n/Cr\xE9ditos.unity"
     guid: a1114ef679b8fc640889e64dd338bf9e
   - enabled: 1
