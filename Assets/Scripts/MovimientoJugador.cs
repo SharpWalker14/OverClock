@@ -10,70 +10,46 @@ public class MovimientoJugador : MonoBehaviour
     public float velocidadMovimiento = 10f;
     public float gravedad = -15f;
     public float saltoAltura = 3f;
-    public GameObject colisionador;
     public DetectarSuelo controlarSuelo;
-    public Vector3 ver;
-    public Transform controlSuelo;
+    private Transform controlSuelo;
     public float distanciaSuelo = 0.4f;
     public LayerMask sueloFiltro;
-
-    public Vector3 velocidad;
-    public bool enSuelo;
+    [HideInInspector]
+    public GameObject eden;
+    private Vector3 velocidad;
+    public bool enSuelo, poseido;
 
     public bool inmovilizado = false;
 
     void Start()
     {
+        poseido = false;
         gameObject.transform.parent = null;
 
     }
 
     void Update()
     {
-        //MovimientoControl();
-        MovimientoCuerpo();
-    }
-    void MovimientoControl()
-    {
-        colisionador.transform.position = transform.position;
-        //Comprobar si estás en el suelo
-        //enSuelo = Physics.CheckSphere(controlSuelo.position, distanciaSuelo, sueloFiltro);
-        
-        if (controlarSuelo.tocado && velocidad.y < 0)
+        // Por si el edén lo atrapa
+        if (poseido)
         {
-            velocidad.y = -2f;
+            Posesion();
         }
-        
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
-        Vector3 movimiento = transform.right * x + transform.forward * z;
-        if(!inmovilizado)
+        else
         {
-            controlador.Move(movimiento * velocidadMovimiento * Time.deltaTime);
+            MovimientoCuerpo();
+        }
+        Condicion();
+    }
 
-            if (Input.GetButton("Jump") && controlarSuelo.tocado)
-            {
-                velocidad.y = Mathf.Sqrt(saltoAltura * -2f * gravedad);
-            }
-        }
-        
-        velocidad.y += gravedad * Time.deltaTime;
-        controlador.Move(velocidad * Time.deltaTime);
-    }
     void MovimientoCuerpo()
     {
         //Comprobar si estás en el suelo
-        //enSuelo = Physics.CheckSphere(controlSuelo.position, distanciaSuelo, sueloFiltro);
-
-
 
         Vector2 xMov = new Vector2(Input.GetAxisRaw("Horizontal") * transform.right.x, Input.GetAxisRaw("Horizontal") * transform.right.z);
         Vector2 zMov = new Vector2(Input.GetAxisRaw("Vertical") * transform.forward.x, Input.GetAxisRaw("Vertical") * transform.forward.z);
         Vector2 velocidad = (xMov + zMov).normalized * velocidadMovimiento * 100 * Time.deltaTime;
-        /*if (controlarSuelo.tocado && cuerpo.velocity.y < 0)
-        {
-            cuerpo.velocity = new Vector3(cuerpo.velocity.x, -2f, cuerpo.velocity.z);
-        }*/
+
         float graviton = cuerpo.velocity.y + gravedad * Time.deltaTime;
         if (!inmovilizado)
         {
@@ -86,6 +62,26 @@ public class MovimientoJugador : MonoBehaviour
         else
         {
             cuerpo.velocity = new Vector3(0, graviton, 0);
+        }
+    }
+
+    void Posesion()
+    {
+        if (eden != null)
+        {
+            Vector3 posesor = (eden.transform.position - transform.position).normalized;
+            cuerpo.velocity = posesor * 5;
+        }
+    }
+    void Condicion()
+    {
+        if (eden == null)
+        {
+            poseido = false;
+        }
+        else
+        {
+            poseido = true;
         }
     }
 }

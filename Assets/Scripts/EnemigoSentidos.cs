@@ -8,8 +8,7 @@ public class EnemigoSentidos : MonoBehaviour
     public float alcance;
     public float angulo;
 
-    private RaycastHit pared, piso, objetivoCuerpo;
-    private Vector3 mirar;
+    private RaycastHit pared, piso;
     private float rotacionY, rotacionX, comienzoMirador, intentaMuro, intentaObjetivo, alcanceTotal;
     [HideInInspector]
     public GameObject objetivo;
@@ -44,7 +43,6 @@ public class EnemigoSentidos : MonoBehaviour
     {
         LayerMask mascaraA = LayerMask.GetMask("Piso");
         LayerMask mascaraB = LayerMask.GetMask("Pared");
-        LayerMask mirarObjetivo = LayerMask.GetMask("Jugador");
         intentaObjetivo = Vector3.Distance(transform.position, objetivo.transform.position);
         if (Physics.Linecast(transform.position, objetivo.transform.position, out pared, mascaraB))
         {

@@ -922,8 +922,10 @@ MonoBehaviour:
   sueloFiltro:
     serializedVersion: 2
     m_Bits: 64
+  eden: {fileID: 0}
   velocidad: {x: 0, y: 0, z: 0}
   enSuelo: 0
+  poseido: 0
   inmovilizado: 0
 --- !u!114 &8171468167559788719
 MonoBehaviour:

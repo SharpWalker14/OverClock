@@ -15,7 +15,8 @@ public class CharcoAcido : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
 
-        Destroy(explosion,0.1f);
+        player.GetComponent<ValorSalud>().CambioDeVida(-dañoExplosion);
+        Destroy(explosion);
 
         velocidadJugGuar = player.GetComponent<MovimientoJugador>().velocidadMovimiento;
     }
