@@ -4,18 +4,25 @@ using UnityEngine;
 
 public class PantallaCambio : MonoBehaviour
 {
-   private bool pantallaCompleta=true;
+    private GameObject nucleo;
+    private NoDestruir datos;
 
-   public void Cambiador()
-   {
-      if(pantallaCompleta)
-      {
-      Screen.fullScreenMode = FullScreenMode.Windowed;
-      }
-      else
-      { 
-      Screen.fullScreenMode = FullScreenMode.ExclusiveFullScreen;
-      }
-   }
+    void Start()
+    {
+        nucleo = GameObject.FindGameObjectWithTag("Datos");
+        datos = nucleo.GetComponent<NoDestruir>();
+    }
+
+    public void Cambiador()
+    {
+        if (datos.ventana)
+        {
+            datos.ventana = false;
+        }
+        else
+        {
+            datos.ventana = true;
+        }
+    }
 
 }

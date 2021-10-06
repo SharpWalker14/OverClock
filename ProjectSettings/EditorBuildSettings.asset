@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Escenas/PreProducci\xF3n/Derrota.unity"
     guid: 4fe7cc457331ccc4dab2c5a5f1fef6d1
+  - enabled: 1
+    path: "Assets/Escenas/PreProducci\xF3n/EscenaWhiteBlocking.unity"
+    guid: d548fde93e5d4794bad91624dc344245
   m_configObjects: {}

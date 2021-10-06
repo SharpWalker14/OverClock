@@ -209,6 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jugadorM: {fileID: 0}
+  "da\xF1o": 1
   jugadorObj: {fileID: 0}
   rangoDeteccion: 10
   enRangoVision: 0
@@ -230,7 +231,8 @@ MonoBehaviour:
   charcoAcido: {fileID: 0}
   enemigodSuicida: 0
   regalo: {fileID: 5535481161884255686}
-  explosion: 0
+  explosionAcido: 0
+  explosionHumo: 0
 --- !u!114 &5535481161884255686
 MonoBehaviour:
   m_ObjectHideFlags: 0

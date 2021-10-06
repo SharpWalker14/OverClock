@@ -10,6 +10,7 @@ public class Pausa : MonoBehaviour
     void Start()
     {
         juegoPausado = false;
+        Cursor.visible = false;
     }
 
     void Update()

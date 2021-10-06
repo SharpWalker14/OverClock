@@ -11,7 +11,7 @@ public class ValorSalud : MonoBehaviour
     public GameObject charcoAcido;
     public bool enemigodSuicida;
     public ValorTiempoEnemigo regalo;
-    public bool explosion;
+    public bool explosionAcido, explosionHumo;
 
     private int intentos, charcos;
     void Start()
@@ -56,11 +56,17 @@ public class ValorSalud : MonoBehaviour
 
     public void DañoExplosion()
     {
-        if (explosion == true)
+        if (explosionAcido == true)
         {
-            vida -= GetComponent<CharcoAcido>().dañoExplosion;
-            explosion = false;
+            vida -= 16;
+            explosionAcido = false;
         }
+        if (explosionHumo == true)
+        {
+            vida -= 16;
+            explosionHumo = false;
+        }
+
     }
 
     void OnTriggerStay(Collider col)
@@ -70,9 +76,13 @@ public class ValorSalud : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (jugador == true && other.gameObject.tag == "Explosion" && explosion == false)
+        if (jugador == true && other.gameObject.tag == "Explosion" && explosionAcido == false)
         {
-            explosion = true;
+            explosionAcido = true;
+        }
+        if (jugador == true && other.gameObject.tag == "Explosion" && explosionHumo == false)
+        {
+            explosionHumo = true;
         }
     }
 }

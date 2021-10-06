@@ -116,8 +116,9 @@ public class Hazzard : MonoBehaviour
         Gizmos.color = Color.red;
         //Gizmos.DrawWireSphere(transform.position, rangoDeteccion);
         Vector3 visionGizmo = new Vector3(0.25f, 0.25f, rangoDeteccion);
-        Vector3 verRango = new Vector3(0, 0, -rangoDeteccion/2);
+        Vector3 verRango = new Vector3(0, 0, rangoDeteccion / 2);
         Gizmos.DrawWireCube(transform.position + verRango, visionGizmo);
+        Gizmos.color = Color.blue;
 
     }
 }

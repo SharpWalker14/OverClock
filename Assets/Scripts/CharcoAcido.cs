@@ -5,18 +5,22 @@ using UnityEngine;
 public class CharcoAcido : MonoBehaviour
 {
     public float tiempoDeRelentizar;
-    public GameObject player;
+    private GameObject player;
     public float dañoExplosion;
     public GameObject explosion;
     public bool contacto;
     private float velocidadJugGuar;
+    public Detector explosionDetectar;
+
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-
-        player.GetComponent<ValorSalud>().CambioDeVida(-dañoExplosion);
-        Destroy(explosion);
+        if (explosionDetectar.tocado)
+        {
+            player.GetComponent<ValorSalud>().CambioDeVida(-dañoExplosion);
+        }
+        Destroy(explosion, 0.1f);
 
         velocidadJugGuar = player.GetComponent<MovimientoJugador>().velocidadMovimiento;
     }
