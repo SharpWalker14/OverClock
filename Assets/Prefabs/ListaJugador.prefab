@@ -914,16 +914,12 @@ MonoBehaviour:
   velocidadMovimiento: 6
   gravedad: -10
   saltoAltura: 2.5
-  colisionador: {fileID: 0}
   controlarSuelo: {fileID: 8673614711465124114}
-  ver: {x: 0, y: 0, z: 0}
-  controlSuelo: {fileID: 828055154177783592}
   distanciaSuelo: 0.4
   sueloFiltro:
     serializedVersion: 2
     m_Bits: 64
   eden: {fileID: 0}
-  velocidad: {x: 0, y: 0, z: 0}
   enSuelo: 0
   poseido: 0
   inmovilizado: 0
@@ -944,7 +940,8 @@ MonoBehaviour:
   charcoAcido: {fileID: 0}
   enemigodSuicida: 0
   regalo: {fileID: 0}
-  explosion: 0
+  explosionAcido: 0
+  explosionHumo: 0
 --- !u!114 &6145628480073578907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1200,7 +1197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rangoDisparo: 50
-  impactoBala: {fileID: 3468912289624738958, guid: ecbaceee2f4329d40a47e0b70674cdef, type: 3}
+  impactoBala: {fileID: 1491614750064858252, guid: 130f78a77a1f24142b6541ee7a91c7c2, type: 3}
   laser: {fileID: 199096991623134442, guid: 067e42a4942baa8409f9d4a633bb098a, type: 3}
   "ca\xF1on": {fileID: 8810364097502344525}
   espera: 0.5
@@ -1946,6 +1943,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sensibilidad: 100
   "jugadorGr\xE1ficos": {fileID: 3483176941321734887}
+  datos: {fileID: 0}
 --- !u!1 &8368105142011884047
 GameObject:
   m_ObjectHideFlags: 0

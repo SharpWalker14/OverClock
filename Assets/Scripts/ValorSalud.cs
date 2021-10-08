@@ -42,7 +42,7 @@ public class ValorSalud : MonoBehaviour
             if (enemigodSuicida == true && charcos == 0)
             {
                 charcos += 1;
-                Vector3 Acido = new Vector3(transform.position.x, transform.position.y - 0.03f, transform.position.z);
+                Vector3 Acido = new Vector3(transform.position.x, transform.position.y, transform.position.z);
 
                 Instantiate(charcoAcido, Acido, transform.rotation);
             }
@@ -61,12 +61,12 @@ public class ValorSalud : MonoBehaviour
             vida -= 16;
             explosionAcido = false;
         }
-        if (explosionHumo == true)
+      /*  if (explosionHumo == true)
         {
             vida -= 16;
             explosionHumo = false;
         }
-
+      */
     }
 
     void OnTriggerStay(Collider col)
@@ -80,9 +80,9 @@ public class ValorSalud : MonoBehaviour
         {
             explosionAcido = true;
         }
-        if (jugador == true && other.gameObject.tag == "Explosion" && explosionHumo == false)
+       /* if (jugador == true && other.gameObject.tag == "Explosion" && explosionHumo == false)
         {
             explosionHumo = true;
-        }
+        }*/
     }
 }
