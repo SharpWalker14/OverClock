@@ -7,11 +7,15 @@ public class Hazzard : MonoBehaviour
 {
     public MovimientoJugador jugadorM;
     public float daño=1;
-    public GameObject jugadorObj;
+    public GameObject jugadorObj, areaObj;
     private RaycastHit pared, piso, jugadorRay;
     private float intentaMuro, intentaObjetivo, tiempo;
     public float rangoDeteccion;
     public bool enRangoVision, linea;
+
+
+    public Detector deteccion;
+    public BoxCollider colision;
 
     void Start()
     {
@@ -41,7 +45,7 @@ public class Hazzard : MonoBehaviour
         LayerMask mascaraA = LayerMask.GetMask("Piso");
         LayerMask mascaraB = LayerMask.GetMask("Pared");
         LayerMask mirarObjetivo = LayerMask.GetMask("Jugador");
-        Vector3 limite = new Vector3(transform.position.x, transform.position.y, jugadorObj.transform.position.z);
+        Vector3 limite = new Vector3(jugadorObj.transform.position.x, transform.position.y, jugadorObj.transform.position.z);
         intentaObjetivo = Vector3.Distance(transform.position, limite);
 
         if (Physics.Linecast(transform.position, limite, out pared, mascaraB))
@@ -57,7 +61,7 @@ public class Hazzard : MonoBehaviour
             intentaMuro = rangoDeteccion;
 
         }
-        if (Physics.Linecast(transform.position, limite, out jugadorRay, mirarObjetivo))
+        if (Physics.Linecast(transform.position, limite, out jugadorRay, mirarObjetivo) && deteccion.tocado)
         {
             linea = true;
         }
@@ -114,11 +118,14 @@ public class Hazzard : MonoBehaviour
     void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        //Gizmos.DrawWireSphere(transform.position, rangoDeteccion);
-        Vector3 visionGizmo = new Vector3(0.25f, 0.25f, rangoDeteccion);
-        Vector3 verRango = new Vector3(0, 0, rangoDeteccion / 2);
-        Gizmos.DrawWireCube(transform.position + verRango, visionGizmo);
+        Vector3 rangoGizmo = new Vector3(0, 0, 0);
+        rangoGizmo.z += rangoDeteccion;
+        areaObj.transform.localPosition = rangoGizmo;
+        Gizmos.DrawLine(transform.position, areaObj.transform.position);
         Gizmos.color = Color.blue;
+        colision.size = new Vector3(0.1f, 0.1f, rangoDeteccion);
+        colision.center = new Vector3(0, 0, rangoDeteccion / 2);
+
 
     }
 }

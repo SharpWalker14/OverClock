@@ -5,6 +5,7 @@ using UnityEngine;
 public class AtaqueEnemigo : MonoBehaviour
 {
     public int daño;
+    public float frecuencia;
     private float conteoAtaque;
     private bool preparaAtaque;
     public Detector deteccionAtaque;
@@ -25,7 +26,7 @@ public class AtaqueEnemigo : MonoBehaviour
     void Ataque()
     {
         conteoAtaque += Time.deltaTime;
-        if (conteoAtaque >= 3)
+        if (conteoAtaque >= frecuencia)
         {
             preparaAtaque = true;
         }

@@ -10,6 +10,8 @@ TagManager:
   - Explosion
   - Datos
   - Proyectil
+  - Suelo
+  - Explosion2
   layers:
   - Default
   - TransparentFX

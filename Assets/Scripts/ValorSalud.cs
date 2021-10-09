@@ -8,8 +8,8 @@ public class ValorSalud : MonoBehaviour
     public float vida;
     public bool jugador;
     private GameObject objetivo;
-    public GameObject charcoAcido;
-    public bool enemigodSuicida;
+    public GameObject charcoAcido, cortinaHumo;
+    public bool enemigodSuicida, enemigoHumo;
     public ValorTiempoEnemigo regalo;
     public bool explosionAcido, explosionHumo;
 
@@ -46,6 +46,13 @@ public class ValorSalud : MonoBehaviour
 
                 Instantiate(charcoAcido, Acido, transform.rotation);
             }
+            if (enemigoHumo == true && charcos == 0)
+            {
+                charcos += 1;
+                Vector3 Humo = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+
+                Instantiate(cortinaHumo, Humo, transform.rotation);
+            }
             Destroy(gameObject);
         }
         if (jugador == true)
@@ -60,13 +67,14 @@ public class ValorSalud : MonoBehaviour
         {
             vida -= 16;
             explosionAcido = false;
+            GetComponent<FeedbackDaño>().Inicia();
         }
-      /*  if (explosionHumo == true)
+        if (explosionHumo == true)
         {
-            vida -= 16;
+            vida -= 9;
             explosionHumo = false;
+            GetComponent<FeedbackDaño>().Inicia();
         }
-      */
     }
 
     void OnTriggerStay(Collider col)
@@ -80,9 +88,9 @@ public class ValorSalud : MonoBehaviour
         {
             explosionAcido = true;
         }
-       /* if (jugador == true && other.gameObject.tag == "Explosion" && explosionHumo == false)
+        if (jugador == true && other.gameObject.tag == "Explosion2" && explosionHumo == false)
         {
             explosionHumo = true;
-        }*/
+        }
     }
 }

@@ -58,6 +58,7 @@ public class MovimientoJugador : MonoBehaviour
             {
                 cuerpo.AddForce(new Vector3(0, saltoAltura * 10f * -2f * gravedad));
             }
+
         }
         else
         {
