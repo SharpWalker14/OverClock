@@ -660,7 +660,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 1.4
+  m_Speed: 6
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -687,9 +687,12 @@ MonoBehaviour:
   vida: 150
   jugador: 0
   charcoAcido: {fileID: 3278621805438566124, guid: 92afffd5bb77e13488135f9f422ef1b8, type: 3}
+  cortinaHumo: {fileID: 0}
   enemigodSuicida: 1
+  enemigoHumo: 0
   regalo: {fileID: 3048203799647601448}
-  explosion: 0
+  explosionAcido: 0
+  explosionHumo: 0
 --- !u!114 &6015069487381888069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -722,6 +725,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   "da\xF1o": 2
+  frecuencia: 0.5
   deteccionAtaque: {fileID: 6015069486993247174}
   movimiento: {fileID: 6015069487381888069}
 --- !u!136 &5831810357498347840
