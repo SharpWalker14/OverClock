@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PantallaCambio : MonoBehaviour
 {
-    private GameObject nucleo;
-    private NoDestruir datos;
+    /*public GameObject nucleo;
+    public NoDestruir datos;
 
     void Start()
     {
@@ -23,6 +23,6 @@ public class PantallaCambio : MonoBehaviour
         {
             datos.ventana = true;
         }
-    }
+    }*/
 
 }

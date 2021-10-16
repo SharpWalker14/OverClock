@@ -11,8 +11,8 @@ public class NoDestruir : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        DontDestroyOnLoad(gameObject);
-        Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
+        //DontDestroyOnLoad(gameObject);
+        //Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
         ventana = false;
         sensibilidadMouse = 70;
         volumen = 0.5f;
@@ -21,10 +21,10 @@ public class NoDestruir : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Ajustador();
+        //Ajustador();
     }
 
-    void Ajustador()
+    /*void Ajustador()
     {
         if (ventana)
         {
@@ -51,5 +51,5 @@ public class NoDestruir : MonoBehaviour
     void TamanoVentana()
     {
         Screen.SetResolution(1024, 576, false);
-    }
+    }*/
 }

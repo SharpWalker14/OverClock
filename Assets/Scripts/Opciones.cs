@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class Opciones : MonoBehaviour
 {
@@ -12,23 +13,58 @@ public class Opciones : MonoBehaviour
     private GameObject nucleo;
     private NoDestruir datos;
 
+    public AudioMixer audioMixer;
+
+    public Dropdown resolutionDropdown;
+    Resolution[] resolutions;
+
     void Start()
     {
-        nucleo = GameObject.FindGameObjectWithTag("Datos");
+        //
+        resolutions = Screen.resolutions;
+        resolutionDropdown.ClearOptions();
+
+        List<string> options = new List<string>();
+
+        int currentResolutionIndex = 0;
+        for (int i = 0; i < resolutions.Length; i++)
+        {
+            string option = resolutions[i].width + "x" + resolutions[i].height;
+            options.Add(option);
+
+            if (resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height)
+                resolutionDropdown.RefreshShownValue();
+            {
+                currentResolutionIndex = i;
+            }
+        }
+
+        resolutionDropdown.AddOptions(options);
+        resolutionDropdown.value = currentResolutionIndex;
+        //
+
+
+        /*nucleo = GameObject.FindGameObjectWithTag("Datos");
         datos = nucleo.GetComponent<NoDestruir>();
         sensibilidadSlider.value = datos.sensibilidadMouse;
-        volumenSlider.value = datos.volumen;
+        volumenSlider.value = datos.volumen;*/
+        
     }
 
     // Update is called once per frame
     void Update()
-    {
-        AjustadorSensibilidad();
+    {       
+        //AjustadorSensibilidad();
     }
     /*public static void CambiarSensibilidad(float nuevaSensibilidad)
     {
         ControladorDeJuego.sensibilidadMouse = nuevaSensibilidad;
     }*/
+
+    public void PantallaCompleta(bool isFull)
+    {
+        Screen.fullScreen = isFull;      
+    }
 
     void AjustadorSensibilidad()
     {
@@ -41,6 +77,23 @@ public class Opciones : MonoBehaviour
         sensibilidadTexto.text = "" + (sensibilidadSlider.value - (sensibilidadSlider.value % 1));
         volumenTexto.text = "" + (((volumenSlider.value+0.001) - ((volumenSlider.value+0.001) % 0.01)) * 100)+"%";
     }
+
+    public void ConfiguracionVolumen(float volumen)
+    {
+        audioMixer.SetFloat("VolumenGeneral", volumen);
+
+        int enterovolumen = (int)volumen;
+
+        volumenTexto.text = "" + enterovolumen;
+    }
+
+    public void CambiarResolucion(int resolutionIndex)
+    {
+        Resolution resolution = resolutions[resolutionIndex];
+        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+    }
+
+
 
 
 
