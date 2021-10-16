@@ -44,17 +44,17 @@ public class Opciones : MonoBehaviour
         //
 
 
-        /*nucleo = GameObject.FindGameObjectWithTag("Datos");
+        nucleo = GameObject.FindGameObjectWithTag("Datos");
         datos = nucleo.GetComponent<NoDestruir>();
         sensibilidadSlider.value = datos.sensibilidadMouse;
-        volumenSlider.value = datos.volumen;*/
+        //volumenSlider.value = datos.volumen;
         
     }
 
     // Update is called once per frame
     void Update()
     {       
-        //AjustadorSensibilidad();
+        AjustadorSensibilidad();
     }
     /*public static void CambiarSensibilidad(float nuevaSensibilidad)
     {
@@ -72,10 +72,10 @@ public class Opciones : MonoBehaviour
         //sensibilidadSlider.maxValue = 150f;
         //sensibilidadSlider.minValue = 30f;
         //sensibilidadSlider.value = ControladorDeJuego.sensibilidadMouse;
-        datos.sensibilidadMouse = sensibilidadSlider.value;
-        datos.volumen = volumenSlider.value;
+        //datos.sensibilidadMouse = sensibilidadSlider.value;
+        //datos.volumen = volumenSlider.value;
         sensibilidadTexto.text = "" + (sensibilidadSlider.value - (sensibilidadSlider.value % 1));
-        volumenTexto.text = "" + (((volumenSlider.value+0.001) - ((volumenSlider.value+0.001) % 0.01)) * 100)+"%";
+        //volumenTexto.text = "" + (((volumenSlider.value+0.001) - ((volumenSlider.value+0.001) % 0.01)) * 100)+"%";
     }
 
     public void ConfiguracionVolumen(float volumen)

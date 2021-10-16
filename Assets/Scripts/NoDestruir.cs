@@ -1,27 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NoDestruir : MonoBehaviour
 {
     [HideInInspector]
-    public float sensibilidadMouse, volumen;
+    public float sensibilidadMouse;
     [HideInInspector]
     public bool ventana;
+    private Scene escenaActual;
+    public string nombreDeEscena;
     // Start is called before the first frame update
     void Start()
     {
-        //DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject);
         //Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
         ventana = false;
         sensibilidadMouse = 70;
-        volumen = 0.5f;
+
+        escenaActual = SceneManager.GetActiveScene();
+        nombreDeEscena = escenaActual.name;
     }
 
     // Update is called once per frame
     void Update()
     {
         //Ajustador();
+        Escenas();
+    }
+
+    void Escenas()
+    {
+        escenaActual = SceneManager.GetActiveScene();
+        nombreDeEscena = escenaActual.name;
     }
 
     /*void Ajustador()
