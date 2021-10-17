@@ -3167,10 +3167,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d49d323d3fcfb847a0af6d550fc47c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensibilidadTexto: {fileID: 0}
-  volumenTexto: {fileID: 0}
-  sensibilidadSlider: {fileID: 0}
-  volumenSlider: {fileID: 0}
+  sensibilidadTexto: {fileID: 6228372110581821396}
+  volumenTexto: {fileID: 2834659887306689259}
+  sensibilidadSlider: {fileID: 5010180785786202886}
+  volumenSlider: {fileID: 4462389320133583810}
   audioMixer: {fileID: 24100000, guid: a99a9d33574420247a0ce84f6c96d0be, type: 2}
   resolutionDropdown: {fileID: 6821296342602602969}
 --- !u!1 &3571562401527473680
@@ -5933,7 +5933,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1116573070991048772}
   - component: {fileID: 766155581883317157}
-  - component: {fileID: 4412237875224330107}
   - component: {fileID: 8399922784308744992}
   m_Layer: 0
   m_Name: Camera Arma
@@ -5999,14 +5998,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &4412237875224330107
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7999916937697084717}
-  m_Enabled: 1
 --- !u!114 &8399922784308744992
 MonoBehaviour:
   m_ObjectHideFlags: 0
