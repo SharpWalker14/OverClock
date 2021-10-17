@@ -93,6 +93,11 @@ public class Opciones : MonoBehaviour
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
 
+    public void Calidades(int calidadesIndex)
+    {
+        QualitySettings.SetQualityLevel(calidadesIndex);
+    }
+
 
 
 
