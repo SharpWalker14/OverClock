@@ -8,8 +8,7 @@ public class EscopetaRaycast : MonoBehaviour
     private Ray linea;
     Transform camara;
     public float rangoDisparo;
-    public GameObject impactoBala;
-    public GameObject laser;
+    public GameObject impactoBala, laser, camaraRotacion;
     public Transform cañon;
     public float espera;
     public int daño;
@@ -20,7 +19,7 @@ public class EscopetaRaycast : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        camara = Camera.main.transform;
+        camara = camaraRotacion.transform;
     }
 
     // Update is called once per frame

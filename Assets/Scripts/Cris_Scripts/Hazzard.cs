@@ -25,9 +25,13 @@ public class Hazzard : MonoBehaviour
 
     void Update()
     {
-        Vision();
-        Atracción();
-        Ataque();
+        if (jugadorObj != null)
+        {
+            Vision();
+            Atracción();
+            Ataque();
+        }
+
         //Muerte();
     }
 
