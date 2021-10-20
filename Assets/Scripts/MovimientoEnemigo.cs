@@ -5,7 +5,6 @@ using UnityEngine.AI;
 
 public class MovimientoEnemigo : MonoBehaviour
 {
-    [HideInInspector]
     public NavMeshAgent inteligencia;
     private bool tranquilo = true;
     [HideInInspector]
@@ -28,7 +27,6 @@ public class MovimientoEnemigo : MonoBehaviour
         ControlPatrullas();
         tranquilo = true;
         numeroPatrulla = 0;
-        inteligencia = GetComponent<NavMeshAgent>();
         guardarVelocidad = inteligencia.speed;
         patrullero.transform.parent = null;
         candado = true;

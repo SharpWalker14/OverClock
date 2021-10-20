@@ -541,9 +541,12 @@ MonoBehaviour:
   vida: 10
   jugador: 0
   charcoAcido: {fileID: 0}
+  cortinaHumo: {fileID: 0}
   enemigodSuicida: 0
+  enemigoHumo: 0
   regalo: {fileID: 3323983584919452558}
-  explosion: 0
+  explosionAcido: 0
+  explosionHumo: 0
 --- !u!114 &6275094920765605091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -556,7 +559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 847bf775590f9414b8ab6ed969789db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inteligencia: {fileID: 0}
+  inteligencia: {fileID: 6275094920765605090}
   guardarVelocidad: 0
   radar: {fileID: 6275094920218743578}
   puntoPatrulla: []
@@ -576,6 +579,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   "da\xF1o": 10
+  frecuencia: 0
   deteccionAtaque: {fileID: 6275094921185702752}
   movimiento: {fileID: 6275094920765605091}
 --- !u!136 &6089584531512605158

@@ -531,7 +531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 847bf775590f9414b8ab6ed969789db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inteligencia: {fileID: 0}
+  inteligencia: {fileID: 2011522952988760948}
   guardarVelocidad: 0
   radar: {fileID: 2011522953435942028}
   puntoPatrulla: []
