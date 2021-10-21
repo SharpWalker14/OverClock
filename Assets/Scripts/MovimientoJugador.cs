@@ -7,12 +7,12 @@ public class MovimientoJugador : MonoBehaviour
     public CharacterController controlador;
     public Rigidbody cuerpo;
 
-    public float velocidadMovimiento = 10f;
-    public float gravedad = -15f;
-    public float saltoAltura = 3f;
+    public float velocidadMovimiento;
+    public float gravedad;
+    public float saltoAltura;
     public DetectarSuelo controlarSuelo;
     private Transform controlSuelo;
-    public float distanciaSuelo = 0.4f;
+    public float distanciaSuelo;
     public LayerMask sueloFiltro;
     [HideInInspector]
     public GameObject eden;
@@ -48,7 +48,7 @@ public class MovimientoJugador : MonoBehaviour
 
         Vector2 xMov = new Vector2(Input.GetAxisRaw("Horizontal") * transform.right.x, Input.GetAxisRaw("Horizontal") * transform.right.z);
         Vector2 zMov = new Vector2(Input.GetAxisRaw("Vertical") * transform.forward.x, Input.GetAxisRaw("Vertical") * transform.forward.z);
-        Vector2 velocidad = (xMov + zMov).normalized * velocidadMovimiento * 100 * Time.deltaTime;
+        Vector2 velocidad = (xMov + zMov).normalized * velocidadMovimiento;
 
         float graviton = cuerpo.velocity.y + gravedad * Time.deltaTime;
         if (!inmovilizado)

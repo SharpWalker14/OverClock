@@ -40,7 +40,7 @@ public class AtaqueEnemigo : MonoBehaviour
         {
             if (movimiento.inteligencia.speed >= 0)
             {
-                movimiento.inteligencia.speed -= 0.5f;
+                movimiento.inteligencia.speed -= movimiento.inteligencia.speed;
             }
         }
         else

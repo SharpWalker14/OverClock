@@ -1484,7 +1484,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2011522952988760947, guid: 50364196106247842bc4b12fc3a06f2a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.549997
+      value: -10.83
       objectReference: {fileID: 0}
     - target: {fileID: 2011522952988760947, guid: 50364196106247842bc4b12fc3a06f2a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1492,7 +1492,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2011522952988760947, guid: 50364196106247842bc4b12fc3a06f2a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 75.53001
+      value: 76.06
       objectReference: {fileID: 0}
     - target: {fileID: 2011522952988760947, guid: 50364196106247842bc4b12fc3a06f2a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1595,7 +1595,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 848258032997460264, guid: 39374f3f6f8a6d7488305325f2495710, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 86.381
+      value: 86.37
       objectReference: {fileID: 0}
     - target: {fileID: 848258032997460264, guid: 39374f3f6f8a6d7488305325f2495710, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3129,7 +3129,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 848258032997460264, guid: 39374f3f6f8a6d7488305325f2495710, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 24.26
+      value: 24.2108
       objectReference: {fileID: 0}
     - target: {fileID: 848258032997460264, guid: 39374f3f6f8a6d7488305325f2495710, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4152,8 +4152,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1843306943}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.249998, y: 1.4900005, z: 61.6}
-  m_LocalScale: {x: 2.6040804, y: 11.505236, z: 22.722845}
+  m_LocalPosition: {x: -4.249998, y: 1.49, z: 64.6511}
+  m_LocalScale: {x: 2.6040804, y: 11.505236, z: 28.8262}
   m_Children: []
   m_Father: {fileID: 1582220227}
   m_RootOrder: 15
@@ -5496,7 +5496,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1945321189596318266, guid: 346f9306dfdcef64e8b3cabaf39597fd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.079998
+      value: -10.98
       objectReference: {fileID: 0}
     - target: {fileID: 1945321189596318266, guid: 346f9306dfdcef64e8b3cabaf39597fd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5504,7 +5504,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1945321189596318266, guid: 346f9306dfdcef64e8b3cabaf39597fd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 34.819996
+      value: 35.64
       objectReference: {fileID: 0}
     - target: {fileID: 1945321189596318266, guid: 346f9306dfdcef64e8b3cabaf39597fd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5554,11 +5554,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4877091918112836481, guid: 6138b65085ddc8540b14c653fae6d7cf, type: 3}
       propertyPath: m_Name
-      value: "Bar\xF3n de la rueda iluminada"
+      value: Probador
       objectReference: {fileID: 0}
     - target: {fileID: 4877091918112836481, guid: 6138b65085ddc8540b14c653fae6d7cf, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4877091918112836482, guid: 6138b65085ddc8540b14c653fae6d7cf, type: 3}
       propertyPath: m_RootOrder

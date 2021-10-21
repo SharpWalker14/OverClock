@@ -9,9 +9,12 @@ public class TiempoJugador : MonoBehaviour
     public float tiempo;
     public ValorSalud salud;
     private bool muerte;
+    [HideInInspector]
+    public bool congelado;
     // Start is called before the first frame update
     void Start()
     {
+        congelado = false;
         muerte = false;
         tiempo = tiempoMaximo;
     }
@@ -19,7 +22,10 @@ public class TiempoJugador : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CuentaRegresiva();
+        if (congelado==false)
+        {
+            CuentaRegresiva();
+        }
     }
 
     void CuentaRegresiva()
@@ -32,15 +38,15 @@ public class TiempoJugador : MonoBehaviour
                 salud.CambioDeVida(-salud.vida);
                 muerte = true;
             }
-            if (tiempo > tiempoMaximo)
-            {
-                tiempo = tiempoMaximo;
-            }
         }
     }
 
     public void ObtenerTiempo(float valor)
     {
         tiempo += valor;
+        if (tiempo > tiempoMaximo)
+        {
+            tiempo = tiempoMaximo;
+        }
     }
 }

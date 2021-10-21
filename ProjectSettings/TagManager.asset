@@ -12,6 +12,9 @@ TagManager:
   - Proyectil
   - Suelo
   - Explosion2
+  - PuntoDios
+  - "M\xFAsica"
+  - "M\xFAsicaSeguidor"
   layers:
   - Default
   - TransparentFX

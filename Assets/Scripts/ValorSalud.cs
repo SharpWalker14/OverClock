@@ -7,6 +7,8 @@ public class ValorSalud : MonoBehaviour
     // En el HUD tiene que mostrar lo que es la variable vida (Si es jugador).
     public float vida;
     public bool jugador;
+    [HideInInspector]
+    public bool armadura;
     private GameObject objetivo;
     public GameObject charcoAcido, cortinaHumo;
     public bool enemigodSuicida, enemigoHumo;
@@ -30,7 +32,10 @@ public class ValorSalud : MonoBehaviour
     }
     public void CambioDeVida(float valor)
     {
-        vida += valor;
+        if (armadura==false)
+        {
+            vida += valor;
+        }
         if (vida <= 0)
         {
             if (jugador == false && intentos == 0)
@@ -63,18 +68,22 @@ public class ValorSalud : MonoBehaviour
 
     public void DañoExplosion()
     {
-        if (explosionAcido == true)
+        if (armadura == false)
         {
-            vida -= 16;
-            explosionAcido = false;
-            GetComponent<FeedbackDaño>().Inicia();
+            if (explosionAcido == true)
+            {
+                vida -= 16;
+                GetComponent<FeedbackDaño>().Inicia();
+            }
+            if (explosionHumo == true)
+            {
+                vida -= 9;
+                GetComponent<FeedbackDaño>().Inicia();
+            }
         }
-        if (explosionHumo == true)
-        {
-            vida -= 9;
-            explosionHumo = false;
-            GetComponent<FeedbackDaño>().Inicia();
-        }
+        explosionAcido = false;
+        explosionHumo = false;
+
     }
 
     void OnTriggerStay(Collider col)

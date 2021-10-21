@@ -20,11 +20,15 @@ public class MovimientoEnemigo : MonoBehaviour
     [HideInInspector]
     public GameObject[] guardarPatrulla;
     public Detector deteccionPatrulla;
-    private bool candado = true;
+    private bool candado = true, candadoDraw = false;
     // Start is called before the first frame update
     void Start()
     {
-        ControlPatrullas();
+        if (puntoPatrulla.Length != 0)
+        {
+            ControlPatrullas();
+        }
+        candadoDraw = true;
         tranquilo = true;
         numeroPatrulla = 0;
         guardarVelocidad = inteligencia.speed;
@@ -78,32 +82,38 @@ public class MovimientoEnemigo : MonoBehaviour
 
     void OnDrawGizmos()
     {
-        if (candado)
+        if (candadoDraw == false)
         {
-            patrullajePasado = puntoPatrulla.Length;
-            candado = false;
-        }
-        ControlarPuntos();
-        ControlPatrullas();
-        for (int i = 0; i < puntoPatrulla.Length; i++)
-        {
-            if (puntoPatrulla[i] != null)
+            if (candado)
             {
-                Gizmos.color = Color.yellow;
-                Gizmos.DrawWireSphere(puntoPatrulla[i].transform.position, 0.5f);
-                Gizmos.color = Color.red;
-                Vector3 tamañoAltura = new Vector3(0.1f, 1, 0.1f), precaucion = new Vector3(0, -0.5f, 0);
-                Gizmos.DrawWireCube(puntoPatrulla[i].transform.position+precaucion, tamañoAltura);
+                patrullajePasado = puntoPatrulla.Length;
+                candado = false;
             }
-        }
+            ControlarPuntos();
+            if (puntoPatrulla.Length != 0)
+            {
+                ControlPatrullas();
+            }
+            for (int i = 0; i < puntoPatrulla.Length; i++)
+            {
+                if (puntoPatrulla[i] != null)
+                {
+                    Gizmos.color = Color.yellow;
+                    Gizmos.DrawWireSphere(puntoPatrulla[i].transform.position, 0.5f);
+                    Gizmos.color = Color.red;
+                    Vector3 tamañoAltura = new Vector3(0.1f, 1, 0.1f), precaucion = new Vector3(0, -0.5f, 0);
+                    Gizmos.DrawWireCube(puntoPatrulla[i].transform.position + precaucion, tamañoAltura);
+                }
+            }
 
-        for (int i = 1; i < puntoPatrulla.Length; i++)
-        {
-            Gizmos.DrawLine(puntoPatrulla[i].transform.position, puntoPatrulla[i - 1].transform.position);
-        }
-        if (puntoPatrulla.Length > 1)
-        {
-            Gizmos.DrawLine(puntoPatrulla[puntoPatrulla.Length - 1].transform.position, puntoPatrulla[0].transform.position);
+            for (int i = 1; i < puntoPatrulla.Length; i++)
+            {
+                Gizmos.DrawLine(puntoPatrulla[i].transform.position, puntoPatrulla[i - 1].transform.position);
+            }
+            if (puntoPatrulla.Length > 1)
+            {
+                Gizmos.DrawLine(puntoPatrulla[puntoPatrulla.Length - 1].transform.position, puntoPatrulla[0].transform.position);
+            }
         }
     }
 

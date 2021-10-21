@@ -361,6 +361,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &861959410
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 861959411}
+  m_Layer: 0
+  m_Name: "M\xFAsicaFondo"
+  m_TagString: "M\xFAsica"
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &861959411
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861959410}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 951477716}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &951477713
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,6 +404,7 @@ GameObject:
   - component: {fileID: 951477714}
   - component: {fileID: 951477717}
   - component: {fileID: 951477718}
+  - component: {fileID: 951477719}
   m_Layer: 0
   m_Name: "C\xE1mara principal"
   m_TagString: MainCamera
@@ -444,6 +475,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 989580762}
+  - {fileID: 861959411}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -489,6 +521,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9ecf4bce02a46045a229b3c3a07bc3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &951477719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951477713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9731d0b8cc3adcd49a7464060dd9ef42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &989580761
@@ -676,10 +720,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 951477718}
-        m_TargetAssemblyTypeName: EscenaCambios, Assembly-CSharp
-        m_MethodName: CambioEscena
-        m_Mode: 5
+      - m_Target: {fileID: 951477719}
+        m_TargetAssemblyTypeName: ReinicioAlNivel, Assembly-CSharp
+        m_MethodName: ReiniciarEnNivel
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
