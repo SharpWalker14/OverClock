@@ -355,10 +355,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6015069486993247172}
-  - component: {fileID: 6015069486993247175}
   - component: {fileID: 6015069486993247174}
   - component: {fileID: 6015069486993247173}
   - component: {fileID: 7712458638178761134}
+  - component: {fileID: 6015069486993247175}
   m_Layer: 9
   m_Name: Area de ataque
   m_TagString: Untagged
@@ -380,19 +380,6 @@ Transform:
   m_Father: {fileID: 6015069487381888067}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &6015069486993247175
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6015069486993247171}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0.7}
 --- !u!114 &6015069486993247174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -435,8 +422,21 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0.75, z: 0}
+  m_Radius: 0.3
+  m_Center: {x: 0, y: 0.15, z: 0}
+--- !u!135 &6015069486993247175
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6015069486993247171}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.15
+  m_Center: {x: 0, y: 0, z: 0.3}
 --- !u!1 &6015069487171667318
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,7 +525,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 0.2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -547,6 +547,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vida: 150
   jugador: 0
+  armadura: 0
   charcoAcido: {fileID: 3278621805438566124, guid: 92afffd5bb77e13488135f9f422ef1b8, type: 3}
   cortinaHumo: {fileID: 0}
   enemigodSuicida: 1
@@ -587,6 +588,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   "da\xF1o": 2
   frecuencia: 0.5
+  conteoAtaque: 0
+  tiempoAtaque: 0
   deteccionAtaque: {fileID: 6015069486993247174}
   movimiento: {fileID: 6015069487381888069}
 --- !u!136 &5831810357498347840

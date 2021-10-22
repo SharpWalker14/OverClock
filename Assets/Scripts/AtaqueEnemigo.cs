@@ -6,7 +6,7 @@ public class AtaqueEnemigo : MonoBehaviour
 {
     public int daño;
     public float frecuencia;
-    private float conteoAtaque;
+    public float conteoAtaque, tiempoAtaque;
     private bool preparaAtaque;
     public Detector deteccionAtaque;
     public MovimientoEnemigo movimiento;
@@ -15,6 +15,7 @@ public class AtaqueEnemigo : MonoBehaviour
     {
         preparaAtaque = false;
         conteoAtaque = 0;
+        tiempoAtaque = 0;
     }
 
     // Update is called once per frame
@@ -38,13 +39,26 @@ public class AtaqueEnemigo : MonoBehaviour
         }
         if (deteccionAtaque.tocado)
         {
+            tiempoAtaque = 0.5f;
             if (movimiento.inteligencia.speed >= 0)
             {
-                movimiento.inteligencia.speed -= movimiento.inteligencia.speed;
+                movimiento.inteligencia.speed = 0;
+            }
+        }
+        else if (tiempoAtaque > 0)
+        {
+            tiempoAtaque -= Time.deltaTime;
+        }
+        if (tiempoAtaque > 0)
+        {
+            if (movimiento.inteligencia.speed >= 0)
+            {
+                movimiento.inteligencia.speed = 0;
             }
         }
         else
         {
+            tiempoAtaque = 0;
             movimiento.inteligencia.speed = movimiento.guardarVelocidad;
         }
     }

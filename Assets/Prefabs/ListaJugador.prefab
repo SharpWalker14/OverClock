@@ -1539,9 +1539,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controlador: {fileID: 7584353362690960908}
   cuerpo: {fileID: 6711062877382068020}
-  velocidadMovimiento: 10
+  velocidadMovimiento: 6
   gravedad: -9.8
-  saltoAltura: 2.4
+  saltoAltura: 1.4
   controlarSuelo: {fileID: 8673614711465124114}
   distanciaSuelo: 0.4
   sueloFiltro:
