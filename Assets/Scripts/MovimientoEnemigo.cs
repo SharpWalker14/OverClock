@@ -11,6 +11,7 @@ public class MovimientoEnemigo : MonoBehaviour
     public float guardarVelocidad;
     public EnemigoSentidos radar;
 
+    private int fijador;
 
     public GameObject[] puntoPatrulla;
 
@@ -24,6 +25,7 @@ public class MovimientoEnemigo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        fijador = 0;
         if (puntoPatrulla.Length != 0)
         {
             ControlPatrullas();
@@ -68,6 +70,7 @@ public class MovimientoEnemigo : MonoBehaviour
             }
             if (radar.detectar)
             {
+                Mirar();
                 tranquilo = false;
             }
         }
@@ -77,6 +80,25 @@ public class MovimientoEnemigo : MonoBehaviour
         }
 
     }
+
+    void Mirar()
+    {
+        if (fijador == 0)
+        {
+            fijador++;
+
+            Vector3 objetivoO = radar.objetivo.transform.position;
+            objetivoO.y = 0;
+            Vector3 vistaO = transform.position;
+            vistaO.y = 0;
+            Vector3 mira = (objetivoO - vistaO).normalized;
+            float rotacion = Mathf.Atan2(mira.x, mira.z);
+            rotacion = rotacion * (180 / Mathf.PI);
+            transform.localEulerAngles = new Vector3(0, rotacion, 0);
+        }
+    }
+
+
 
     #region GizmosNoTocar
 
