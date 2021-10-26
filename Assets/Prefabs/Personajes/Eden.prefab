@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1980976205204535088}
   - component: {fileID: 5535481161884255686}
   m_Layer: 0
-  m_Name: EnemigoHazzard
+  m_Name: Eden
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100,8 +100,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.22
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.45
+  m_Center: {x: 0, y: 0, z: 0.2}
 --- !u!114 &848258032997460268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,6 +137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vida: 200
   jugador: 0
+  armadura: 0
   charcoAcido: {fileID: 0}
   cortinaHumo: {fileID: 0}
   enemigodSuicida: 0
@@ -268,8 +269,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.22
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.45
+  m_Center: {x: 0, y: 0, z: 0.2}
 --- !u!1 &4465183759250932131
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,7 +350,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ce226f5fc6d495746be54d8bb399ca54, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.018
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ce226f5fc6d495746be54d8bb399ca54, type: 3}
       propertyPath: m_LocalPosition.z
