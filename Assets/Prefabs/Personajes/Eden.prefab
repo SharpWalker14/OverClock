@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 848258032997460268}
   - component: {fileID: 1980976205204535088}
   - component: {fileID: 5535481161884255686}
+  - component: {fileID: 4714778716511283310}
   m_Layer: 0
   m_Name: Eden
   m_TagString: Untagged
@@ -158,6 +159,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valor: 0
+--- !u!114 &4714778716511283310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848258032997460271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c77ecc55af077c347904d26de32a29ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  original: {fileID: 2100000, guid: 659c2a8592ac9b14195e7a9f3327c407, type: 2}
+  modelado: {fileID: 8242513537684599801}
+  "feedbackDa\xF1o": {fileID: 2100000, guid: a86088909080e9349b19b2464c4ffd1b, type: 2}
+  tiempoFiltro: 0.2
 --- !u!1 &1479878057680527866
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,6 +407,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce226f5fc6d495746be54d8bb399ca54, type: 3}
+--- !u!1 &8242513537684599801 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ce226f5fc6d495746be54d8bb399ca54, type: 3}
+  m_PrefabInstance: {fileID: 9124895058154540712}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8730398065010780483 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ce226f5fc6d495746be54d8bb399ca54, type: 3}

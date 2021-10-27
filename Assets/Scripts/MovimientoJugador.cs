@@ -17,7 +17,7 @@ public class MovimientoJugador : MonoBehaviour
     [HideInInspector]
     public GameObject eden;
     private Vector3 velocidad;
-    public bool enSuelo, poseido;
+    public bool enSuelo, poseido, charco;
 
     public bool inmovilizado = false;
 
@@ -83,6 +83,22 @@ public class MovimientoJugador : MonoBehaviour
         else
         {
             poseido = true;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "CharcoAcido")
+        {
+            charco = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "CharcoAcido")
+        {
+            charco = false;
         }
     }
 }

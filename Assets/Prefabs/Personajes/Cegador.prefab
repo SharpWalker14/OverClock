@@ -486,6 +486,7 @@ GameObject:
   - component: {fileID: 673700239819412259}
   - component: {fileID: 778673615588175397}
   - component: {fileID: 8101344801120971853}
+  - component: {fileID: 6642038637183231902}
   m_Layer: 10
   m_Name: Cegador
   m_TagString: Untagged
@@ -620,6 +621,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valor: 5
+--- !u!114 &6642038637183231902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673700239819412263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c77ecc55af077c347904d26de32a29ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  original: {fileID: 2100000, guid: bcb57d4937b60644a826f08e27d8fd59, type: 2}
+  modelado: {fileID: 6585153608232912931}
+  "feedbackDa\xF1o": {fileID: 2100000, guid: a86088909080e9349b19b2464c4ffd1b, type: 2}
+  tiempoFiltro: 0
 --- !u!1 &673700239878695443
 GameObject:
   m_ObjectHideFlags: 0
@@ -748,5 +765,10 @@ PrefabInstance:
 --- !u!4 &5776142489600299673 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d32b4b35c58ddc5498fe6929298ef41c, type: 3}
+  m_PrefabInstance: {fileID: 6314683848019408242}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6585153608232912931 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d32b4b35c58ddc5498fe6929298ef41c, type: 3}
   m_PrefabInstance: {fileID: 6314683848019408242}
   m_PrefabAsset: {fileID: 0}

@@ -62,7 +62,11 @@ public class ValorSalud : MonoBehaviour
         }
         if (jugador == true)
         {
-            GetComponent<FeedbackDaño>().Inicia();
+            GetComponent<FeedbackDaño>().IniciaDaño();
+        }
+        if (jugador == false)
+        {
+            GetComponent<FeedbackEnemigos>().Inicia();
         }
     }
 
@@ -73,12 +77,12 @@ public class ValorSalud : MonoBehaviour
             if (explosionAcido == true)
             {
                 vida -= 16;
-                GetComponent<FeedbackDaño>().Inicia();
+                GetComponent<FeedbackDaño>().IniciaDaño();
             }
             if (explosionHumo == true)
             {
                 vida -= 9;
-                GetComponent<FeedbackDaño>().Inicia();
+                GetComponent<FeedbackDaño>().IniciaDaño();
             }
         }
         explosionAcido = false;
