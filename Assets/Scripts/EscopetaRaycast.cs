@@ -40,7 +40,10 @@ public class EscopetaRaycast : MonoBehaviour
                     {
                         golpe.collider.GetComponent<ValorSalud>().CambioDeVida(-daño);
                     }
-
+                    if (golpe.collider.GetComponent<Huevo>() != null)
+                    {
+                        golpe.collider.GetComponent<Huevo>().Toque();
+                    }
                     GameObject efectoDeBala = Instantiate(impactoBala, golpe.point, Quaternion.identity) as GameObject;
                     Destroy(efectoDeBala, 1);
 
