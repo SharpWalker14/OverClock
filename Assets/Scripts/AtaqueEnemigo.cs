@@ -6,22 +6,27 @@ public class AtaqueEnemigo : MonoBehaviour
 {
     public int daño;
     public float frecuencia;
-    public float conteoAtaque, tiempoAtaque;
-    private bool preparaAtaque;
+    private float conteoAtaque, tiempoAtaque, tiempoAnimacion;
+    private bool preparaAtaque, animacion;
     public Detector deteccionAtaque;
     public MovimientoEnemigo movimiento;
+    public MeshFilter vista;
+    public Mesh normal, ataque;
     // Start is called before the first frame update
     void Start()
     {
+        animacion = false;
         preparaAtaque = false;
         conteoAtaque = 0;
         tiempoAtaque = 0;
+        tiempoAnimacion = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
         Ataque();
+        Animar();
     }
 
     void Ataque()
@@ -36,6 +41,7 @@ public class AtaqueEnemigo : MonoBehaviour
             deteccionAtaque.objetoRegistrado.GetComponent<ValorSalud>().CambioDeVida(-daño);
             conteoAtaque = 0;
             preparaAtaque = false;
+            animacion = true;
         }
         if (deteccionAtaque.tocado)
         {
@@ -60,6 +66,24 @@ public class AtaqueEnemigo : MonoBehaviour
         {
             tiempoAtaque = 0;
             movimiento.inteligencia.speed = movimiento.guardarVelocidad;
+        }
+    }
+
+    void Animar()
+    {
+        if (animacion)
+        {
+            vista.mesh = ataque;
+            tiempoAnimacion += Time.deltaTime;
+            if (tiempoAnimacion >= 1)
+            {
+                animacion = false;
+            }
+        }
+        else
+        {
+            vista.mesh = normal;
+            tiempoAnimacion = 0;
         }
     }
 }

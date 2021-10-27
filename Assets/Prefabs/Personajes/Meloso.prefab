@@ -589,10 +589,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   "da\xF1o": 2
   frecuencia: 0.5
-  conteoAtaque: 0
-  tiempoAtaque: 0
   deteccionAtaque: {fileID: 6015069486993247174}
   movimiento: {fileID: 6015069487381888069}
+  vista: {fileID: 173134987691339641}
+  normal: {fileID: -165931976072596170, guid: c952c1ed59d0a3446ab563326e3ad732, type: 3}
+  ataque: {fileID: -6647340580436709500, guid: 0800633960bf01f488f5a5edd2c9b148, type: 3}
 --- !u!136 &5831810357498347840
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -756,5 +757,10 @@ GameObject:
 --- !u!4 &3875561677315875036 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c952c1ed59d0a3446ab563326e3ad732, type: 3}
+  m_PrefabInstance: {fileID: 3621593057599342391}
+  m_PrefabAsset: {fileID: 0}
+--- !u!33 &173134987691339641 stripped
+MeshFilter:
+  m_CorrespondingSourceObject: {fileID: -5754084199372789682, guid: c952c1ed59d0a3446ab563326e3ad732, type: 3}
   m_PrefabInstance: {fileID: 3621593057599342391}
   m_PrefabAsset: {fileID: 0}

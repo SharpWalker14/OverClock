@@ -7,7 +7,7 @@ public class MovimientoJugador : MonoBehaviour
     public CharacterController controlador;
     public Rigidbody cuerpo;
 
-    public float velocidadMovimiento;
+    public float velocidadMovimiento, acido, normal;
     public float gravedad;
     public float saltoAltura;
     public DetectarSuelo controlarSuelo;
@@ -17,7 +17,8 @@ public class MovimientoJugador : MonoBehaviour
     [HideInInspector]
     public GameObject eden;
     private Vector3 velocidad;
-    public bool enSuelo, poseido, charco;
+    [HideInInspector]
+    public bool enSuelo, poseido, charco, tiempo, frenesi, oportunidad;
 
     public bool inmovilizado = false;
 
@@ -25,7 +26,8 @@ public class MovimientoJugador : MonoBehaviour
     {
         poseido = false;
         gameObject.transform.parent = null;
-
+        acido = velocidadMovimiento / 2;
+        normal = velocidadMovimiento;
     }
 
     void Update()
@@ -84,13 +86,21 @@ public class MovimientoJugador : MonoBehaviour
         {
             poseido = true;
         }
+        if (charco)
+        {
+            velocidadMovimiento = acido;
+        }
+        else
+        {
+            velocidadMovimiento = normal;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "CharcoAcido")
         {
-            charco = true;
+            //charco = true;
         }
     }
 
@@ -98,7 +108,7 @@ public class MovimientoJugador : MonoBehaviour
     {
         if (other.tag == "CharcoAcido")
         {
-            charco = false;
+            //charco = false;
         }
     }
 }

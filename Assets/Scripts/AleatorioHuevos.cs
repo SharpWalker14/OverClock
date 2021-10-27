@@ -6,7 +6,8 @@ public class AleatorioHuevos : MonoBehaviour
 {
     public bool oportunidad;
     private int probabilidad;
-    private GameObject[] huevos, huevosPot;
+    public Huevo[] huevos;
+    public GameObject[] verHuevos, huevosPot;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,11 +16,13 @@ public class AleatorioHuevos : MonoBehaviour
 
     void ContadorHuevos()
     {
-        huevos = FindObjectsOfType(typeof(GameObject)) as GameObject[];
+        huevos = FindObjectsOfType(typeof(Huevo)) as Huevo[];
+        verHuevos = new GameObject[huevos.Length];
         int contador = 0;
         for (int i = 0; i < huevos.Length; i++)
         {
-            if (huevos[i].GetComponent<Huevo>() != null)
+            verHuevos[i] = huevos[i].gameObject;
+            if (huevos[i].HuevoVerdad() == true)
             {
                 contador++;
             }
@@ -32,11 +35,12 @@ public class AleatorioHuevos : MonoBehaviour
         int contador = 0;
         for (int i = 0; i < huevos.Length; i++)
         {
-            if (huevos[i].GetComponent<Huevo>() != null)
+            if (huevos[i].HuevoVerdad() == true)
             {
-                huevosPot[contador] = huevos[i];
+                huevosPot[contador] = verHuevos[i];
                 contador++;
             }
+
         }
         AsignadorHuevos();
     }
@@ -55,7 +59,7 @@ public class AleatorioHuevos : MonoBehaviour
         {
             probabilidad = Random.Range(0, huevosPot.Length);
             bloqueo = probabilidad;
-            huevos[bloqueo].GetComponent<Huevo>().PotenciadorEscoger(true, false);
+            huevosPot[bloqueo].GetComponent<Huevo>().PotenciadorEscoger(true, false);
         }
         else
             bloqueo = -1;
@@ -67,9 +71,9 @@ public class AleatorioHuevos : MonoBehaviour
                 contador++;
                 probabilidad = Random.Range(1, 3);
                 if (probabilidad == 1)
-                    huevos[i].GetComponent<Huevo>().PotenciadorEscoger(false, true);
+                    huevosPot[i].GetComponent<Huevo>().PotenciadorEscoger(false, true);
                 else
-                    huevos[i].GetComponent<Huevo>().PotenciadorEscoger(false, false);
+                    huevosPot[i].GetComponent<Huevo>().PotenciadorEscoger(false, false);
 
             }
         }

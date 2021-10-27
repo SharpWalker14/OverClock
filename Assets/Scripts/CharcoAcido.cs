@@ -35,7 +35,7 @@ public class CharcoAcido : MonoBehaviour
 
     public void Destruccion()
     {
-        player.GetComponent<MovimientoJugador>().velocidadMovimiento = velocidadJugGuar;
+        player.GetComponent<MovimientoJugador>().charco = false;
         Destroy(gameObject);
     }
 
@@ -43,7 +43,7 @@ public class CharcoAcido : MonoBehaviour
     {
         if (contacto == true && tiempoDeRelentizar < 6f)
         {
-            player.GetComponent<MovimientoJugador>().velocidadMovimiento = velocidadJugGuar / 2;
+            player.GetComponent<MovimientoJugador>().charco = true;
         }
         else if(tiempoDeRelentizar >= 6f)
         {

@@ -8,12 +8,13 @@ public class FeedbackDaño : MonoBehaviour
     // Start is called before the first frame update
     public GameObject feedbackDaño;
     public GameObject feedbackCharco;
+    public GameObject feedDaño, feedHumo, feedAtrapado, feedAturdido;
+    public MovimientoJugador jugador;
     private bool daño;
     private bool charco;
-    public Color filtroCharco;
-    public Color sinFiltroCharco;
-    public Color filtroDaño;
-    public Color sinFiltroDaño;
+    public Color filtroCharco, sinFiltroCharco;
+    public Color filtroDaño, sinFiltro, filtroEden;
+
     public float tiempoFiltro;
     private float tiempo;
 
@@ -31,6 +32,7 @@ public class FeedbackDaño : MonoBehaviour
         FeedbackRecibirDaño();
         charco = GetComponent<MovimientoJugador>().charco;
         FeedBackCharco();
+        FeedbackEden();
     }
 
     public void IniciaDaño()
@@ -58,7 +60,8 @@ public class FeedbackDaño : MonoBehaviour
         if (daño)
         {
             tiempo += Time.deltaTime;
-            feedbackDaño.GetComponent<Image>().color = filtroDaño;
+            //feedbackDaño.GetComponent<Image>().color = filtroDaño;
+            feedDaño.SetActive(true);
             if (tiempo >= tiempoFiltro)
             {
                 daño = false;
@@ -66,7 +69,20 @@ public class FeedbackDaño : MonoBehaviour
         }
         else
         {
-            feedbackDaño.GetComponent<Image>().color = sinFiltroDaño;
+            //feedbackDaño.GetComponent<Image>().color = sinFiltro;
+            feedDaño.SetActive(false);
+        }
+    }
+
+    void FeedbackEden()
+    {
+        if (jugador.poseido)
+        {
+            feedAtrapado.SetActive(true);
+        }
+        else
+        {
+            feedAtrapado.SetActive(false);
         }
     }
 

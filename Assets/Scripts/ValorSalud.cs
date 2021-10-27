@@ -32,7 +32,7 @@ public class ValorSalud : MonoBehaviour
     }
     public void CambioDeVida(float valor)
     {
-        if (armadura==false)
+        if (armadura==false|| valor > 0)
         {
             vida += valor;
         }
@@ -60,7 +60,7 @@ public class ValorSalud : MonoBehaviour
             }
             Destroy(gameObject);
         }
-        if (jugador == true)
+        if (jugador == true && valor < 0)
         {
             GetComponent<FeedbackDaño>().IniciaDaño();
         }
@@ -95,7 +95,7 @@ public class ValorSalud : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (jugador == true && other.gameObject.tag == "Explosion" && explosionAcido == false)
         {

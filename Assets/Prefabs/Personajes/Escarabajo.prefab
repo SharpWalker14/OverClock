@@ -568,10 +568,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   "da\xF1o": 10
   frecuencia: 1
-  conteoAtaque: 0
-  tiempoAtaque: 0
   deteccionAtaque: {fileID: 2011522952600136950}
   movimiento: {fileID: 2011522952988760949}
+  vista: {fileID: 8288104754162326275}
+  normal: {fileID: -1905299377333647871, guid: f55d5ce3c5403f84799defa8933445c8, type: 3}
+  ataque: {fileID: -3329151391964408338, guid: 3749cc4c5a37e5e46bcb0b4a660ceec1, type: 3}
 --- !u!136 &561808716276777744
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -762,13 +763,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f55d5ce3c5403f84799defa8933445c8, type: 3}
+--- !u!4 &4947935133217674406 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f55d5ce3c5403f84799defa8933445c8, type: 3}
+  m_PrefabInstance: {fileID: 4836903059686699853}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5755961398621179420 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f55d5ce3c5403f84799defa8933445c8, type: 3}
   m_PrefabInstance: {fileID: 4836903059686699853}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &4947935133217674406 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f55d5ce3c5403f84799defa8933445c8, type: 3}
+--- !u!33 &8288104754162326275 stripped
+MeshFilter:
+  m_CorrespondingSourceObject: {fileID: -5754084199372789682, guid: f55d5ce3c5403f84799defa8933445c8, type: 3}
   m_PrefabInstance: {fileID: 4836903059686699853}
   m_PrefabAsset: {fileID: 0}

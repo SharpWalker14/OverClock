@@ -15,6 +15,7 @@ TagManager:
   - PuntoDios
   - "M\xFAsica"
   - "M\xFAsicaSeguidor"
+  - Orbe
   layers:
   - Default
   - TransparentFX

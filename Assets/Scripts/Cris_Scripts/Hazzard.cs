@@ -12,7 +12,8 @@ public class Hazzard : MonoBehaviour
     private float intentaMuro, intentaObjetivo, tiempo;
     public float rangoDeteccion;
     public bool enRangoVision, linea;
-
+    public MeshFilter vista;
+    public Mesh ataque;
 
     public Detector deteccion;
     public BoxCollider colision;
@@ -94,6 +95,7 @@ public class Hazzard : MonoBehaviour
         if (enRangoVision)
         {
             jugadorM.eden = gameObject;
+            vista.mesh = ataque;
         }
     }
 
@@ -107,15 +109,6 @@ public class Hazzard : MonoBehaviour
                 jugadorObj.GetComponent<ValorSalud>().CambioDeVida(-daño);
                 tiempo = 0;
             }
-        }
-    }
-
-    void Muerte()
-    {
-        if(Input.GetKey(KeyCode.F))
-        {
-            jugadorObj.GetComponent<MovimientoJugador>().enabled = true;
-            Destroy(gameObject);
         }
     }
 

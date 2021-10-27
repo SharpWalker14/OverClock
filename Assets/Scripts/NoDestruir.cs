@@ -26,9 +26,9 @@ public class NoDestruir : MonoBehaviour
         Calidades(0);
         pantallaCompleta = false;
         sensibilidadMouse = 70;
-        volumen = 0.5f;
-        anchoDatos = 640;
-        alturaDatos = 400;
+        volumen = 0.25f;
+        anchoDatos = 1920;
+        alturaDatos = 1080;
         Screen.SetResolution(anchoDatos, alturaDatos, pantallaCompleta);
         escenaActual = SceneManager.GetActiveScene();
         nombreDeEscena = escenaActual.name;

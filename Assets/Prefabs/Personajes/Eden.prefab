@@ -122,6 +122,8 @@ MonoBehaviour:
   rangoDeteccion: 10
   enRangoVision: 0
   linea: 0
+  vista: {fileID: 5658563326963525350}
+  ataque: {fileID: -7125070966360474771, guid: bce21cf7bcd293b46baceedadfb89a37, type: 3}
   deteccion: {fileID: 5984272209736218070}
   colision: {fileID: 2095275371540762909}
 --- !u!114 &1980976205204535088
@@ -415,5 +417,10 @@ GameObject:
 --- !u!4 &8730398065010780483 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ce226f5fc6d495746be54d8bb399ca54, type: 3}
+  m_PrefabInstance: {fileID: 9124895058154540712}
+  m_PrefabAsset: {fileID: 0}
+--- !u!33 &5658563326963525350 stripped
+MeshFilter:
+  m_CorrespondingSourceObject: {fileID: -5754084199372789682, guid: ce226f5fc6d495746be54d8bb399ca54, type: 3}
   m_PrefabInstance: {fileID: 9124895058154540712}
   m_PrefabAsset: {fileID: 0}

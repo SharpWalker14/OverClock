@@ -22,5 +22,11 @@ public class OrbePot : MonoBehaviour
                 break;
         }
     }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
 
+        }
+    }
 }

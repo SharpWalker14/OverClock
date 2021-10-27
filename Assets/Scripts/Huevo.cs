@@ -38,7 +38,18 @@ public class Huevo : MonoBehaviour
                 numeroPot = 2;
             }
         }
-        objeto.GetComponent<OrbePot>().Asignacion(numeroPot);
+    }
+
+    public bool HuevoVerdad()
+    {
+        if (tipoHuevo == Tipo.potenciador)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     public void Toque()
@@ -48,7 +59,10 @@ public class Huevo : MonoBehaviour
             Vector3 locacion = transform.position;
             locacion.y += 0.4f;
             objeto.transform.position = locacion;
-
+            if (objeto.GetComponent<OrbePot>() != null)
+            {
+                objeto.GetComponent<OrbePot>().Asignacion(numeroPot);
+            }
             Instantiate(objeto);
         }
         Destroy(gameObject);
