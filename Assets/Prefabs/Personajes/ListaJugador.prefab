@@ -1534,6 +1534,9 @@ MonoBehaviour:
   enSuelo: 0
   poseido: 0
   charco: 0
+  tiempo: 0
+  frenesi: 0
+  oportunidad: 0
   inmovilizado: 0
 --- !u!114 &8171468167559788719
 MonoBehaviour:
@@ -8334,6 +8337,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1bab8fdc87fdc8b469c43900cd1e16a8, type: 3}
       propertyPath: m_Name
       value: Arma_FBX
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1bab8fdc87fdc8b469c43900cd1e16a8, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bab8fdc87fdc8b469c43900cd1e16a8, type: 3}
