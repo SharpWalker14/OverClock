@@ -3177,6 +3177,7 @@ GameObject:
   - component: {fileID: 1458415074}
   - component: {fileID: 1458415073}
   - component: {fileID: 1458415072}
+  - component: {fileID: 1458415071}
   - component: {fileID: 1458415070}
   m_Layer: 0
   m_Name: Meta
