@@ -6,23 +6,25 @@ using UnityEngine.UI;
 public class FeedbackDaño : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject feedbackDaño;
+    public GameObject feedPot;
     public GameObject feedbackCharco;
     public GameObject feedDaño, feedHumo, feedAtrapado, feedAturdido;
     public MovimientoJugador jugador;
-    private bool daño;
+    public bool daño, potencia;
     private bool charco;
     public Color filtroCharco, sinFiltroCharco;
-    public Color filtroDaño, sinFiltro, filtroEden;
-
+    public Color filtroDaño, sinFiltro;
+    public Color potTiempo, potFrenesi, potOportunidad;
     public float tiempoFiltro;
-    private float tiempo;
+    private float tiempo, tiempoPot;
+    private int numeroPot;
 
 
     void Start()
     {
         daño = false;
         charco = false;
+        potencia = false;
         tiempo = 0;
     }
 
@@ -33,6 +35,7 @@ public class FeedbackDaño : MonoBehaviour
         charco = GetComponent<MovimientoJugador>().charco;
         FeedBackCharco();
         FeedbackEden();
+        FeedbackPot();
     }
 
     public void IniciaDaño()
@@ -60,7 +63,7 @@ public class FeedbackDaño : MonoBehaviour
         if (daño)
         {
             tiempo += Time.deltaTime;
-            //feedbackDaño.GetComponent<Image>().color = filtroDaño;
+            //feedPot.GetComponent<Image>().color = filtroDaño;
             feedDaño.SetActive(true);
             if (tiempo >= tiempoFiltro)
             {
@@ -69,9 +72,15 @@ public class FeedbackDaño : MonoBehaviour
         }
         else
         {
-            //feedbackDaño.GetComponent<Image>().color = sinFiltro;
             feedDaño.SetActive(false);
         }
+    }
+
+    public void FeedbackPotencia(int numero)
+    {
+        tiempoPot = 0;
+        numeroPot = numero;
+        potencia = true;
     }
 
     void FeedbackEden()
@@ -86,4 +95,31 @@ public class FeedbackDaño : MonoBehaviour
         }
     }
 
+    void FeedbackPot()
+    {
+        if (potencia)
+        {
+            switch (numeroPot)
+            {
+                case 1:
+                    feedPot.GetComponent<Image>().color = potTiempo;
+                    break;
+                case 2:
+                    feedPot.GetComponent<Image>().color = potFrenesi;
+                    break;
+                case 3:
+                    feedPot.GetComponent<Image>().color = potOportunidad;
+                    break;
+            }
+            tiempoPot += Time.deltaTime;
+            if (tiempoPot >= tiempoFiltro)
+            {
+                potencia = false;
+            }
+        }
+        else
+        {
+            feedPot.GetComponent<Image>().color = sinFiltro;
+        }
+    }
 }
