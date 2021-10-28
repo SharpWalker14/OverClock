@@ -568,6 +568,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   "da\xF1o": 10
   frecuencia: 1
+  aturdidor: 1
   deteccionAtaque: {fileID: 2011522952600136950}
   movimiento: {fileID: 2011522952988760949}
   vista: {fileID: 8288104754162326275}

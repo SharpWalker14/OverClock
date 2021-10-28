@@ -6,7 +6,8 @@ public class AtaqueEnemigo : MonoBehaviour
 {
     public int daño;
     public float frecuencia;
-    private float conteoAtaque, tiempoAtaque, tiempoAnimacion;
+    public bool aturdidor;
+    private float conteoAtaque, tiempoAtaque, tiempoAnimacion, tiempoAturdidor;
     private bool preparaAtaque, animacion;
     public Detector deteccionAtaque;
     public MovimientoEnemigo movimiento;
@@ -20,6 +21,7 @@ public class AtaqueEnemigo : MonoBehaviour
         conteoAtaque = 0;
         tiempoAtaque = 0;
         tiempoAnimacion = 0;
+        tiempoAturdidor = 0;
     }
 
     // Update is called once per frame
@@ -36,9 +38,19 @@ public class AtaqueEnemigo : MonoBehaviour
         {
             preparaAtaque = true;
         }
+        if (aturdidor)
+        {
+            tiempoAturdidor += Time.deltaTime;
+        }
         if (deteccionAtaque.tocado&&preparaAtaque)
         {
             deteccionAtaque.objetoRegistrado.GetComponent<ValorSalud>().CambioDeVida(-daño);
+            if (aturdidor && tiempoAturdidor >= 5)
+            {
+                deteccionAtaque.objetoRegistrado.GetComponent<MovimientoJugador>().tiempoInmovilizado = 1;
+                deteccionAtaque.objetoRegistrado.GetComponent<MovimientoJugador>().inmovilizado = true;
+                tiempoAturdidor = 0;
+            }
             conteoAtaque = 0;
             preparaAtaque = false;
             animacion = true;

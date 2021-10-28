@@ -6,22 +6,46 @@ public class OrbePot : MonoBehaviour
 {
     public enum Potenciador { tiempo, frenesi, oportunidad };
     public Potenciador tipoPotenciador;
+    public Renderer modelo;
+    public Material mTiempo, mFrenesi, mOportunidad;
 
     public void Asignacion(int numero)
     {
+        modelo.enabled = true;
         switch (numero)
         {
             case 1:
                 tipoPotenciador = Potenciador.tiempo;
+                modelo.sharedMaterial = mTiempo;
                 break;
             case 2:
                 tipoPotenciador = Potenciador.frenesi;
+                modelo.sharedMaterial = mFrenesi;
                 break;
             case 3:
                 tipoPotenciador = Potenciador.oportunidad;
+                modelo.sharedMaterial = mOportunidad;
                 break;
         }
     }
+
+    void Update()
+    {
+        switch (tipoPotenciador)
+        {
+            case Potenciador.tiempo:
+                modelo.material = mTiempo;
+                break;
+            case Potenciador.frenesi:
+                modelo.material = mFrenesi;
+                break;
+            case Potenciador.oportunidad:
+                modelo.material = mOportunidad;
+                break;
+        }
+    }
+
+
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")

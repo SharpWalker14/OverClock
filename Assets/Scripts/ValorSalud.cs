@@ -41,7 +41,10 @@ public class ValorSalud : MonoBehaviour
             if (jugador == false && intentos == 0)
             {
                 intentos++;
-                objetivo.GetComponent<TiempoJugador>().ObtenerTiempo(regalo.valor);
+                if (GetComponent<ValorTiempoEnemigo>().estadoHorda == false)
+                {
+                    objetivo.GetComponent<TiempoJugador>().ObtenerTiempo(regalo.valor);
+                }
             }
 
             if (enemigodSuicida == true && charcos == 0)
@@ -82,7 +85,10 @@ public class ValorSalud : MonoBehaviour
             if (explosionHumo == true)
             {
                 vida -= 9;
+                GetComponent<MovimientoJugador>().tiempoInmovilizado = 1.5f;
+                GetComponent<MovimientoJugador>().inmovilizado = true;
                 GetComponent<FeedbackDaño>().IniciaDaño();
+                GetComponent<FeedbackDaño>().humo = true;
             }
         }
         explosionAcido = false;

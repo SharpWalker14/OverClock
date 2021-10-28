@@ -5,4 +5,5 @@ using UnityEngine;
 public class ValorTiempoEnemigo : MonoBehaviour
 {
     public float valor;
+    public bool estadoHorda;
 }

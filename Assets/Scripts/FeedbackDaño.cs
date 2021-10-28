@@ -6,17 +6,15 @@ using UnityEngine.UI;
 public class FeedbackDaño : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject feedPot;
-    public GameObject feedbackCharco;
-    public GameObject feedDaño, feedHumo, feedAtrapado, feedAturdido;
+    public GameObject feedPot , feedDaño, feedHumo, feedAtrapado, feedAturdido, feedCharco;
     public MovimientoJugador jugador;
-    public bool daño, potencia;
+    public bool daño, potencia, humo;
     private bool charco;
     public Color filtroCharco, sinFiltroCharco;
     public Color filtroDaño, sinFiltro;
     public Color potTiempo, potFrenesi, potOportunidad;
     public float tiempoFiltro;
-    private float tiempo, tiempoPot;
+    private float tiempo, tiempoPot, tiempoHumo;
     private int numeroPot;
 
 
@@ -25,6 +23,7 @@ public class FeedbackDaño : MonoBehaviour
         daño = false;
         charco = false;
         potencia = false;
+        humo = false;
         tiempo = 0;
     }
 
@@ -32,10 +31,10 @@ public class FeedbackDaño : MonoBehaviour
     void Update()
     {
         FeedbackRecibirDaño();
-        charco = GetComponent<MovimientoJugador>().charco;
         FeedBackCharco();
+        FeedbackAturdido();
         FeedbackEden();
-        FeedbackPot();
+        FeedBackPot();
     }
 
     public void IniciaDaño()
@@ -44,16 +43,18 @@ public class FeedbackDaño : MonoBehaviour
         daño = true;
     }
 
-    public void FeedBackCharco()
+    void FeedBackCharco()
     {
+        charco = GetComponent<MovimientoJugador>().charco;
         if (charco)
         {
-            feedbackCharco.GetComponent<RawImage>().color = filtroCharco;
+            //feedbackCharco.GetComponent<RawImage>().color = filtroCharco;
+            feedCharco.SetActive(true);
         }
-
         else
         {
-            feedbackCharco.GetComponent<RawImage>().color = sinFiltroCharco;
+            //feedbackCharco.GetComponent<RawImage>().color = sinFiltroCharco;
+            feedCharco.SetActive(false);
         }
         charco = false;
     }
@@ -83,6 +84,18 @@ public class FeedbackDaño : MonoBehaviour
         potencia = true;
     }
 
+    void FeedbackAturdido()
+    {
+        if (jugador.inmovilizado)
+        {
+            feedAturdido.SetActive(true);
+        }
+        else
+        {
+            feedAturdido.SetActive(false);
+        }
+    }
+
     void FeedbackEden()
     {
         if (jugador.poseido)
@@ -95,7 +108,7 @@ public class FeedbackDaño : MonoBehaviour
         }
     }
 
-    void FeedbackPot()
+    void FeedBackPot()
     {
         if (potencia)
         {
@@ -120,6 +133,24 @@ public class FeedbackDaño : MonoBehaviour
         else
         {
             feedPot.GetComponent<Image>().color = sinFiltro;
+        }
+    }
+
+    void FeedBackHumo()
+    {
+        if (humo)
+        {
+            tiempoHumo += Time.deltaTime;
+            //feedPot.GetComponent<Image>().color = filtroDaño;
+            feedHumo.SetActive(true);
+            if (tiempoHumo >= 5)
+            {
+                humo = false;
+            }
+        }
+        else
+        {
+            feedHumo.SetActive(false);
         }
     }
 }
