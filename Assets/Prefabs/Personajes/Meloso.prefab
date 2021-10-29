@@ -569,6 +569,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inteligencia: {fileID: 6015069487381888068}
+  tranquilo: 1
   guardarVelocidad: 0
   radar: {fileID: 6015069487837522876}
   puntoPatrulla: []
@@ -589,6 +590,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   "da\xF1o": 2
   frecuencia: 0.5
+  aturdidor: 0
   deteccionAtaque: {fileID: 6015069486993247174}
   movimiento: {fileID: 6015069487381888069}
   vista: {fileID: 173134987691339641}
@@ -621,6 +623,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valor: 0
+  estadoHorda: 0
 --- !u!114 &6210581847442932252
 MonoBehaviour:
   m_ObjectHideFlags: 0

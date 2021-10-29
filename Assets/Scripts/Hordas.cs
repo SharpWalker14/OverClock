@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Hordas : MonoBehaviour
 {
-    public HordaHueco[] huecos;
+    private HordaHueco[] huecos;
     private float tiempo;
     // Start is called before the first frame update
     void Start()
@@ -26,7 +26,7 @@ public class Hordas : MonoBehaviour
             int contador = 0;
             for(int i = 0; i < huecos.Length; i++)
             {
-                if (huecos[i].visto == false)
+                if (huecos[i].confirmado == false)
                 {
                     contador++;
                 }
@@ -36,7 +36,7 @@ public class Hordas : MonoBehaviour
 
             for (int i = 0; i < huecos.Length; i++)
             {
-                if (huecos[i].visto == false)
+                if (huecos[i].confirmado == false)
                 {
                     lugarAparicion[contador] = huecos[i];
                     contador++;

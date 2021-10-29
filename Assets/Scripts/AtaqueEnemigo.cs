@@ -60,6 +60,7 @@ public class AtaqueEnemigo : MonoBehaviour
             tiempoAtaque = 0.5f;
             if (movimiento.inteligencia.speed >= 0)
             {
+                movimiento.inteligencia.acceleration = 100;
                 movimiento.inteligencia.speed = 0;
             }
         }
@@ -71,6 +72,7 @@ public class AtaqueEnemigo : MonoBehaviour
         {
             if (movimiento.inteligencia.speed >= 0)
             {
+                movimiento.inteligencia.acceleration = 100;
                 movimiento.inteligencia.speed = 0;
             }
         }
@@ -78,6 +80,7 @@ public class AtaqueEnemigo : MonoBehaviour
         {
             tiempoAtaque = 0;
             movimiento.inteligencia.speed = movimiento.guardarVelocidad;
+            movimiento.inteligencia.acceleration = movimiento.guardarAceleracion;
         }
     }
 

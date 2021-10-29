@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class CámaraPrimeraPersona : MonoBehaviour
 {
-    public float sensibilidad;
+    [HideInInspector]
+    public float sensibilidad, multiX, multiY;
     public Transform jugadorGráficos;
     float rotaciónX = 0f;
     private GameObject nucleo;
@@ -25,8 +26,8 @@ public class CámaraPrimeraPersona : MonoBehaviour
 
     void Rotacion()
     {
-        float mouseX = Input.GetAxis("Mouse X") * sensibilidad * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * sensibilidad * Time.deltaTime;
+        float mouseX = Input.GetAxis("Mouse X") * sensibilidad * Time.deltaTime * multiX;
+        float mouseY = Input.GetAxis("Mouse Y") * sensibilidad * Time.deltaTime * multiY;
         rotaciónX -= mouseY;
         rotaciónX = Mathf.Clamp(rotaciónX, -90f, 90f);
 
@@ -37,5 +38,7 @@ public class CámaraPrimeraPersona : MonoBehaviour
     void FijarSensibilidad()
     {
         sensibilidad = datos.sensibilidadMouse;
+        multiX = datos.multAncho;
+        multiY = datos.multAltura;
     }
 }

@@ -6,11 +6,11 @@ using UnityEngine.SceneManagement;
 public class NoDestruir : MonoBehaviour
 {
     [HideInInspector]
-    public float sensibilidadMouse, volumen;
+    public float sensibilidadMouse, volumen, multiplicadorSensibilidad;
     [HideInInspector]
     public bool pantallaCompleta;
     [HideInInspector]
-    public int numeroCalidad, numeroResolucion, anchoDatos, alturaDatos;
+    public int numeroCalidad, numeroResolucion, anchoDatos, alturaDatos, maxAncho, maxAltura, multAncho, multAltura;
     private Scene escenaActual;
     public GameObject objetoMusica;
     private GameObject objetivoMusica;
@@ -26,7 +26,10 @@ public class NoDestruir : MonoBehaviour
         Calidades(0);
         pantallaCompleta = false;
         sensibilidadMouse = 70;
+
         volumen = 0.25f;
+        maxAncho = 1920;
+        maxAltura = 1080;
         anchoDatos = 1920;
         alturaDatos = 1080;
         Screen.SetResolution(anchoDatos, alturaDatos, pantallaCompleta);
@@ -39,6 +42,7 @@ public class NoDestruir : MonoBehaviour
     {
         Ajustador();
         Escenas();
+        MultiplicaSens();
     }
 
     void Escenas()
@@ -65,6 +69,12 @@ public class NoDestruir : MonoBehaviour
             Screen.fullScreen = false;
         }
         musicos.volume = volumen;
+    }
+
+    void MultiplicaSens()
+    {
+        multAncho = maxAncho / anchoDatos;
+        multAltura = maxAltura / alturaDatos;
     }
 
     public void Calidades(int calidad)

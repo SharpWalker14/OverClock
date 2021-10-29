@@ -324,7 +324,6 @@ GameObject:
   - component: {fileID: 2011522952600136949}
   - component: {fileID: 7572651445434019910}
   - component: {fileID: 2011522952600136951}
-  - component: {fileID: 6767406993171076599}
   m_Layer: 9
   m_Name: Area de ataque
   m_TagString: Untagged
@@ -402,20 +401,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.4
-  m_Center: {x: 0.3, y: 0, z: 0.65}
---- !u!135 &6767406993171076599
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2011522952600136947}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.4
-  m_Center: {x: -0.3, y: 0, z: 0.65}
+  m_Center: {x: 0, y: 0, z: 0.65}
 --- !u!1 &2011522952795267654
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,7 +534,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inteligencia: {fileID: 2011522952988760948}
+  tranquilo: 1
   guardarVelocidad: 0
+  guardarAceleracion: 0
   radar: {fileID: 2011522953435942028}
   puntoPatrulla: []
   patrullero: {fileID: 2011522951520681766}
@@ -601,6 +589,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valor: 5
+  estadoHorda: 0
 --- !u!114 &2872121636904362929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -764,9 +753,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f55d5ce3c5403f84799defa8933445c8, type: 3}
---- !u!4 &4947935133217674406 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f55d5ce3c5403f84799defa8933445c8, type: 3}
+--- !u!33 &8288104754162326275 stripped
+MeshFilter:
+  m_CorrespondingSourceObject: {fileID: -5754084199372789682, guid: f55d5ce3c5403f84799defa8933445c8, type: 3}
   m_PrefabInstance: {fileID: 4836903059686699853}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &5755961398621179420 stripped
@@ -774,8 +763,8 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f55d5ce3c5403f84799defa8933445c8, type: 3}
   m_PrefabInstance: {fileID: 4836903059686699853}
   m_PrefabAsset: {fileID: 0}
---- !u!33 &8288104754162326275 stripped
-MeshFilter:
-  m_CorrespondingSourceObject: {fileID: -5754084199372789682, guid: f55d5ce3c5403f84799defa8933445c8, type: 3}
+--- !u!4 &4947935133217674406 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f55d5ce3c5403f84799defa8933445c8, type: 3}
   m_PrefabInstance: {fileID: 4836903059686699853}
   m_PrefabAsset: {fileID: 0}

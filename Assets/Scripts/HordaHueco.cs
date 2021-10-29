@@ -4,19 +4,76 @@ using UnityEngine;
 
 public class HordaHueco : MonoBehaviour
 {
-    public bool visto;
+    private bool visto, enVacio;
+    public bool confirmado;
+    private bool suelo, pared;
     public GameObject[] lugares;
-    public GameObject enemigo;
+    public GameObject enemigo, vistaObjeto;
+    private GameObject camara;
+    private RaycastHit vista;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        camara = GameObject.FindGameObjectWithTag("MainCamera");
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        VisionParedes();
+        Comprobar();
+    }
+
+    void VisionParedes()
+    {
+        LayerMask mascaraA = LayerMask.GetMask("Piso");
+        LayerMask mascaraB = LayerMask.GetMask("Pared");
+        if (Physics.Linecast(vistaObjeto.transform.position, camara.transform.position, out vista, mascaraA))
+        {
+            suelo = true;
+        }
+        else
+        {
+            suelo = false;
+        }
+        if (Physics.Linecast(vistaObjeto.transform.position, camara.transform.position, out vista, mascaraB))
+        {
+            pared = true;
+        }
+        else
+        {
+            pared = false;
+        }
+        if (suelo == false && pared == false)
+        {
+            enVacio=true;
+        }
+        else
+        {
+            enVacio=false;
+        }
+    }
+
+    void Comprobar()
+    {
+        if (enVacio && visto)
+        {
+            confirmado = true;
+        }
+        else
+        {
+            confirmado = false;
+        }
+    }
+
+    float Distancia()
+    {
+        float distancia;
+
+        distancia = Vector3.Distance(vistaObjeto.transform.position, camara.transform.position);
+
+        return distancia;
     }
 
     void OnBecameVisible()
@@ -31,7 +88,7 @@ public class HordaHueco : MonoBehaviour
 
     public void Invocacion()
     {
-        for(int i=0; i <= lugares.Length; i++)
+        for(int i=0; i < lugares.Length; i++)
         {
             enemigo.transform.position = lugares[i].transform.position;
             enemigo.GetComponent<MovimientoEnemigo>().tranquilo = false;

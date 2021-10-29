@@ -378,7 +378,6 @@ GameObject:
   - component: {fileID: 673700239671960739}
   - component: {fileID: 673700239671960736}
   - component: {fileID: 4714685679675713141}
-  - component: {fileID: 673700239671960738}
   - component: {fileID: 5727119155847474930}
   m_Layer: 9
   m_Name: Area de ataque
@@ -445,19 +444,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.35
   m_Center: {x: 0, y: 0.05, z: 0}
---- !u!135 &673700239671960738
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 673700239671960742}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.3
-  m_Center: {x: -0.25, y: 0, z: 0.4}
 --- !u!135 &5727119155847474930
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -470,7 +456,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.3
-  m_Center: {x: 0.25, y: 0, z: 0.4}
+  m_Center: {x: 0, y: 0, z: 0.4}
 --- !u!1 &673700239819412263
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,7 +556,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inteligencia: {fileID: 673700239819412257}
+  tranquilo: 1
   guardarVelocidad: 0
+  guardarAceleracion: 0
   radar: {fileID: 673700239170897113}
   puntoPatrulla: []
   patrullero: {fileID: 673700238604105587}
@@ -590,6 +578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   "da\xF1o": 4
   frecuencia: 0.5
+  aturdidor: 0
   deteccionAtaque: {fileID: 673700239671960739}
   movimiento: {fileID: 673700239819412256}
   vista: {fileID: 7459968042460880188}
@@ -622,6 +611,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valor: 5
+  estadoHorda: 0
 --- !u!114 &6642038637183231902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -763,14 +753,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d32b4b35c58ddc5498fe6929298ef41c, type: 3}
---- !u!4 &5776142489600299673 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d32b4b35c58ddc5498fe6929298ef41c, type: 3}
-  m_PrefabInstance: {fileID: 6314683848019408242}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6585153608232912931 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d32b4b35c58ddc5498fe6929298ef41c, type: 3}
+  m_PrefabInstance: {fileID: 6314683848019408242}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5776142489600299673 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d32b4b35c58ddc5498fe6929298ef41c, type: 3}
   m_PrefabInstance: {fileID: 6314683848019408242}
   m_PrefabAsset: {fileID: 0}
 --- !u!33 &7459968042460880188 stripped
