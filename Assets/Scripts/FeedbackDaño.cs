@@ -25,6 +25,7 @@ public class FeedbackDaño : MonoBehaviour
         potencia = false;
         humo = false;
         tiempo = 0;
+        tiempoHumo = 0;
     }
 
     // Update is called once per frame
@@ -35,6 +36,7 @@ public class FeedbackDaño : MonoBehaviour
         FeedbackAturdido();
         FeedbackEden();
         FeedBackPot();
+        FeedBackHumo();
     }
 
     public void IniciaDaño()
@@ -150,6 +152,7 @@ public class FeedbackDaño : MonoBehaviour
         }
         else
         {
+            tiempoHumo = 0;
             feedHumo.SetActive(false);
         }
     }
