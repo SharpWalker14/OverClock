@@ -6,7 +6,8 @@ using UnityEngine.AI;
 public class MovimientoEnemigo : MonoBehaviour
 {
     public NavMeshAgent inteligencia;
-    private bool tranquilo = true;
+    [HideInInspector]
+    public bool tranquilo;
     [HideInInspector]
     public float guardarVelocidad;
     public EnemigoSentidos radar;
@@ -31,7 +32,6 @@ public class MovimientoEnemigo : MonoBehaviour
             ControlPatrullas();
         }
         candadoDraw = true;
-        tranquilo = true;
         numeroPatrulla = 0;
         guardarVelocidad = inteligencia.speed;
         patrullero.transform.parent = null;
