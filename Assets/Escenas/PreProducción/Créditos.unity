@@ -712,7 +712,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -20.6}
   m_SizeDelta: {x: 667.48, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1783911772
@@ -748,12 +748,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Gestor: Gonzalo Pariahuaman\nCo gestor: Samuel Apolinario\nRegistros:
-    Alexander Bejar\nAsistente General: Cristian Checa\n\nL\xEDder de programaci\xF3n:
-    Ralph Maura\nL\xEDder de dise\xF1o: Roberto Cardich\nL\xEDder de arte: Antony
-    Mitma\n\nProgramaci\xF3n: Ralph Maura, Alexander Bejar, Bruno Salas y Cristian
-    Checa\nDise\xF1o: Roberto Cardich, Samuel Apolinario, Alexander Bejar y Cristian
-    Checa\nArte: Antony Mitma, Gonzalo Pariahuaman, Jean Paul Gavidia y Bruno Salas"
+  m_Text: "Gestor y asistente de arte: Gonzalo Pariahuaman\nCo gestor y asistente
+    de dise\xF1o: Samuel Apolinario\nRegistros y asistente de programaci\xF3n y dise\xF1o:
+    Alexander Bejar\nAsistente General y asistente de programaci\xF3n y de dise\xF1o:
+    Cristian Checa\n\nL\xEDder de programaci\xF3n: Ralph Maura\nL\xEDder de dise\xF1o:
+    Roberto Cardich\nL\xEDder de arte: Antony Mitma\n\nAsistente de Programaci\xF3n,
+    arte y dise\xF1o: Bruno Salas\nAsistente de arte: Jean Paul Gavidia"
 --- !u!222 &1783911773
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -796,7 +796,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 160}
+  m_AnchoredPosition: {x: 0, y: 169.7}
   m_SizeDelta: {x: 396.03, y: 54.68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1903709400

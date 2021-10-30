@@ -27,8 +27,11 @@ public class AtaqueEnemigo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Ataque();
-        Animar();
+        if (movimiento.radar.objetivo != null)
+        {
+            Ataque();
+            Animar();
+        }
     }
 
     void Ataque()
