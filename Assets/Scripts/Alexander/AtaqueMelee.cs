@@ -4,17 +4,15 @@ using UnityEngine;
 
 public class AtaqueMelee : MonoBehaviour
 {
-
-    float velocidad = 30;
+    float velocidad = 30; //velocidad de estela
     public bool ouch; //comprobar la estela
-    public int usos;
+    public int usos; //cantidad de usos
 
     TrailRenderer estela;
+    public GameObject golpeArma, areaAtaque, pos1, pos2;
 
-    public GameObject golpeArma;
-    public GameObject areaAtaque;
-    public GameObject pos1;
-    public GameObject pos2;
+    public GameObject palo1, palo2, palo3;
+
     void Start()
     {
         estela = golpeArma.GetComponent<TrailRenderer>();
@@ -25,6 +23,8 @@ public class AtaqueMelee : MonoBehaviour
     void Update()
     {
         Golpe();
+
+        MostrarUsos();
     }
     void Golpe()
     {
@@ -54,5 +54,32 @@ public class AtaqueMelee : MonoBehaviour
         areaAtaque.SetActive(true);
         yield return new WaitForSeconds(0.1f);
         areaAtaque.SetActive(false);
+    }
+    void MostrarUsos()
+    {
+        if (usos >= 1)
+        {
+            palo1.SetActive(true);
+        }
+        else
+        {
+            palo1.SetActive(false);
+        }
+        if (usos >= 2)
+        {
+            palo2.SetActive(true);
+        }
+        else
+        {
+            palo2.SetActive(false);
+        }
+        if (usos == 3)
+        {
+            palo3.SetActive(true);
+        }
+        else
+        {
+            palo3.SetActive(false);
+        }
     }
 }
