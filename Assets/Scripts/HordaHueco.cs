@@ -21,8 +21,11 @@ public class HordaHueco : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        VisionParedes();
-        Comprobar();
+        if (camara != null)
+        {
+            VisionParedes();
+            Comprobar();
+        }
     }
 
     void VisionParedes()
