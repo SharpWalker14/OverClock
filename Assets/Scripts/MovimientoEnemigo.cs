@@ -6,11 +6,11 @@ using UnityEngine.AI;
 public class MovimientoEnemigo : MonoBehaviour
 {
     public NavMeshAgent inteligencia;
+    public ValorSalud valores;
     public bool tranquilo;
     [HideInInspector]
-    public float guardarVelocidad, guardarAceleracion;
+    public float guardarVelocidad, guardarAceleracion, guardarVida;
     public EnemigoSentidos radar;
-
     private int fijador;
 
     public GameObject[] puntoPatrulla;
@@ -25,6 +25,10 @@ public class MovimientoEnemigo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (valores != null)
+        {
+            guardarVida = valores.vida;
+        }
         fijador = 0;
         if (puntoPatrulla.Length != 0)
         {
@@ -68,11 +72,12 @@ public class MovimientoEnemigo : MonoBehaviour
                     numeroPatrulla += 1;
                 }
             }
-            if (radar.detectar)
+            if (radar.detectar || guardarVida != valores.vida)
             {
                 Mirar();
                 tranquilo = false;
             }
+
         }
         else
         {

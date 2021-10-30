@@ -556,6 +556,7 @@ MonoBehaviour:
   regalo: {fileID: 3048203799647601448}
   explosionAcido: 0
   explosionHumo: 0
+  ataqueMelee: 0
 --- !u!114 &6015069487381888069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -569,8 +570,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inteligencia: {fileID: 6015069487381888068}
+  valores: {fileID: 2052414420174409613}
   tranquilo: 1
   guardarVelocidad: 0
+  guardarAceleracion: 0
+  guardarVida: 0
   radar: {fileID: 6015069487837522876}
   puntoPatrulla: []
   patrullero: {fileID: 6015069485897078806}

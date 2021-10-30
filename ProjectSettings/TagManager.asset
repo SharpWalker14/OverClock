@@ -16,6 +16,7 @@ TagManager:
   - "M\xFAsica"
   - "M\xFAsicaSeguidor"
   - Orbe
+  - ArmaAtaque
   layers:
   - Default
   - TransparentFX
