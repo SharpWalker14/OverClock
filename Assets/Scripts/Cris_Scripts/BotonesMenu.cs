@@ -9,9 +9,9 @@ public class BotonesMenu : MonoBehaviour
     public GameObject MenuCam;
     public GameObject CreditosCam;
 
-    public Canvas IntroCanvas;
-    public Canvas MenuCanvas;
-    public Canvas CreditosCanvas;
+    public GameObject IntroCanvas;
+    public GameObject MenuCanvas;
+    public GameObject CreditosCanvas;
 
     public void IrMenuPrincipal()
     {
@@ -19,9 +19,9 @@ public class BotonesMenu : MonoBehaviour
         MenuCam.GetComponent<Cinemachine.CinemachineVirtualCamera>().Priority = 1;
         CreditosCam.GetComponent<Cinemachine.CinemachineVirtualCamera>().Priority = 0;
 
-        IntroCanvas.enabled = false;
-        MenuCanvas.enabled = true;
-        CreditosCanvas.enabled = false;
+        IntroCanvas.SetActive(false);
+        MenuCanvas.SetActive(true);
+        CreditosCanvas.SetActive(false);
     }
 
     public void IrCreditos()
@@ -30,8 +30,8 @@ public class BotonesMenu : MonoBehaviour
         MenuCam.GetComponent<Cinemachine.CinemachineVirtualCamera>().Priority = 0;
         CreditosCam.GetComponent<Cinemachine.CinemachineVirtualCamera>().Priority = 1;
 
-        IntroCanvas.enabled = false;
-        MenuCanvas.enabled = false;
-        CreditosCanvas.enabled = true;
+        IntroCanvas.SetActive(false);
+        MenuCanvas.SetActive(false);
+        CreditosCanvas.SetActive(true);
     }
 }
