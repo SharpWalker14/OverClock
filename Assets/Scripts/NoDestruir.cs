@@ -27,7 +27,7 @@ public class NoDestruir : MonoBehaviour
         pantallaCompleta = false;
         sensibilidadMouse = 70;
 
-        volumen = 0.25f;
+        volumen = 0;
         maxAncho = 1920;
         maxAltura = 1080;
         anchoDatos = 1920;
