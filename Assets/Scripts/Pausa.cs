@@ -15,7 +15,7 @@ public class Pausa : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (juegoPausado)
             {
