@@ -24,7 +24,7 @@ public class Condiciones : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-            SceneManager.LoadScene("Derrota");
+            SceneManager.LoadScene("DerrotaProd");
         }
     }
 
@@ -34,7 +34,7 @@ public class Condiciones : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-            SceneManager.LoadScene("Victoria");
+            SceneManager.LoadScene("VictoriaProd");
         }
     }
 }
