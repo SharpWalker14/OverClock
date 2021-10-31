@@ -1754,7 +1754,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.3333334, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2085,6 +2085,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 155.58624
       objectReference: {fileID: 0}
+    - target: {fileID: 3312926445579279401, guid: 51470e4a85024a74fb7216332df46116, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3312926445579279401, guid: 51470e4a85024a74fb7216332df46116, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 687077973}
+    - target: {fileID: 3312926445579279401, guid: 51470e4a85024a74fb7216332df46116, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CambiarResolucion
+      objectReference: {fileID: 0}
     - target: {fileID: 3387376941193132195, guid: 51470e4a85024a74fb7216332df46116, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2092,6 +2104,18 @@ PrefabInstance:
     - target: {fileID: 3387376941193132195, guid: 51470e4a85024a74fb7216332df46116, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SalirPantalla
+      objectReference: {fileID: 0}
+    - target: {fileID: 3554900481363369707, guid: 51470e4a85024a74fb7216332df46116, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3554900481363369707, guid: 51470e4a85024a74fb7216332df46116, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 687077973}
+    - target: {fileID: 3554900481363369707, guid: 51470e4a85024a74fb7216332df46116, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PantallaCompleta
       objectReference: {fileID: 0}
     - target: {fileID: 3564613318352117788, guid: 51470e4a85024a74fb7216332df46116, type: 3}
       propertyPath: m_RootOrder
@@ -2201,6 +2225,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 31
       objectReference: {fileID: 0}
+    - target: {fileID: 6978289291715143327, guid: 51470e4a85024a74fb7216332df46116, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6978289291715143327, guid: 51470e4a85024a74fb7216332df46116, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 687077973}
+    - target: {fileID: 6978289291715143327, guid: 51470e4a85024a74fb7216332df46116, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Calidades
+      objectReference: {fileID: 0}
     - target: {fileID: 7203088503872863189, guid: 51470e4a85024a74fb7216332df46116, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -2252,6 +2288,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3564613318352117788, guid: 51470e4a85024a74fb7216332df46116, type: 3}
   m_PrefabInstance: {fileID: 687077971}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &687077973 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5790448960034646878, guid: 51470e4a85024a74fb7216332df46116, type: 3}
+  m_PrefabInstance: {fileID: 687077971}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d49d323d3fcfb847a0af6d550fc47c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &713201213
 GameObject:
   m_ObjectHideFlags: 0
@@ -2558,7 +2605,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.3333334, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -4918,7 +4965,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.3333334, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
