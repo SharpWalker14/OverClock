@@ -30,13 +30,22 @@ public class Jefe : MonoBehaviour
         }
         else
         {
+            tiempoCiclo += Time.deltaTime;
             if (valores.volando)
-            {
-                tiempoCiclo += Time.deltaTime;
+            { 
+                if (tiempoCiclo >= 10)
+                {
+                    valores.volando = false;
+                    tiempoCiclo = 0;
+                }
             }
             else
             {
-
+                if (tiempoCiclo >= 9)
+                {
+                    valores.volando = true;
+                    tiempoCiclo = 0;
+                }
             }
         }
     }
