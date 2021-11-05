@@ -1230,7 +1230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90f86973238bdf54784d40417c90592e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tiempoMaximo: 60
+  tiempoMaximo: 90
   tiempo: 0
   tiempoCongelar: 0
   tiempoFrenesi: 0
@@ -3951,7 +3951,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.78431374}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4787,9 +4787,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4120539273568230326, guid: 51470e4a85024a74fb7216332df46116, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4147644191834794683, guid: 51470e4a85024a74fb7216332df46116, type: 3}
       propertyPath: m_Name
       value: Pantalla Opciones
+      objectReference: {fileID: 0}
+    - target: {fileID: 4147644191834794683, guid: 51470e4a85024a74fb7216332df46116, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7203088503872863189, guid: 51470e4a85024a74fb7216332df46116, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7588315954975527940, guid: 51470e4a85024a74fb7216332df46116, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8514160326343048636, guid: 51470e4a85024a74fb7216332df46116, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51470e4a85024a74fb7216332df46116, type: 3}

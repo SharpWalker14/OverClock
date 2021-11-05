@@ -21,7 +21,7 @@ public class Hordas : MonoBehaviour
     void ConteoHuecos()
     {
         tiempo += Time.deltaTime;
-        if (tiempo >= 25)
+        if (tiempo >= 60)
         {
             int contador = 0;
             for(int i = 0; i < huecos.Length; i++)

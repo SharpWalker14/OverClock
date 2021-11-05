@@ -19,7 +19,7 @@ public class Pausa : MonoBehaviour
         {
             if (juegoPausado)
             {
-                Reanudar();
+                
             }
             else
             {
