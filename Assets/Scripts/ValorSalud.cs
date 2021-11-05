@@ -62,7 +62,6 @@ public class ValorSalud : MonoBehaviour
                 GetComponent<MovimientoJugador>().tiempoInmovilizado = 1.5f;
                 GetComponent<MovimientoJugador>().inmovilizado = true;
                 GetComponent<FeedbackDaño>().IniciaDaño();
-                GetComponent<FeedbackDaño>().humo = true;
             }
             explosionAcido = false;
             explosionHumo = false;

@@ -145,7 +145,7 @@ public class FeedbackDaño : MonoBehaviour
             tiempoHumo += Time.deltaTime;
             //feedPot.GetComponent<Image>().color = filtroDaño;
             feedHumo.SetActive(true);
-            if (tiempoHumo >= 5)
+            if (tiempoHumo >= 3)
             {
                 humo = false;
             }
