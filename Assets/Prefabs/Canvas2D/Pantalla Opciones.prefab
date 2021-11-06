@@ -1583,6 +1583,7 @@ RectTransform:
   - {fileID: 3593285848273968866}
   - {fileID: 4641060623507868035}
   - {fileID: 4099426753360069467}
+  - {fileID: 7181321665221852957}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1750,7 +1751,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5790448960034646878}
         m_TargetAssemblyTypeName: Opciones, Assembly-CSharp
         m_MethodName: PantallaCompleta
         m_Mode: 0
@@ -2524,6 +2525,59 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 100
+--- !u!1 &5611632459210471834
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7181321665221852957}
+  - component: {fileID: 5790448960034646878}
+  m_Layer: 0
+  m_Name: Ajustes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7181321665221852957
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5611632459210471834}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3564613318352117788}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5790448960034646878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5611632459210471834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d49d323d3fcfb847a0af6d550fc47c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensibilidadTexto: {fileID: 2683127787947174436}
+  volumenTexto: {fileID: 6054317604175679259}
+  sensibilidadSlider: {fileID: 3950854308458262262}
+  volumenSlider: {fileID: 5674089812063217202}
+  nucleo: {fileID: 0}
+  datos: {fileID: 0}
+  modificadorPantalla: {fileID: 3554900481363369707}
+  audioMixer: {fileID: 24100000, guid: a99a9d33574420247a0ce84f6c96d0be, type: 2}
+  resolucionDropdown: {fileID: 3312926445579279401}
+  calidadDropdown: {fileID: 6978289291715143327}
 --- !u!1 &5663591862059280839
 GameObject:
   m_ObjectHideFlags: 0
@@ -2851,7 +2905,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5790448960034646878}
         m_TargetAssemblyTypeName: Opciones, Assembly-CSharp
         m_MethodName: Calidades
         m_Mode: 0
@@ -3844,7 +3898,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5790448960034646878}
         m_TargetAssemblyTypeName: Opciones, Assembly-CSharp
         m_MethodName: CambiarResolucion
         m_Mode: 0

@@ -6,11 +6,11 @@ using UnityEngine.SceneManagement;
 public class NoDestruir : MonoBehaviour
 {
     [HideInInspector]
-    public float sensibilidadMouse, volumen, multiplicadorSensibilidad;
+    public float sensibilidadMouse, volumen, multiplicadorSensibilidad, multAncho, multAltura;
     [HideInInspector]
     public bool pantallaCompleta;
     [HideInInspector]
-    public int numeroCalidad, numeroResolucion, anchoDatos, alturaDatos, maxAncho, maxAltura, multAncho, multAltura;
+    public int numeroCalidad, numeroResolucion, anchoDatos, alturaDatos, maxAncho, maxAltura;
     private Scene escenaActual;
     public GameObject objetoMusica;
     private GameObject objetivoMusica;

@@ -29,6 +29,7 @@ public class VidaJefe : MonoBehaviour
         if (vida <= 0)
         {
             cansancio = true;
+            vida = 0;
         }
     }
     void Fases()
