@@ -7,18 +7,52 @@ public class MovimientoJugador : MonoBehaviour
     public CharacterController controlador;
     public Rigidbody cuerpo;
 
+    public GameObject objeto;
+
     public float velocidadMovimiento, gravedad, saltoAltura;
     [HideInInspector]
     public float tiempoInmovilizado;
     public DetectarSuelo controlarSuelo;
-    private float acido, normal;
+    private float acido, normal, alturaJugador = 1.7f;
     private Transform controlSuelo;
     public LayerMask sueloFiltro;
     [HideInInspector]
     public GameObject eden;
-    private Vector3 velocidad;
+    public bool estacionario;
+    private Vector3 velocidad, movimientoTotal;
     [HideInInspector]
     public bool enSuelo, poseido, charco, tiempo, frenesi, oportunidad, inmovilizado;
+
+    public Vector3 escalerasVector, escalera;
+    private RaycastHit limiteEscalera;
+
+    private bool OnSlope()
+    {
+        LayerMask mascara = 1 << 6;
+
+
+        bool revision = Physics.Raycast(transform.position, Vector3.down, out limiteEscalera, alturaJugador / 2 + 1f, mascara);
+        if (revision == true) 
+        {
+            objeto.transform.position = limiteEscalera.point;
+            if (limiteEscalera.normal != Vector3.up)
+            {
+                escalera = limiteEscalera.normal;
+                estacionario = true;
+                return true;
+            }
+            else
+            {
+                escalera = limiteEscalera.normal;
+                estacionario = false;
+                return false;
+            }
+        }
+        escalera = limiteEscalera.normal;
+        estacionario = false;
+        return false;
+    }
+
     void Start()
     {
         inmovilizado = false;
@@ -49,11 +83,28 @@ public class MovimientoJugador : MonoBehaviour
         Vector2 xMov = new Vector2(Input.GetAxisRaw("Horizontal") * transform.right.x, Input.GetAxisRaw("Horizontal") * transform.right.z);
         Vector2 zMov = new Vector2(Input.GetAxisRaw("Vertical") * transform.forward.x, Input.GetAxisRaw("Vertical") * transform.forward.z);
         Vector2 velocidad = (xMov + zMov).normalized * velocidadMovimiento;
-
         float graviton = cuerpo.velocity.y + gravedad * Time.deltaTime;
+        Vector3 gravedadTotal = new Vector3(0, graviton, 0);
+        //movimientoTotal.x = new Vector3(velocidad.x, graviton, velocidad.y);
+        movimientoTotal.x = velocidad.x;
+        movimientoTotal.z = velocidad.y;
+        escalerasVector = Vector3.ProjectOnPlane(movimientoTotal, limiteEscalera.normal);
+
+
         if (!inmovilizado)
         {
-            cuerpo.velocity = new Vector3(velocidad.x, graviton, velocidad.y);
+            if (controlarSuelo.tocado && !OnSlope())
+            {
+                cuerpo.velocity = movimientoTotal;
+            }
+            else if (controlarSuelo.tocado && OnSlope())
+            {
+                cuerpo.velocity = escalerasVector;
+            }
+            else if (!controlarSuelo.tocado)
+            {
+                cuerpo.velocity = movimientoTotal + gravedadTotal;
+            }
             if (Input.GetKeyDown(KeyCode.Space) && controlarSuelo.tocado)
             {
                 cuerpo.AddForce(new Vector3(0, saltoAltura * 10f * -2f * gravedad));
@@ -62,7 +113,7 @@ public class MovimientoJugador : MonoBehaviour
         }
         else
         {
-            cuerpo.velocity = new Vector3(0, graviton, 0);
+            cuerpo.velocity = gravedadTotal;
         }
     }
 
