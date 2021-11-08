@@ -7,18 +7,16 @@ public class MovimientoJugador : MonoBehaviour
     public CharacterController controlador;
     public Rigidbody cuerpo;
 
-    public GameObject objeto;
-
     public float velocidadMovimiento, gravedad, saltoAltura;
     [HideInInspector]
     public float tiempoInmovilizado;
-    public DetectarSuelo controlarSuelo;
-    private float acido, normal, alturaJugador = 1.7f;
+    public DetectarSuelo controlarSuelo, controlarSalto;
+    private float acido, normal, alturaJugador = 1.7f, tiempoSalto;
     private Transform controlSuelo;
     public LayerMask sueloFiltro;
     [HideInInspector]
     public GameObject eden;
-    public bool estacionario;
+    public bool estacionario, saltando;
     private Vector3 velocidad, movimientoTotal;
     [HideInInspector]
     public bool enSuelo, poseido, charco, tiempo, frenesi, oportunidad, inmovilizado;
@@ -34,7 +32,6 @@ public class MovimientoJugador : MonoBehaviour
         bool revision = Physics.Raycast(transform.position, Vector3.down, out limiteEscalera, alturaJugador / 2 + 1f, mascara);
         if (revision == true) 
         {
-            objeto.transform.position = limiteEscalera.point;
             if (limiteEscalera.normal != Vector3.up)
             {
                 escalera = limiteEscalera.normal;
@@ -55,11 +52,13 @@ public class MovimientoJugador : MonoBehaviour
 
     void Start()
     {
+        saltando = false;
         inmovilizado = false;
         poseido = false;
         gameObject.transform.parent = null;
         acido = velocidadMovimiento / 2;
         normal = velocidadMovimiento;
+        tiempoSalto = 0;
     }
 
     void Update()
@@ -93,23 +92,37 @@ public class MovimientoJugador : MonoBehaviour
 
         if (!inmovilizado)
         {
-            if (controlarSuelo.tocado && !OnSlope())
-            {
-                cuerpo.velocity = movimientoTotal;
-            }
-            else if (controlarSuelo.tocado && OnSlope())
-            {
-                cuerpo.velocity = escalerasVector;
-            }
-            else if (!controlarSuelo.tocado)
-            {
-                cuerpo.velocity = movimientoTotal + gravedadTotal;
-            }
-            if (Input.GetKeyDown(KeyCode.Space) && controlarSuelo.tocado)
+            if (Input.GetKeyDown(KeyCode.Space) && controlarSalto.tocado)
             {
                 cuerpo.AddForce(new Vector3(0, saltoAltura * 10f * -2f * gravedad));
+                saltando = true;
+                tiempoSalto = 0;
             }
+            if (saltando)
+            {
+                tiempoSalto += Time.deltaTime;
+                cuerpo.velocity = movimientoTotal+gravedadTotal;
+                if (controlarSalto.tocado && tiempoSalto >= 0.1f)
+                {
+                    saltando = false;
+                }
+            }
+            else
+            {
+                if (controlarSuelo.tocado && !OnSlope())
+                {
+                    cuerpo.velocity = movimientoTotal;
+                }
+                else if (controlarSuelo.tocado && OnSlope())
+                {
+                    cuerpo.velocity = escalerasVector;
+                }
+                else if (!controlarSuelo.tocado)
+                {
+                    cuerpo.velocity = movimientoTotal + gravedadTotal;
+                }
 
+            }
         }
         else
         {
