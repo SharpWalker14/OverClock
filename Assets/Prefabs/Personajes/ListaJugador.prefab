@@ -1179,7 +1179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controlador: {fileID: 0}
   cuerpo: {fileID: 6711062877382068020}
-  velocidadMovimiento: 6
+  velocidadMovimiento: 7
   gravedad: -9.8
   saltoAltura: 1.4
   tiempoInmovilizado: 0
@@ -1896,7 +1896,7 @@ MonoBehaviour:
   laser: {fileID: 199096991623134442, guid: 067e42a4942baa8409f9d4a633bb098a, type: 3}
   camaraRotacion: {fileID: 7987985722595495990}
   "ca\xF1on": {fileID: 8810364097502344525}
-  espera: 0.5
+  espera: 0.3
   "da\xF1o": 24
   disparos: 7
   dispersionBalas: 6

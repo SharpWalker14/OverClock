@@ -26,8 +26,8 @@ public class CámaraPrimeraPersona : MonoBehaviour
 
     void Rotacion()
     {
-        float mouseX = Input.GetAxis("Mouse X") * sensibilidad * Time.deltaTime * multiX;
-        float mouseY = Input.GetAxis("Mouse Y") * sensibilidad * Time.deltaTime * multiY;
+        float mouseX = Input.GetAxis("Mouse X") * sensibilidad * 0.025f * multiX;
+        float mouseY = Input.GetAxis("Mouse Y") * sensibilidad * 0.025f * multiY;
         rotaciónX -= mouseY;
         rotaciónX = Mathf.Clamp(rotaciónX, -90f, 90f);
 
