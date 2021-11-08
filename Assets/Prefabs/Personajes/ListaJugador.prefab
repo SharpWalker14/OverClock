@@ -1303,9 +1303,9 @@ MonoBehaviour:
   sinFiltroCharco: {r: 0, g: 0, b: 0, a: 0.6666667}
   "filtroDa\xF1o": {r: 1, g: 0, b: 0, a: 0.6313726}
   sinFiltro: {r: 0, g: 0, b: 0, a: 0}
-  potTiempo: {r: 0.17046647, g: 0.15966538, b: 0.8679245, a: 0.47058824}
-  potFrenesi: {r: 0.8962264, g: 0.19023676, b: 0.72747785, a: 0.47058824}
-  potOportunidad: {r: 0.8584906, g: 0.8570792, b: 0.3523051, a: 0.47058824}
+  potTiempo: {r: 0.17046647, g: 0.15966538, b: 0.8679245, a: 0.19607843}
+  potFrenesi: {r: 0.8962264, g: 0.19023676, b: 0.72747785, a: 0.19607843}
+  potOportunidad: {r: 0.8584906, g: 0.8570792, b: 0.3523051, a: 0.19607843}
   tiempoFiltro: 1
 --- !u!114 &2136486585648305416
 MonoBehaviour:

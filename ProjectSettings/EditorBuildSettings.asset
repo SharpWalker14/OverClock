@@ -35,7 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Escenas/Producci\xF3n/Menu/Men\xFAConjunto.unity"
     guid: cb992165e96e3ad4b9a484b56e379656
-  - enabled: 1
+  - enabled: 0
     path: "Assets/Escenas/Producci\xF3n/WB1.unity"
     guid: d548fde93e5d4794bad91624dc344245
   - enabled: 1
@@ -44,4 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Escenas/Producci\xF3n/VictoriaProd.unity"
     guid: 635714010242eeb46b78d443033f5b61
+  - enabled: 1
+    path: "Assets/Escenas/PreProducci\xF3n/WhitePrueba.unity"
+    guid: 2301c44026108824ab4b16ca72326dd5
   m_configObjects: {}
