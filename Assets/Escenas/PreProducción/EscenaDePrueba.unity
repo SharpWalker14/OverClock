@@ -7508,10 +7508,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 919327918867707010, guid: 588032cd05d76234d9996fd8fb866536, type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1562092511166271377, guid: 588032cd05d76234d9996fd8fb866536, type: 3}
       propertyPath: m_Name
       value: ListaJugador
@@ -7558,58 +7554,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1562092511166271379, guid: 588032cd05d76234d9996fd8fb866536, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4832129657195659747, guid: 588032cd05d76234d9996fd8fb866536, type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4832129657195659747, guid: 588032cd05d76234d9996fd8fb866536, type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4832129657195659747, guid: 588032cd05d76234d9996fd8fb866536, type: 3}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4832129657195659747, guid: 588032cd05d76234d9996fd8fb866536, type: 3}
-      propertyPath: m_Color.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7614269069754487040, guid: 588032cd05d76234d9996fd8fb866536, type: 3}
-      propertyPath: filtroCharco.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7614269069754487040, guid: 588032cd05d76234d9996fd8fb866536, type: 3}
-      propertyPath: filtroCharco.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7614269069754487040, guid: 588032cd05d76234d9996fd8fb866536, type: 3}
-      propertyPath: filtroCharco.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7614269069754487040, guid: 588032cd05d76234d9996fd8fb866536, type: 3}
-      propertyPath: filtroCharco.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7614269069754487040, guid: 588032cd05d76234d9996fd8fb866536, type: 3}
-      propertyPath: sinFiltroCharco.a
-      value: 0.3529412
-      objectReference: {fileID: 0}
-    - target: {fileID: 7614269069754487040, guid: 588032cd05d76234d9996fd8fb866536, type: 3}
-      propertyPath: sinFiltroCharco.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7614269069754487040, guid: 588032cd05d76234d9996fd8fb866536, type: 3}
-      propertyPath: sinFiltroCharco.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7614269069754487040, guid: 588032cd05d76234d9996fd8fb866536, type: 3}
-      propertyPath: sinFiltroCharco.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9132428700633819772, guid: 588032cd05d76234d9996fd8fb866536, type: 3}
-      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
