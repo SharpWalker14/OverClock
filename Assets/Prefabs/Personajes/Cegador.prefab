@@ -538,6 +538,7 @@ MonoBehaviour:
   armadura: 0
   charcoAcido: {fileID: 0}
   cortinaHumo: {fileID: 6616731616377629614, guid: 5ffdf0669be0ded44950bb3c1de83da8, type: 3}
+  porDosObjecto: {fileID: 5367659412949508569, guid: 63d68657adb4ad44f92892baf9d4653b, type: 3}
   enemigodSuicida: 0
   enemigoHumo: 1
   regalo: {fileID: 8101344801120971853}

@@ -10,7 +10,7 @@ public class ValorSalud : MonoBehaviour
     [HideInInspector]
     public bool armadura;
     private GameObject objetivo;
-    public GameObject charcoAcido, cortinaHumo;
+    public GameObject charcoAcido, cortinaHumo,porDosObjecto;
     public bool enemigodSuicida, enemigoHumo;
     public ValorTiempoEnemigo regalo;
     public bool explosionAcido, explosionHumo, ataqueMelee;
@@ -95,6 +95,10 @@ public class ValorSalud : MonoBehaviour
                 Vector3 Humo = new Vector3(transform.position.x, transform.position.y, transform.position.z);
 
                 Instantiate(cortinaHumo, Humo, transform.rotation);
+            }
+            if(objetivo.GetComponent<TiempoJugador>().cambioFrenesi && GetComponent<ValorTiempoEnemigo>().estadoHorda == false)
+            {
+                Instantiate(porDosObjecto, transform.position, transform.rotation);
             }
             Destroy(gameObject);
         }

@@ -18,10 +18,7 @@ public class BotonesMenu : MonoBehaviour
         IntroCam.GetComponent<Cinemachine.CinemachineVirtualCamera>().Priority = 0;
         MenuCam.GetComponent<Cinemachine.CinemachineVirtualCamera>().Priority = 1;
         CreditosCam.GetComponent<Cinemachine.CinemachineVirtualCamera>().Priority = 0;
-
-        IntroCanvas.SetActive(false);
-        MenuCanvas.SetActive(true);
-        CreditosCanvas.SetActive(false);
+        StartCoroutine(TransiciónBotones());
     }
 
     public void IrCreditos()
@@ -29,9 +26,25 @@ public class BotonesMenu : MonoBehaviour
         IntroCam.GetComponent<Cinemachine.CinemachineVirtualCamera>().Priority = 0;
         MenuCam.GetComponent<Cinemachine.CinemachineVirtualCamera>().Priority = 0;
         CreditosCam.GetComponent<Cinemachine.CinemachineVirtualCamera>().Priority = 1;
-
-        IntroCanvas.SetActive(false);
-        MenuCanvas.SetActive(false);
-        CreditosCanvas.SetActive(true);
+        StartCoroutine(TransiciónBotones());
+    }
+    IEnumerator TransiciónBotones()
+    {
+        if (MenuCam.GetComponent<Cinemachine.CinemachineVirtualCamera>().Priority == 1)
+        {
+            IntroCanvas.SetActive(false);
+            CreditosCanvas.SetActive(false);
+            yield return new WaitForSeconds(2);
+            MenuCanvas.SetActive(true);
+            StopCoroutine(TransiciónBotones());
+        }
+        else if (CreditosCam.GetComponent<Cinemachine.CinemachineVirtualCamera>().Priority == 1)
+        {
+            IntroCanvas.SetActive(false);
+            MenuCanvas.SetActive(false);
+            yield return new WaitForSeconds(2);
+            CreditosCanvas.SetActive(true);
+            StopCoroutine(TransiciónBotones());
+        }
     }
 }
