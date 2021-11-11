@@ -148,6 +148,7 @@ MonoBehaviour:
   regalo: {fileID: 5535481161884255686}
   explosionAcido: 0
   explosionHumo: 0
+  ataqueMelee: 0
 --- !u!114 &5535481161884255686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,6 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valor: 0
+  estadoHorda: 0
 --- !u!114 &4714778716511283310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -365,7 +367,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ce226f5fc6d495746be54d8bb399ca54, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0087641375
+      value: 0.254
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ce226f5fc6d495746be54d8bb399ca54, type: 3}
       propertyPath: m_LocalPosition.y
@@ -403,6 +405,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5754084199372789682, guid: ce226f5fc6d495746be54d8bb399ca54, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 5256924276574915431, guid: cc582994da78d224e858a7f1cd118389, type: 3}
     - target: {fileID: 919132149155446097, guid: ce226f5fc6d495746be54d8bb399ca54, type: 3}
       propertyPath: m_Name
       value: Enemigo(hazard)_FBX

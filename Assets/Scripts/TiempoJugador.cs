@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TiempoJugador : MonoBehaviour
 {
@@ -10,6 +11,11 @@ public class TiempoJugador : MonoBehaviour
     public float tiempo, tiempoCongelar, tiempoFrenesi, congelarMaximo;
     public ValorSalud salud;
     public bool muerte, cambioOportunidad, cambioFrenesi, cambioCongelar;
+    public Color estado1;
+    public Color estado2;
+    public Color estado3;
+    public Image reloj;
+    public float etapa1, etapa2, etapa3;
     [HideInInspector]
     public bool congelado;
     public FeedbackDaño feedback;
@@ -32,8 +38,27 @@ public class TiempoJugador : MonoBehaviour
             CuentaRegresiva();
         }
         ListaPotenciadores();
+
+        Etapas();
     }
 
+    void Etapas()
+    {
+        if (tiempo <= etapa1 && tiempo > etapa2)
+        {
+            reloj.color = estado1;
+        }
+
+        if (tiempo < etapa1 && tiempo <= etapa2)
+        {
+            reloj.color = estado2;
+        }
+
+        if (tiempo <= etapa3 && tiempo < etapa2)
+        {
+            reloj.color = estado3;
+        }
+    }
     void CuentaRegresiva()
     {
         if (muerte == false)

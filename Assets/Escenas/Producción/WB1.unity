@@ -31653,6 +31653,30 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 6145628480073578907, guid: 588032cd05d76234d9996fd8fb866536, type: 3}
+      propertyPath: etapa1
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6145628480073578907, guid: 588032cd05d76234d9996fd8fb866536, type: 3}
+      propertyPath: etapa2
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 6145628480073578907, guid: 588032cd05d76234d9996fd8fb866536, type: 3}
+      propertyPath: etapa3
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6145628480073578907, guid: 588032cd05d76234d9996fd8fb866536, type: 3}
+      propertyPath: estado1.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6145628480073578907, guid: 588032cd05d76234d9996fd8fb866536, type: 3}
+      propertyPath: estado2.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6145628480073578907, guid: 588032cd05d76234d9996fd8fb866536, type: 3}
+      propertyPath: estado3.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8399922784308744992, guid: 588032cd05d76234d9996fd8fb866536, type: 3}
       propertyPath: m_RenderPostProcessing
       value: 1
