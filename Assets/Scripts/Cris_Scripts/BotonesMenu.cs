@@ -5,9 +5,8 @@ using UnityEngine.UI;
 
 public class BotonesMenu : MonoBehaviour
 {
-    public GameObject IntroCam;
-    public GameObject MenuCam;
-    public GameObject CreditosCam;
+    public Animator menuAnim;
+
 
     public GameObject IntroCanvas;
     public GameObject MenuCanvas;
@@ -15,9 +14,8 @@ public class BotonesMenu : MonoBehaviour
 
     public void IrMenuPrincipal()
     {
-        IntroCam.GetComponent<Cinemachine.CinemachineVirtualCamera>().Priority = 0;
-        MenuCam.GetComponent<Cinemachine.CinemachineVirtualCamera>().Priority = 1;
-        CreditosCam.GetComponent<Cinemachine.CinemachineVirtualCamera>().Priority = 0;
+        menuAnim.SetBool("IrMenu", true);
+        menuAnim.SetBool("IrCreditos", false);
 
         IntroCanvas.SetActive(false);
         MenuCanvas.SetActive(true);
@@ -26,9 +24,9 @@ public class BotonesMenu : MonoBehaviour
 
     public void IrCreditos()
     {
-        IntroCam.GetComponent<Cinemachine.CinemachineVirtualCamera>().Priority = 0;
-        MenuCam.GetComponent<Cinemachine.CinemachineVirtualCamera>().Priority = 0;
-        CreditosCam.GetComponent<Cinemachine.CinemachineVirtualCamera>().Priority = 1;
+
+        menuAnim.SetBool("IrMenu", false);
+        menuAnim.SetBool("IrCreditos", true);
 
         IntroCanvas.SetActive(false);
         MenuCanvas.SetActive(false);
