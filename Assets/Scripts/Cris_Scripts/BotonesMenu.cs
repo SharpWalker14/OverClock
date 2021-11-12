@@ -18,7 +18,6 @@ public class BotonesMenu : MonoBehaviour
         IntroCam.GetComponent<Cinemachine.CinemachineVirtualCamera>().Priority = 0;
         MenuCam.GetComponent<Cinemachine.CinemachineVirtualCamera>().Priority = 1;
         CreditosCam.GetComponent<Cinemachine.CinemachineVirtualCamera>().Priority = 0;
-        IntroCam.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         StartCoroutine(TransiciónBotones());
     }
 
