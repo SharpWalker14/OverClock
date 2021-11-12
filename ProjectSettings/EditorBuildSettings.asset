@@ -32,10 +32,10 @@ EditorBuildSettings:
   - enabled: 0
     path: "Assets/Escenas/Producci\xF3n/WB1.unity"
     guid: d548fde93e5d4794bad91624dc344245
-  - enabled: 1
+  - enabled: 0
     path: "Assets/Escenas/PreProducci\xF3n/EscenaDePrueba.unity"
     guid: a337884181ae06b43952fd744f965200
-  - enabled: 1
+  - enabled: 0
     path: "Assets/Escenas/PreProducci\xF3n/EscenaDePrueba2.unity"
     guid: 5b64d6844c3a05f4baef978ef5704863
   - enabled: 1
@@ -44,7 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Escenas/Producci\xF3n/VictoriaProd.unity"
     guid: 635714010242eeb46b78d443033f5b61
-  - enabled: 0
+  - enabled: 1
     path: "Assets/Escenas/PreProducci\xF3n/WhitePrueba.unity"
     guid: 2301c44026108824ab4b16ca72326dd5
   m_configObjects: {}
