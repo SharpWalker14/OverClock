@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Condiciones : MonoBehaviour
 {
     private GameObject jugador;
+    public string nivel;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +25,7 @@ public class Condiciones : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-            SceneManager.LoadScene("DerrotaProd");
+            SceneManager.LoadScene(nivel);
         }
     }
 

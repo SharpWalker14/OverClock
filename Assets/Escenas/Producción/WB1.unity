@@ -4806,7 +4806,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &269807021
 Transform:
   m_ObjectHideFlags: 0
@@ -4847,7 +4847,7 @@ Transform:
   - {fileID: 1129989367}
   - {fileID: 212948574}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &270266650
 GameObject:
@@ -11246,7 +11246,7 @@ Transform:
   - {fileID: 116292408}
   - {fileID: 142341217}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &609880783
 PrefabInstance:
@@ -15956,7 +15956,7 @@ Transform:
   - {fileID: 129488662}
   - {fileID: 249674552}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &896215406 stripped
 Transform:
