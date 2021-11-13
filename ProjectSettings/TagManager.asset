@@ -18,6 +18,7 @@ TagManager:
   - Orbe
   - ArmaAtaque
   - FinTutorial
+  - TutorialTeclas
   layers:
   - Default
   - TransparentFX

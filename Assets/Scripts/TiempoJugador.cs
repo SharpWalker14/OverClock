@@ -10,14 +10,14 @@ public class TiempoJugador : MonoBehaviour
     [HideInInspector]
     public float tiempo, tiempoCongelar, tiempoFrenesi, congelarMaximo;
     public ValorSalud salud;
-    public bool muerte, cambioOportunidad, cambioFrenesi, cambioCongelar;
+    public bool tutorial;
     public Color estado1;
     public Color estado2;
     public Color estado3;
     public Image reloj;
     public float etapa1, etapa2, etapa3;
     [HideInInspector]
-    public bool congelado;
+    public bool congelado, muerte, cambioOportunidad, cambioFrenesi, cambioCongelar;
     public FeedbackDaño feedback;
     // Start is called before the first frame update
     void Start()
@@ -33,13 +33,17 @@ public class TiempoJugador : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (congelado == false && cambioCongelar == false)
+        if (tutorial==false)
         {
-            CuentaRegresiva();
-        }
-        ListaPotenciadores();
+            if (congelado == false && cambioCongelar == false)
+            {
+                CuentaRegresiva();
+            }
+            ListaPotenciadores();
 
-        Etapas();
+            Etapas();
+        }
+
     }
 
     void Etapas()
