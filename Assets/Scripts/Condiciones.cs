@@ -25,7 +25,7 @@ public class Condiciones : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-            SceneManager.LoadScene(nivel);
+            SceneManager.LoadScene("DerrotaProd");
         }
     }
 

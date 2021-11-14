@@ -81,7 +81,13 @@ public class ValorSalud : MonoBehaviour
                     objetivo.GetComponent<TiempoJugador>().ObtenerTiempo(regalo.valor);
                 }
             }
-
+            if (jugador == false)
+            {
+                if (objetivo.GetComponent<TiempoJugador>().cambioFrenesi && GetComponent<ValorTiempoEnemigo>().estadoHorda == false)
+                {
+                    Instantiate(porDosObjecto, transform.position, transform.rotation);
+                }
+            }
             if (enemigodSuicida == true && charcos == 0)
             {
                 charcos += 1;
@@ -96,10 +102,7 @@ public class ValorSalud : MonoBehaviour
 
                 Instantiate(cortinaHumo, Humo, transform.rotation);
             }
-            if(objetivo.GetComponent<TiempoJugador>().cambioFrenesi && GetComponent<ValorTiempoEnemigo>().estadoHorda == false)
-            {
-                Instantiate(porDosObjecto, transform.position, transform.rotation);
-            }
+
             Destroy(gameObject);
         }
     }
