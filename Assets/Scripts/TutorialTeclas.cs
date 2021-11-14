@@ -29,7 +29,7 @@ public class TutorialTeclas : MonoBehaviour
         {
             case 0:
                 textoObj.SetActive(true);
-                texto.text = "Presiona WASD para moverte y usa el Mouse para mirar hacia los lados";
+                texto.text = "Presiona W, A, S y D para moverte y usa el Mouse para mirar hacia los lados";
                 break;
             case 1:
                 textoObj.SetActive(true);
@@ -64,6 +64,7 @@ public class TutorialTeclas : MonoBehaviour
         if (other.gameObject.tag == "TutorialTeclas")
         {
             ConteoTutorial();
+            other.gameObject.SetActive(false);
         }
     }
 }
