@@ -8,6 +8,7 @@ public class TutorialTeclas : MonoBehaviour
     private int contador;
     public Text texto;
     public GameObject textoObj;
+    public GameObject puntero;
     private float tiempo;
     private bool temporizado;
     // Start is called before the first frame update
@@ -37,6 +38,7 @@ public class TutorialTeclas : MonoBehaviour
                 break;
             case 2:
                 textoObj.SetActive(true);
+                puntero.SetActive(true);
                 texto.text = "Presiona click izquierdo para disparar";
                 break;
         }
