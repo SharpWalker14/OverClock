@@ -1,13 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class TutorialTeclas : MonoBehaviour
 {
     private int contador;
-    public Text texto;
-    public GameObject textoObj;
+    public GameObject controlesObj, saltoObj, disparoObj;
     public GameObject puntero;
     private float tiempo;
     private bool temporizado;
@@ -29,17 +27,24 @@ public class TutorialTeclas : MonoBehaviour
         switch (contador)
         {
             case 0:
-                textoObj.SetActive(true);
-                texto.text = "Presiona W, A, S y D para moverte y usa el Mouse para mirar hacia los lados";
+                controlesObj.SetActive(true);
+                saltoObj.SetActive(false);
+                disparoObj.SetActive(false);
+                //"Presiona W, A, S y D para moverte y usa el Mouse para mirar hacia los lados"
                 break;
             case 1:
-                textoObj.SetActive(true);
-                texto.text = "Presiona Space para saltar";
+                saltoObj.SetActive(true);
+                controlesObj.SetActive(false);
+                disparoObj.SetActive(false);
+                //"Presiona Space para saltar"
                 break;
             case 2:
-                textoObj.SetActive(true);
+                disparoObj.SetActive(true);
+                controlesObj.SetActive(false);
+                saltoObj.SetActive(false);
+
                 puntero.SetActive(true);
-                texto.text = "Presiona click izquierdo para disparar";
+                //"Presiona click izquierdo para disparar"
                 break;
         }
         tiempo = 10;
@@ -55,7 +60,9 @@ public class TutorialTeclas : MonoBehaviour
             if (tiempo <= 0)
             {
                 tiempo = 0;
-                textoObj.SetActive(false);
+                controlesObj.SetActive(false);
+                saltoObj.SetActive(false);
+                disparoObj.SetActive(false);
                 temporizado = false;
             }
         }
