@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1619657385516910017
 Transform:
@@ -51,6 +51,10 @@ PrefabInstance:
     - target: {fileID: 5013770240834944182, guid: bdc6fadc26345ee4faed481185c0f8c8, type: 3}
       propertyPath: m_Name
       value: EstantesLicor (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013770240834944182, guid: bdc6fadc26345ee4faed481185c0f8c8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5683452384380216844, guid: bdc6fadc26345ee4faed481185c0f8c8, type: 3}
       propertyPath: m_RootOrder
@@ -162,6 +166,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mesa de Dados
       objectReference: {fileID: 0}
+    - target: {fileID: 3032492383718119882, guid: 6ce3ffa7f82b1444f9def8335cb8bd28, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ce3ffa7f82b1444f9def8335cb8bd28, type: 3}
 --- !u!4 &3773151147080080830 stripped
@@ -179,6 +187,10 @@ PrefabInstance:
     - target: {fileID: 4623272841109378974, guid: c11dc427900e58640bed418424d9359e, type: 3}
       propertyPath: m_Name
       value: Silla
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623272841109378974, guid: c11dc427900e58640bed418424d9359e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5432179579642531108, guid: c11dc427900e58640bed418424d9359e, type: 3}
       propertyPath: m_RootOrder
@@ -245,6 +257,10 @@ PrefabInstance:
     - target: {fileID: 5013770240834944182, guid: bdc6fadc26345ee4faed481185c0f8c8, type: 3}
       propertyPath: m_Name
       value: EstantesLicor (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013770240834944182, guid: bdc6fadc26345ee4faed481185c0f8c8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5683452384380216844, guid: bdc6fadc26345ee4faed481185c0f8c8, type: 3}
       propertyPath: m_RootOrder
@@ -360,6 +376,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MesaPoker
       objectReference: {fileID: 0}
+    - target: {fileID: 6612019354556820526, guid: 0593e6e25e4d7fd43a056a3b9b55c08e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0593e6e25e4d7fd43a056a3b9b55c08e, type: 3}
 --- !u!4 &9021321008425788437 stripped
@@ -422,6 +442,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mesa de Dados (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3032492383718119882, guid: 6ce3ffa7f82b1444f9def8335cb8bd28, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ce3ffa7f82b1444f9def8335cb8bd28, type: 3}
 --- !u!4 &1320302563384536352 stripped
@@ -439,6 +463,10 @@ PrefabInstance:
     - target: {fileID: 3501465030911573404, guid: 0a9ba0305047dd14e8880ed0fc738406, type: 3}
       propertyPath: m_Name
       value: TragamonedasRoto
+      objectReference: {fileID: 0}
+    - target: {fileID: 3501465030911573404, guid: 0a9ba0305047dd14e8880ed0fc738406, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4313431706055993126, guid: 0a9ba0305047dd14e8880ed0fc738406, type: 3}
       propertyPath: m_RootOrder
@@ -558,6 +586,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MesaPoker (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6612019354556820526, guid: 0593e6e25e4d7fd43a056a3b9b55c08e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0593e6e25e4d7fd43a056a3b9b55c08e, type: 3}
 --- !u!4 &1623169517625965766 stripped
@@ -575,6 +607,10 @@ PrefabInstance:
     - target: {fileID: 5013770240834944182, guid: bdc6fadc26345ee4faed481185c0f8c8, type: 3}
       propertyPath: m_Name
       value: EstantesLicor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013770240834944182, guid: bdc6fadc26345ee4faed481185c0f8c8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5683452384380216844, guid: bdc6fadc26345ee4faed481185c0f8c8, type: 3}
       propertyPath: m_RootOrder
@@ -682,6 +718,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MesaPoker (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6612019354556820526, guid: 0593e6e25e4d7fd43a056a3b9b55c08e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0593e6e25e4d7fd43a056a3b9b55c08e, type: 3}
 --- !u!4 &775157057006984511 stripped
@@ -699,6 +739,10 @@ PrefabInstance:
     - target: {fileID: 5013770240834944182, guid: bdc6fadc26345ee4faed481185c0f8c8, type: 3}
       propertyPath: m_Name
       value: EstantesLicor (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013770240834944182, guid: bdc6fadc26345ee4faed481185c0f8c8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5683452384380216844, guid: bdc6fadc26345ee4faed481185c0f8c8, type: 3}
       propertyPath: m_RootOrder
