@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TutorialColision : MonoBehaviour
 {
-    public GameObject tutTexto, tutImagen, arma;
+    public GameObject tutImagen, arma;
     public TiempoJugador temporizado;
     // Start is called before the first frame update
     void Start()
@@ -22,14 +22,12 @@ public class TutorialColision : MonoBehaviour
     {
         if (temporizado.tutorial)
         {
-            tutTexto.SetActive(false);
             tutImagen.SetActive(false);
 
             arma.SetActive(false);
         }
         else
         {
-            tutTexto.SetActive(true);
             tutImagen.SetActive(true);
 
             arma.SetActive(true);

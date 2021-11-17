@@ -11,10 +11,22 @@ public class HUDJugador : MonoBehaviour
     public Image vidaHUD;
     public Image tiempoHUD;
     public Text tiempoTexto;
+
+    public GameObject armaSecundariaHUD;
+
+    private GameObject armaMeleeExistente;
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (armaMeleeExistente == null)
+        {
+            armaSecundariaHUD.SetActive(false);
+            armaMeleeExistente = GameObject.FindWithTag("Arma melee");
+            if (armaMeleeExistente != null)
+            {
+                armaSecundariaHUD.SetActive(true);
+            }
+        }
     }
 
     // Update is called once per frame

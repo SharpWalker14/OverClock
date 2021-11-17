@@ -19,6 +19,7 @@ TagManager:
   - ArmaAtaque
   - FinTutorial
   - TutorialTeclas
+  - Arma melee
   layers:
   - Default
   - TransparentFX
