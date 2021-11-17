@@ -19,6 +19,7 @@ public class TiempoJugador : MonoBehaviour
     [HideInInspector]
     public bool congelado, muerte, cambioOportunidad, cambioFrenesi, cambioCongelar;
     public FeedbackDaño feedback;
+    public GameObject objOportunidad, objFrenesi, objCongelar;
     // Start is called before the first frame update
     void Start()
     {
@@ -138,15 +139,23 @@ public class TiempoJugador : MonoBehaviour
     {
         if (cambioCongelar)
         {
+            objCongelar.SetActive(true);
             tiempoCongelar -= Time.deltaTime;
             if (tiempoCongelar <= 0)
             {
                 tiempoCongelar = 0;
                 cambioCongelar = false;
+
             }
+        }
+        else
+        {
+            objCongelar.SetActive(false);
         }
         if (cambioFrenesi)
         {
+            objFrenesi.SetActive(true);
+
             tiempoFrenesi -= Time.deltaTime;
             if (tiempoFrenesi <= 0)
             {
@@ -154,12 +163,22 @@ public class TiempoJugador : MonoBehaviour
                 cambioFrenesi = false;
             }
         }
+        else
+        {
+            objFrenesi.SetActive(false);
+        }
         if (cambioOportunidad)
         {
+            objOportunidad.SetActive(true);
             if (tiempo <= 1)
             {
                 tiempo += 20;
+                cambioOportunidad = false;
             }
+        }
+        else
+        {
+            objOportunidad.SetActive(false);
         }
     }
 }

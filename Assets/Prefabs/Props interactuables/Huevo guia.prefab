@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9001005251969055514}
   - component: {fileID: 9001005251969055513}
   - component: {fileID: 9001005251969055512}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Huevo guia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9001005251969055517}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 208903d3cd5051d41a1d0c8d8c4d6ddc, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2

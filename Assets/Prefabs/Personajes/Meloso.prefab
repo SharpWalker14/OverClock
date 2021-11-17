@@ -598,7 +598,7 @@ MonoBehaviour:
   aturdidor: 0
   deteccionAtaque: {fileID: 6015069486993247174}
   movimiento: {fileID: 6015069487381888069}
-  vista: {fileID: 0}
+  vista: {fileID: 6452532972908012363}
   normal: {fileID: -165931976072596170, guid: c952c1ed59d0a3446ab563326e3ad732, type: 3}
   ataque: {fileID: -6647340580436709500, guid: 0800633960bf01f488f5a5edd2c9b148, type: 3}
 --- !u!136 &5831810357498347840
@@ -764,5 +764,10 @@ PrefabInstance:
 --- !u!4 &7936427864510065902 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2b08cf85503e73f41b1555a261846a80, type: 3}
+  m_PrefabInstance: {fileID: 7613724833110493957}
+  m_PrefabAsset: {fileID: 0}
+--- !u!33 &6452532972908012363 stripped
+MeshFilter:
+  m_CorrespondingSourceObject: {fileID: -5754084199372789682, guid: 2b08cf85503e73f41b1555a261846a80, type: 3}
   m_PrefabInstance: {fileID: 7613724833110493957}
   m_PrefabAsset: {fileID: 0}
