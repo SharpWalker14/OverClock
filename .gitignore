@@ -1,13 +1,13 @@
-[Ll]ibrary/
-[Tt]emp/
-[Oo]bj/
-[Bb]uild/
-[Bb]uilds/
-[Aa]ssets/
-[Ll]ogs/
-[Pp]ackages/
-[Pp]rojectSettings/
-[Uu]serSettings/
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Aa]ssets/
+/[Ll]ogs/
+/[Pp]ackages/
+/[Pp]rojectSettings/
+/[Uu]serSettings/
 Assets/AssetStoreTools*
 
 # Visual Studio cache directory
