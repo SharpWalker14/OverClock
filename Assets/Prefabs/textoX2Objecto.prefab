@@ -83,7 +83,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1429158485816869383}
-  m_Text: x2
+  m_Text: 2x
   m_OffsetZ: 0
   m_CharacterSize: 1.1
   m_LineSpacing: 1
@@ -107,7 +107,7 @@ Animator:
   m_GameObject: {fileID: 1429158485816869383}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 94475b2aeff0190418649cc327424788, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -244,7 +244,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7496935113161370002}
-  m_Text: x2
+  m_Text: 2x
   m_OffsetZ: 0
   m_CharacterSize: 1.1
   m_LineSpacing: 1
