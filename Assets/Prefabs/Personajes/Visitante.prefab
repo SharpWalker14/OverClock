@@ -217,7 +217,7 @@ MonoBehaviour:
   deteccionAtaque: {fileID: 1945321189712592319}
   movimiento: {fileID: 1945321189596318268}
   vista: {fileID: 5781172575532198158}
-  normal: {fileID: 167570697240502952, guid: f4c88b8e12f792840a2750ff44e0aa0c, type: 3}
+  normal: {fileID: -2841969272438934730, guid: ee73b1ccb61cac7499bb68fcc718f7a5, type: 3}
   ataque: {fileID: -4522116333415366894, guid: 0479e99ea5bb59848bde08d0c8273120, type: 3}
 --- !u!136 &7478808142850078982
 CapsuleCollider:
