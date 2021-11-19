@@ -15,7 +15,7 @@ public class NoDestruir : MonoBehaviour
     public GameObject objetoMusica;
     private GameObject objetivoMusica;
     public AudioSource musicos;
-    public string nombreDeEscena, ultimaEscena;
+    public string nombreDeEscena, ultimaEscena, siguienteEscena;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,17 +24,18 @@ public class NoDestruir : MonoBehaviour
         objetoMusica.transform.position = objetivoMusica.transform.position;
         //Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
         Calidades(0);
-        pantallaCompleta = false;
         sensibilidadMouse = 70;
-
+        pantallaCompleta = Screen.fullScreen;
         volumen = 0;
         maxAncho = 1920;
         maxAltura = 1080;
-        anchoDatos = 1920;
-        alturaDatos = 1080;
-        Screen.SetResolution(anchoDatos, alturaDatos, pantallaCompleta);
         escenaActual = SceneManager.GetActiveScene();
         nombreDeEscena = escenaActual.name;
+        anchoDatos = Screen.width;
+        alturaDatos = Screen.height;
+        //Screen.SetResolution(anchoDatos, alturaDatos, pantallaCompleta);
+
+
     }
 
     // Update is called once per frame

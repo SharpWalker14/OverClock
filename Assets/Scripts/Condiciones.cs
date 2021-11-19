@@ -5,12 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class Condiciones : MonoBehaviour
 {
+    private GameObject nucleo;
+    private NoDestruir datos;
     private GameObject jugador;
     public string nivel;
     // Start is called before the first frame update
     void Start()
     {
         jugador = GameObject.FindGameObjectWithTag("Player");
+        nucleo = GameObject.FindGameObjectWithTag("Datos");
+        datos = nucleo.GetComponent<NoDestruir>();
+        datos.siguienteEscena = nivel;
     }
 
     // Update is called once per frame
@@ -35,7 +40,7 @@ public class Condiciones : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-            SceneManager.LoadScene(nivel);
+            SceneManager.LoadScene("VictoriaProd");
         }
     }
 }

@@ -405,6 +405,7 @@ GameObject:
   - component: {fileID: 951477717}
   - component: {fileID: 951477718}
   - component: {fileID: 951477719}
+  - component: {fileID: 951477720}
   m_Layer: 0
   m_Name: "C\xE1mara principal"
   m_TagString: MainCamera
@@ -535,6 +536,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9731d0b8cc3adcd49a7464060dd9ef42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &951477720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951477713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed83e5ed09e87834fae75abfed563f75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &989580761
 GameObject:
   m_ObjectHideFlags: 0
@@ -650,7 +663,7 @@ GameObject:
   - component: {fileID: 1121968758}
   - component: {fileID: 1121968757}
   m_Layer: 0
-  m_Name: Reiniciar
+  m_Name: SiguienteNivel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -720,9 +733,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 951477719}
-        m_TargetAssemblyTypeName: ReinicioAlNivel, Assembly-CSharp
-        m_MethodName: ReiniciarEnNivel
+      - m_Target: {fileID: 951477720}
+        m_TargetAssemblyTypeName: SiguienteNivel, Assembly-CSharp
+        m_MethodName: Siguiente
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1052,7 +1065,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Reiniciar
+  m_Text: Siguiente nivel
 --- !u!222 &1880960653
 CanvasRenderer:
   m_ObjectHideFlags: 0
