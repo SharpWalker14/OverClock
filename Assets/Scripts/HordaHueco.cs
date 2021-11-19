@@ -5,7 +5,9 @@ using UnityEngine;
 public class HordaHueco : MonoBehaviour
 {
     private bool visto, enVacio;
-    public bool confirmado;
+    public Detector deteccion;
+    //[HideInInspector]
+    public bool confirmado, resuelto;
     private bool suelo, pared;
     public GameObject[] lugares;
     public GameObject enemigo, vistaObjeto;
@@ -25,6 +27,7 @@ public class HordaHueco : MonoBehaviour
         {
             VisionParedes();
             Comprobar();
+            Resultado();
         }
     }
 
@@ -67,6 +70,18 @@ public class HordaHueco : MonoBehaviour
         else
         {
             confirmado = false;
+        }
+    }
+
+    void Resultado()
+    {
+        if (confirmado && deteccion.tocado == true)
+        {
+            resuelto = true;
+        }
+        else
+        {
+            resuelto = false;
         }
     }
 

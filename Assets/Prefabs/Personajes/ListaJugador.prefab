@@ -1404,6 +1404,8 @@ MonoBehaviour:
   vida: 100
   jugador: 1
   armadura: 0
+  liviana: 0
+  pesada: 0
   charcoAcido: {fileID: 0}
   cortinaHumo: {fileID: 0}
   porDosObjecto: {fileID: 0}
@@ -5339,7 +5341,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294963199
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -6266,6 +6268,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 85c3d7fc2f54d5245968ae486e90c6f0, type: 3}
       propertyPath: m_Name
       value: PERSONAJE_JUGADOR_FUV
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 85c3d7fc2f54d5245968ae486e90c6f0, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85c3d7fc2f54d5245968ae486e90c6f0, type: 3}

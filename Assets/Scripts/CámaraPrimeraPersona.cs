@@ -30,8 +30,18 @@ public class CámaraPrimeraPersona : MonoBehaviour
         float mouseY = Input.GetAxis("Mouse Y") * sensibilidad * 0.025f * multiY;
         rotaciónX -= mouseY;
         rotaciónX = Mathf.Clamp(rotaciónX, -90f, 90f);
-
-        transform.localRotation = Quaternion.Euler(rotaciónX, 0f, 0f);
+        if (rotaciónX > 65 && mouseY < 0)
+        {
+            rotaciónX = 65;
+        }
+        else if (rotaciónX < -65 && mouseY > 0)
+        {
+            rotaciónX = -65;
+        }
+        else
+        {
+            transform.localRotation = Quaternion.Euler(rotaciónX, 0f, 0f);
+        }
         jugadorGráficos.Rotate(Vector3.up * mouseX);
     }
 

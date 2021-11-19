@@ -59,7 +59,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6015069485847245840}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20, y: 0.175, z: 0}
+  m_LocalPosition: {x: 20, y: 0.17500001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8273932477436962018}
@@ -119,7 +119,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6015069485910212153}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20, y: 0.175, z: 0}
+  m_LocalPosition: {x: -20, y: 0.17500001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8273932477436962018}
@@ -209,7 +209,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6015069486414489416}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.175, z: 20}
+  m_LocalPosition: {x: 0, y: 0.17500001, z: 20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8273932477436962018}
@@ -549,6 +549,8 @@ MonoBehaviour:
   vida: 150
   jugador: 0
   armadura: 0
+  liviana: 0
+  pesada: 0
   charcoAcido: {fileID: 3278621805438566124, guid: 92afffd5bb77e13488135f9f422ef1b8, type: 3}
   cortinaHumo: {fileID: 0}
   porDosObjecto: {fileID: 5367659412949508569, guid: 63d68657adb4ad44f92892baf9d4653b, type: 3}
@@ -599,7 +601,7 @@ MonoBehaviour:
   deteccionAtaque: {fileID: 6015069486993247174}
   movimiento: {fileID: 6015069487381888069}
   vista: {fileID: 6452532972908012363}
-  normal: {fileID: -165931976072596170, guid: c952c1ed59d0a3446ab563326e3ad732, type: 3}
+  normal: {fileID: 5577132485097347295, guid: 2b08cf85503e73f41b1555a261846a80, type: 3}
   ataque: {fileID: -6647340580436709500, guid: 0800633960bf01f488f5a5edd2c9b148, type: 3}
 --- !u!136 &5831810357498347840
 CapsuleCollider:
@@ -642,7 +644,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   original: {fileID: 2100000, guid: d231e3375ef698b4b8bdb935c2e5b651, type: 2}
-  modelado: {fileID: 0}
+  modelado: {fileID: 7307103265732310612}
   "feedbackDa\xF1o": {fileID: 2100000, guid: a86088909080e9349b19b2464c4ffd1b, type: 2}
   tiempoFiltro: 0.2
 --- !u!1 &6015069487837522874
@@ -761,6 +763,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b08cf85503e73f41b1555a261846a80, type: 3}
+--- !u!1 &7307103265732310612 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2b08cf85503e73f41b1555a261846a80, type: 3}
+  m_PrefabInstance: {fileID: 7613724833110493957}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7936427864510065902 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2b08cf85503e73f41b1555a261846a80, type: 3}

@@ -9,6 +9,7 @@ public class ValorSalud : MonoBehaviour
     public bool jugador;
     [HideInInspector]
     public bool armadura;
+    public bool liviana, pesada;
     private GameObject objetivo;
     public GameObject charcoAcido, cortinaHumo,porDosObjecto;
     public bool enemigodSuicida, enemigoHumo;
@@ -128,7 +129,7 @@ public class ValorSalud : MonoBehaviour
         {
             explosionHumo = true;
         }
-        if (jugador == false && other.gameObject.tag == "ArmaAtaque")
+        if (jugador == false && other.gameObject.tag == "ArmaAtaque" && pesada == false)
         {
             DañoArma();
         }

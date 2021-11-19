@@ -6,7 +6,9 @@ using UnityEngine.AI;
 public class Hazzard : MonoBehaviour
 {
     public MovimientoJugador jugadorM;
+    public Detector ataqueCerca;
     public float daño=1;
+    public ValorSalud cambiante;
     public GameObject jugadorObj, areaObj;
     private RaycastHit pared, piso, jugadorRay;
     private float intentaMuro, intentaObjetivo, tiempo;
@@ -96,12 +98,13 @@ public class Hazzard : MonoBehaviour
         {
             jugadorM.eden = gameObject;
             vista.mesh = ataque;
+            cambiante.liviana = false;
         }
     }
 
     void Ataque()
     {
-        if (enRangoVision)
+        if (ataqueCerca.tocado)
         {
             tiempo += Time.deltaTime;
             if (tiempo >= 1)
