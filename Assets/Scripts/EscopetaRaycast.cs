@@ -38,7 +38,10 @@ public class EscopetaRaycast : MonoBehaviour
                 {
                     if (golpe.collider.GetComponent<ValorSalud>() != null)
                     {
-                        golpe.collider.GetComponent<ValorSalud>().CambioDeVida(-daño);
+                        if(golpe.collider.GetComponent<ValorSalud>().liviana==false&& golpe.collider.GetComponent<ValorSalud>().pesada == false)
+                        {
+                            golpe.collider.GetComponent<ValorSalud>().CambioDeVida(-daño);
+                        }
                     }
                     if (golpe.collider.GetComponent<Huevo>() != null)
                     {
