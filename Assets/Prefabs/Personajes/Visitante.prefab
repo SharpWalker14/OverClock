@@ -148,7 +148,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 0
   m_AutoRepath: 1
-  m_Height: 1.75
+  m_Height: 1.6
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 3
@@ -167,6 +167,8 @@ MonoBehaviour:
   vida: 40
   jugador: 0
   armadura: 0
+  liviana: 0
+  pesada: 0
   charcoAcido: {fileID: 0}
   cortinaHumo: {fileID: 0}
   porDosObjecto: {fileID: 5367659412949508569, guid: 63d68657adb4ad44f92892baf9d4653b, type: 3}
@@ -232,7 +234,7 @@ CapsuleCollider:
   m_Radius: 0.27
   m_Height: 1.6
   m_Direction: 1
-  m_Center: {x: 0, y: 0.95, z: 0}
+  m_Center: {x: 0, y: 0.8, z: 0}
 --- !u!114 &7000252759117439697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -484,7 +486,7 @@ CapsuleCollider:
   m_Radius: 0.27
   m_Height: 1.6
   m_Direction: 1
-  m_Center: {x: 0, y: 0.95, z: 0}
+  m_Center: {x: 0, y: 0.8, z: 0}
 --- !u!1 &1945321190207459633
 GameObject:
   m_ObjectHideFlags: 0
@@ -717,7 +719,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f4c88b8e12f792840a2750ff44e0aa0c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.15
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f4c88b8e12f792840a2750ff44e0aa0c, type: 3}
       propertyPath: m_LocalPosition.z
