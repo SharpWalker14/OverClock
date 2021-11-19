@@ -48,6 +48,7 @@ public class EscopetaRaycast : MonoBehaviour
                         golpe.collider.GetComponent<Huevo>().Toque();
                     }
                     GameObject efectoDeBala = Instantiate(impactoBala, golpe.point, Quaternion.identity) as GameObject;
+                    GameObject Particula = Instantiate(impactoBala, golpe.point, Quaternion.identity) as GameObject;
                     Destroy(efectoDeBala, 1);
 
                     CrearLaser(golpe.point);

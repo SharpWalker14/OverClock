@@ -47,7 +47,7 @@ public class TutorialTeclas : MonoBehaviour
                 //"Presiona click izquierdo para disparar"
                 break;
         }
-        tiempo = 10;
+        tiempo = 5;
         temporizado = true;
         contador++;
     }
