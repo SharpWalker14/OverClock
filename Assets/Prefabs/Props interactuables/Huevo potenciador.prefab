@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 1869766605012928985}
   m_Layer: 0
   m_Name: Huevo potenciador
-  m_TagString: Untagged
+  m_TagString: Potenciador
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

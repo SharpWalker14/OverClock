@@ -12,9 +12,9 @@ public class HUDJugador : MonoBehaviour
     public Image tiempoHUD;
     public Text tiempoTexto;
 
-    public GameObject armaSecundariaHUD;
+    public GameObject armaSecundariaHUD, potenciadoresHUD;
 
-    private GameObject armaMeleeExistente;
+    private GameObject armaMeleeExistente, potenciadoresExistente;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +25,15 @@ public class HUDJugador : MonoBehaviour
             if (armaMeleeExistente != null)
             {
                 armaSecundariaHUD.SetActive(true);
+            }
+        }
+        if (potenciadoresExistente == null)
+        {
+            potenciadoresHUD.SetActive(false);
+            potenciadoresExistente = GameObject.FindWithTag("Potenciador");
+            if (potenciadoresExistente != null)
+            {
+                potenciadoresHUD.SetActive(true);
             }
         }
     }

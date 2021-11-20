@@ -20,6 +20,7 @@ TagManager:
   - FinTutorial
   - TutorialTeclas
   - Arma melee
+  - Potenciador
   layers:
   - Default
   - TransparentFX
