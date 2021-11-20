@@ -1285,7 +1285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4fcedb642c9b9d4e9eb7ce733171f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nivel: "Men\xFAConjunto"
+  nivel: WB1
 --- !u!1 &1614202756 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6484326113962966035, guid: b4c298ea90720d84fa49b9c5216a38a2, type: 3}
