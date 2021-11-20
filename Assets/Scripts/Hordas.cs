@@ -36,7 +36,7 @@ public class Hordas : MonoBehaviour
 
             for (int i = 0; i < huecos.Length; i++)
             {
-                if (huecos[i].confirmado == false)
+                if (huecos[i].resuelto == true)
                 {
                     lugarAparicion[contador] = huecos[i];
                     contador++;

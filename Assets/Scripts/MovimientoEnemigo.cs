@@ -45,9 +45,12 @@ public class MovimientoEnemigo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (radar.objetivo != null)
+        if (radar != null)
         {
-            Movimiento();
+            if (radar.objetivo != null)
+            {
+                Movimiento();
+            }
         }
     }
 
