@@ -17,12 +17,20 @@ public class TiempoJugador : MonoBehaviour
     public Image reloj;
     public float etapa1, etapa2, etapa3;
     [HideInInspector]
-    public bool congelado, muerte, cambioOportunidad, cambioFrenesi, cambioCongelar;
+    public bool congelado, muerte, cambioOportunidad, cambioFrenesi, cambioCongelar, tutorialTiempo;
     public FeedbackDaño feedback;
     public GameObject objOportunidad, objFrenesi, objCongelar;
     // Start is called before the first frame update
     void Start()
     {
+        if (tutorial)
+        {
+            tutorialTiempo = true;
+        }
+        else
+        {
+            tutorialTiempo = false;
+        }
         cambioOportunidad = false;
         cambioFrenesi = false;
         cambioCongelar = false;
@@ -34,17 +42,15 @@ public class TiempoJugador : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (tutorial==false)
+        if (tutorialTiempo==false)
         {
             if (congelado == false && cambioCongelar == false)
             {
                 CuentaRegresiva();
             }
-            ListaPotenciadores();
-
             Etapas();
         }
-
+        ListaPotenciadores();
     }
 
     void Etapas()

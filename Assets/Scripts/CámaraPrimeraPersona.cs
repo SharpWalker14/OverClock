@@ -30,13 +30,13 @@ public class CámaraPrimeraPersona : MonoBehaviour
         float mouseY = Input.GetAxis("Mouse Y") * sensibilidad * 0.025f * multiY;
         rotaciónX -= mouseY;
         rotaciónX = Mathf.Clamp(rotaciónX, -90f, 90f);
-        if (rotaciónX > 65 && mouseY < 0)
+        if (rotaciónX > 47.5f && mouseY < 0)
         {
-            rotaciónX = 65;
+            rotaciónX = 47.5f;
         }
-        else if (rotaciónX < -65 && mouseY > 0)
+        else if (rotaciónX < -60.5f && mouseY > 0)
         {
-            rotaciónX = -65;
+            rotaciónX = -60.5f;
         }
         else
         {

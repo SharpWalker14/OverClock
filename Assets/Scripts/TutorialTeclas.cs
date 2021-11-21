@@ -4,16 +4,23 @@ using UnityEngine;
 
 public class TutorialTeclas : MonoBehaviour
 {
-    private int contador;
-    public GameObject controlesObj, saltoObj, disparoObj;
-    public GameObject puntero;
+    private int contador, conteoTecla;
+    public GameObject mouseObj, controlesObj, saltoObj, disparoObj, tiempoObj;
+    public GameObject puntero, tiempoHUD;
+    public TiempoJugador tutoria;
+    public MovimientoJugador movimiento;
     private float tiempo;
-    private bool temporizado;
+    private bool temporizado, siguiente, espacio, disparo;
     // Start is called before the first frame update
     void Start()
     {
         temporizado = false;
         contador = 0;
+        if (tutoria.tutorial)
+        {
+            puntero.SetActive(false);
+            tiempoHUD.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -27,43 +34,89 @@ public class TutorialTeclas : MonoBehaviour
         switch (contador)
         {
             case 0:
-                controlesObj.SetActive(true);
-                saltoObj.SetActive(false);
-                disparoObj.SetActive(false);
+                mouseObj.SetActive(true);
+                tiempo = 3;
+                siguiente = true;
                 //"Presiona W, A, S y D para moverte y usa el Mouse para mirar hacia los lados"
                 break;
             case 1:
-                saltoObj.SetActive(true);
-                controlesObj.SetActive(false);
-                disparoObj.SetActive(false);
-                //"Presiona Space para saltar"
+                controlesObj.SetActive(true);
+                mouseObj.SetActive(false);
+                tiempo = 5;
                 break;
             case 2:
-                disparoObj.SetActive(true);
+                saltoObj.SetActive(true);
                 controlesObj.SetActive(false);
+                espacio = true;
+                conteoTecla = 3;
+                //"Presiona Space para saltar"
+                break;
+            case 3:
+                disparoObj.SetActive(true);
                 saltoObj.SetActive(false);
-
                 puntero.SetActive(true);
+                disparo = true;
+                conteoTecla = 3;
                 //"Presiona click izquierdo para disparar"
                 break;
+            case 4:
+                tiempoObj.SetActive(true);
+                disparoObj.SetActive(false);
+                tiempoHUD.SetActive(true);
+                tutoria.tutorialTiempo = false;
+                tiempo = 3;
+                break;
         }
-        tiempo = 5;
         temporizado = true;
         contador++;
     }
     
     void Temporizador()
     {
-        if (temporizado)
+        if (espacio || disparo)
+        {
+            if (espacio)
+            {
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    conteoTecla--;
+                }
+            }
+            else if (disparo)
+            {
+                if (Input.GetMouseButtonDown(0))
+                {
+                    conteoTecla--;
+                }
+            }
+            if (conteoTecla == 0)
+            {
+                espacio = false;
+                disparo = false;
+            }
+        }
+        else if (temporizado)
         {
             tiempo -= Time.deltaTime;
+            if (siguiente)
+            {
+                movimiento.velocidadMovimiento = 0;
+            }
             if (tiempo <= 0)
             {
                 tiempo = 0;
                 controlesObj.SetActive(false);
                 saltoObj.SetActive(false);
                 disparoObj.SetActive(false);
+                mouseObj.SetActive(false);
+                tiempoObj.SetActive(false);
                 temporizado = false;
+                if (siguiente)
+                {
+                    movimiento.velocidadMovimiento = movimiento.normal;
+                    siguiente = false;
+                    ConteoTutorial();
+                }
             }
         }
     }

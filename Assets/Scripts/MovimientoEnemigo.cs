@@ -77,6 +77,7 @@ public class MovimientoEnemigo : MonoBehaviour
             }
             if (radar.detectar || guardarVida != valores.vida)
             {
+                valores.pesada = false;
                 Mirar();
                 tranquilo = false;
             }
@@ -85,13 +86,17 @@ public class MovimientoEnemigo : MonoBehaviour
         else
         {
             inteligencia.SetDestination(radar.objetivo.transform.position);
+            if (guardarVelocidad == 0)
+            {
+                Mirar();
+            }
         }
 
     }
 
     void Mirar()
     {
-        if (fijador == 0)
+        if (fijador == 0 || (guardarVelocidad == 0 && tranquilo == false))
         {
             fijador++;
 

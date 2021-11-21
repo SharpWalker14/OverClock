@@ -9,9 +9,9 @@ public class MovimientoJugador : MonoBehaviour
 
     public float velocidadMovimiento, gravedad, saltoAltura;
     [HideInInspector]
-    public float tiempoInmovilizado;
+    public float acido, normal, tiempoInmovilizado;
     public DetectarSuelo controlarSuelo, controlarSalto;
-    private float acido, normal, alturaJugador = 1.7f, tiempoSalto;
+    private float alturaJugador = 1.7f, tiempoSalto;
     private Transform controlSuelo;
     public LayerMask sueloFiltro;
     [HideInInspector]

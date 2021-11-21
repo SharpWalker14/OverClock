@@ -247,7 +247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ee2c4ddd14f7d24aa8484e9bd9cf4e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valor: 5
+  valor: 8
   estadoHorda: 0
 --- !u!114 &9184900847882042794
 MonoBehaviour:
