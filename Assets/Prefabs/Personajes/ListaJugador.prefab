@@ -1453,6 +1453,7 @@ MonoBehaviour:
   objOportunidad: {fileID: 92203597728842857}
   objFrenesi: {fileID: 4298231858472416592}
   objCongelar: {fileID: 1159000007845740070}
+  tiempoHUD: {fileID: 7387761501946948700}
 --- !u!114 &2440741115527347479
 MonoBehaviour:
   m_ObjectHideFlags: 0

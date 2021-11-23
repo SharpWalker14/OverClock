@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1980976205204535088}
   - component: {fileID: 5535481161884255686}
   - component: {fileID: 4714778716511283310}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Eden
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 2050782841994889695}
   - component: {fileID: 2095275371540762909}
   - component: {fileID: 5984272209736218070}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AreaVisual
   m_TagString: Untagged
   m_Icon: {fileID: 7422848464349959988, guid: 0000000000000000d000000000000000, type: 0}
@@ -256,7 +256,7 @@ GameObject:
   - component: {fileID: 1324966511976203949}
   - component: {fileID: 1782358096284258964}
   - component: {fileID: 8221138477107929351}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -307,7 +307,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4068206562059691461}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Modelo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -339,7 +339,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6366847749323287140}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AreaRango
   m_TagString: Untagged
   m_Icon: {fileID: 7422848464349959988, guid: 0000000000000000d000000000000000, type: 0}
@@ -371,7 +371,7 @@ GameObject:
   - component: {fileID: 3510740330024029755}
   - component: {fileID: 6447420900490034988}
   - component: {fileID: 6085485878581885659}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AreaAtaque
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -478,6 +478,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ce226f5fc6d495746be54d8bb399ca54, type: 3}
       propertyPath: m_Name
       value: Enemigo(hazard)_FBX
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ce226f5fc6d495746be54d8bb399ca54, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce226f5fc6d495746be54d8bb399ca54, type: 3}

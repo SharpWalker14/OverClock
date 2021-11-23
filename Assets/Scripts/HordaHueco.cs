@@ -6,8 +6,8 @@ public class HordaHueco : MonoBehaviour
 {
     private bool visto, enVacio;
     public Detector deteccion;
-    //[HideInInspector]
-    public bool confirmado, resuelto;
+    [HideInInspector]
+    public bool confirmado, resuelto, obsoleto;
     private bool suelo, pared;
     public GameObject[] lugares;
     public GameObject enemigo, vistaObjeto;
@@ -17,13 +17,14 @@ public class HordaHueco : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        obsoleto = false;
         camara = GameObject.FindGameObjectWithTag("MainCamera");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (camara != null)
+        if (camara != null && !obsoleto)
         {
             VisionParedes();
             Comprobar();
@@ -106,14 +107,17 @@ public class HordaHueco : MonoBehaviour
 
     public void Invocacion()
     {
-        for(int i=0; i < lugares.Length; i++)
+        if (!obsoleto)
         {
-            enemigo.transform.position = lugares[i].transform.position;
-            enemigo.GetComponent<MovimientoEnemigo>().tranquilo = false;
-            enemigo.GetComponent<ValorTiempoEnemigo>().estadoHorda = true;
-            Instantiate(enemigo);
-            enemigo.GetComponent<MovimientoEnemigo>().tranquilo = true;
-            enemigo.GetComponent<ValorTiempoEnemigo>().estadoHorda = false;
+            for (int i = 0; i < lugares.Length; i++)
+            {
+                enemigo.transform.position = lugares[i].transform.position;
+                enemigo.GetComponent<MovimientoEnemigo>().tranquilo = false;
+                enemigo.GetComponent<ValorTiempoEnemigo>().estadoHorda = true;
+                Instantiate(enemigo);
+                enemigo.GetComponent<MovimientoEnemigo>().tranquilo = true;
+                enemigo.GetComponent<ValorTiempoEnemigo>().estadoHorda = false;
+            }
         }
     }
 }

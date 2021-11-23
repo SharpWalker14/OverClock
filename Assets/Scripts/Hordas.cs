@@ -5,7 +5,9 @@ using UnityEngine;
 public class Hordas : MonoBehaviour
 {
     private HordaHueco[] huecos;
+    public bool especial;
     private float tiempo;
+    public GameObject meta;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +17,14 @@ public class Hordas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ConteoHuecos();
+        if (especial)
+        {
+            ColisionArea();
+        }
+        else
+        {
+            ConteoHuecos();
+        }
     }
 
     void ConteoHuecos()
@@ -26,7 +35,7 @@ public class Hordas : MonoBehaviour
             int contador = 0;
             for(int i = 0; i < huecos.Length; i++)
             {
-                if (huecos[i].confirmado == false)
+                if (huecos[i].resuelto == true)
                 {
                     contador++;
                 }
@@ -43,12 +52,38 @@ public class Hordas : MonoBehaviour
                 }
             }
 
-            contador = Random.Range(0, lugarAparicion.Length);
+            if (contador != 0)
+            {
+                contador = Random.Range(0, lugarAparicion.Length);
 
-            lugarAparicion[contador].Invocacion();
+                lugarAparicion[contador].Invocacion();
+                tiempo = 0;
+            }
+        }
+    }
 
-
-            tiempo = 0;
+    void ColisionArea()
+    {
+        int contador = 0;
+        for (int i = 0; i < huecos.Length; i++)
+        {
+            if (huecos[i].resuelto == true)
+            {
+                huecos[i].Invocacion();
+                huecos[i].obsoleto = true;
+            }
+            if (huecos[i].obsoleto)
+            {
+                contador++;
+            }
+            if (contador == huecos.Length)
+            {
+                meta.SetActive(true);
+            }
+            else
+            {
+                meta.SetActive(false);
+            }
         }
     }
 }

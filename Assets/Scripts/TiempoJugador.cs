@@ -19,7 +19,7 @@ public class TiempoJugador : MonoBehaviour
     [HideInInspector]
     public bool congelado, muerte, cambioOportunidad, cambioFrenesi, cambioCongelar, tutorialTiempo;
     public FeedbackDaño feedback;
-    public GameObject objOportunidad, objFrenesi, objCongelar;
+    public GameObject objOportunidad, objFrenesi, objCongelar, tiempoHUD;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,15 +42,26 @@ public class TiempoJugador : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (tutorialTiempo==false)
+        Temporizador();
+
+        ListaPotenciadores();
+    }
+
+    void Temporizador()
+    {
+        if (tutorialTiempo == false)
         {
+            tiempoHUD.SetActive(true);
             if (congelado == false && cambioCongelar == false)
             {
                 CuentaRegresiva();
             }
             Etapas();
         }
-        ListaPotenciadores();
+        else
+        {
+            tiempoHUD.SetActive(false);
+        }
     }
 
     void Etapas()
