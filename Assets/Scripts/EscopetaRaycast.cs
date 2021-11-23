@@ -29,12 +29,13 @@ public class EscopetaRaycast : MonoBehaviour
     }
     void Disparo()
     {
-        if (Input.GetMouseButtonDown(0) && esperaTiempo >= espera && Time.timeScale != 0f)
+       
+            if (Input.GetMouseButtonDown(0) && esperaTiempo >= espera && Time.timeScale != 0f)
         {
             for (int i = 0; i < disparos; i++)
             {
 
-                if (Physics.Raycast(camara.position, DireccionDeBalas(), out golpe, rangoDisparo, ~(1 << 9)))
+                if (Physics.Raycast(camara.position, DireccionDeBalas(), out golpe, rangoDisparo, ~(2 << 8)))
                 {
                     if (golpe.collider.GetComponent<ValorSalud>() != null)
                     {
