@@ -11,7 +11,7 @@ public class Hazzard : MonoBehaviour
     public ValorSalud cambiante;
     public GameObject jugadorObj, areaObj;
     private RaycastHit pared, piso, jugadorRay;
-    private float intentaMuro, intentaObjetivo, tiempo;
+    public float intentaMuro, intentaObjetivo, tiempo;
     public float rangoDeteccion;
     public bool enRangoVision, linea;
     public MeshFilter vista;
