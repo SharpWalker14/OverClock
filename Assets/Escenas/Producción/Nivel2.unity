@@ -311,6 +311,10 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 8.744911
       objectReference: {fileID: 0}
+    - target: {fileID: 7344162386036668142, guid: 88708813573fdb54e801558a02b0e993, type: 3}
+      propertyPath: m_TagString
+      value: TutorialTeclas
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88708813573fdb54e801558a02b0e993, type: 3}
 --- !u!1 &52575830 stripped
@@ -9251,7 +9255,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1516341734}
   m_LocalRotation: {x: -0, y: 0.18997775, z: -0, w: 0.98178846}
-  m_LocalPosition: {x: 150.4, y: -2.32, z: -69.2}
+  m_LocalPosition: {x: 116.71, y: -2.32, z: -73.96}
   m_LocalScale: {x: 2.3473096, y: 4.4960337, z: 5.366095}
   m_Children: []
   m_Father: {fileID: 0}
@@ -9269,7 +9273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4fcedb642c9b9d4e9eb7ce733171f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nivel: WB1
+  nivel: Nivel3
 --- !u!1001 &1536524014
 PrefabInstance:
   m_ObjectHideFlags: 0
