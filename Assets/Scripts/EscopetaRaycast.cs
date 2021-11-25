@@ -53,11 +53,13 @@ public class EscopetaRaycast : MonoBehaviour
                     Destroy(efectoDeBala, 1);
 
                     CrearLaser(golpe.point);
+                    FindObjectOfType<AudioCerebro>().Play("Disparo");
                 }
 
 
                 else
                 {
+                    FindObjectOfType<AudioCerebro>().Play("Disparo");
                     CrearLaser(camara.position + DireccionDeBalas() * rangoDisparo);
                 }
                 esperaTiempo = 0;

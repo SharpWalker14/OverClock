@@ -5787,6 +5787,11 @@ CapsuleCollider:
   m_Height: 0.75
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &935813095 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1424622320235441443, guid: 588032cd05d76234d9996fd8fb866536, type: 3}
+  m_PrefabInstance: {fileID: 1773038307}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &941626589
 GameObject:
   m_ObjectHideFlags: 0
@@ -8385,6 +8390,11 @@ CapsuleCollider:
   m_Height: 0.75
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1375518838 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3685847218527951977, guid: 588032cd05d76234d9996fd8fb866536, type: 3}
+  m_PrefabInstance: {fileID: 1773038307}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1382397506 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3650029971529749584, guid: 588032cd05d76234d9996fd8fb866536, type: 3}
@@ -8801,6 +8811,83 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5085852779158761594, guid: b4c298ea90720d84fa49b9c5216a38a2, type: 3}
+--- !u!1001 &1441712657
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 69698482624654089, guid: 8759f13cd50789c4bb763b2b058b9c05, type: 3}
+      propertyPath: sonidos.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 69698482624654089, guid: 8759f13cd50789c4bb763b2b058b9c05, type: 3}
+      propertyPath: sonidos.Array.data[0].nombre
+      value: Disparo
+      objectReference: {fileID: 0}
+    - target: {fileID: 69698482624654089, guid: 8759f13cd50789c4bb763b2b058b9c05, type: 3}
+      propertyPath: sonidos.Array.data[1].nombre
+      value: Movimiento
+      objectReference: {fileID: 0}
+    - target: {fileID: 69698482624654089, guid: 8759f13cd50789c4bb763b2b058b9c05, type: 3}
+      propertyPath: sonidos.Array.data[0].ubicacion
+      value: 
+      objectReference: {fileID: 935813095}
+    - target: {fileID: 69698482624654089, guid: 8759f13cd50789c4bb763b2b058b9c05, type: 3}
+      propertyPath: sonidos.Array.data[1].ubicacion
+      value: 
+      objectReference: {fileID: 1375518838}
+    - target: {fileID: 5768093583749684238, guid: 8759f13cd50789c4bb763b2b058b9c05, type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5768093583749684238, guid: 8759f13cd50789c4bb763b2b058b9c05, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5768093583749684238, guid: 8759f13cd50789c4bb763b2b058b9c05, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5768093583749684238, guid: 8759f13cd50789c4bb763b2b058b9c05, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5768093583749684238, guid: 8759f13cd50789c4bb763b2b058b9c05, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5768093583749684238, guid: 8759f13cd50789c4bb763b2b058b9c05, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5768093583749684238, guid: 8759f13cd50789c4bb763b2b058b9c05, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5768093583749684238, guid: 8759f13cd50789c4bb763b2b058b9c05, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5768093583749684238, guid: 8759f13cd50789c4bb763b2b058b9c05, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5768093583749684238, guid: 8759f13cd50789c4bb763b2b058b9c05, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5768093583749684238, guid: 8759f13cd50789c4bb763b2b058b9c05, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7905492488592488904, guid: 8759f13cd50789c4bb763b2b058b9c05, type: 3}
+      propertyPath: m_Name
+      value: Sonidos
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8759f13cd50789c4bb763b2b058b9c05, type: 3}
 --- !u!1 &1459827265
 GameObject:
   m_ObjectHideFlags: 0

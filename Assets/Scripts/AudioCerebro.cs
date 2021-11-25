@@ -11,13 +11,29 @@ public class AudioCerebro : MonoBehaviour
     {
         foreach (Sonido s in sonidos)
         {
-            s.source = gameObject.AddComponent<AudioSource>();
-            s.source.clip = s.clip;
+            if (s.existe == false)
+            {
+                s.source = gameObject.AddComponent<AudioSource>();
+                s.source.clip = s.clip;
 
-            s.source.volume = s.volumen;
-            s.source.pitch = s.pitch;
-            s.source.loop = s.loop;
-            s.source.reverbZoneMix = s.dimensiones;
+                s.source.volume = s.volumen;
+                s.source.pitch = s.pitch;
+                s.source.loop = s.loop;
+                s.source.spatialBlend = s.dimensiones;
+                s.source.playOnAwake = s.playOnAwake;
+            }
+            else
+            {
+                s.source = s.ubicacion.AddComponent<AudioSource>();
+                s.source.clip = s.clip;
+
+                s.source.volume = s.volumen;
+                s.source.pitch = s.pitch;
+                s.source.loop = s.loop;
+                s.source.spatialBlend = s.dimensiones;
+                s.source.playOnAwake = s.playOnAwake;
+            }
+        
         }
     }
 

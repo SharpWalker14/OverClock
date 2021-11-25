@@ -20,7 +20,7 @@ public class MovimientoJugador : MonoBehaviour
     private Vector3 velocidad, movimientoTotal;
     [HideInInspector]
     public bool enSuelo, poseido, charco, tiempo, frenesi, oportunidad, inmovilizado, moviendo;
-    public GameObject caminar;
+    public GameObject pies;
 
     public Vector3 escalerasVector, escalera;
     private RaycastHit limiteEscalera;
@@ -64,6 +64,7 @@ public class MovimientoJugador : MonoBehaviour
         acido = velocidadMovimiento / 2;
         normal = velocidadMovimiento;
         tiempoSalto = 0;
+        
     }
 
     void Update()
@@ -204,15 +205,23 @@ public class MovimientoJugador : MonoBehaviour
     {
         if (moviendo)
         {
-            if (movPal == 0)
+            if (saltando == false)
             {
-                FindObjectOfType<AudioCerebro>().Play("Movimiento");
-                movPal++;
-                Debug.Log("Suena");
+                if (movPal == 0)
+                {
+                    pies.SetActive(true);
+                    movPal++;
+                    Debug.Log("Suena");
+                }
+            }
+            else
+            {
+                pies.SetActive(false);
             }
         }
         else
         {
+            pies.SetActive(false);
             movPal = 0;
         }
     }

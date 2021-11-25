@@ -52,6 +52,7 @@ public class AtaqueMelee : MonoBehaviour
     IEnumerator Golpeando()
     {
         areaAtaque.SetActive(true);
+        FindObjectOfType<AudioCerebro>().Play("GolpeMele");
         yield return new WaitForSeconds(0.1f);
         areaAtaque.SetActive(false);
     }
