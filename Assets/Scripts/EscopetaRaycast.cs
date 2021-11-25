@@ -30,7 +30,7 @@ public class EscopetaRaycast : MonoBehaviour
     void Disparo()
     {
        
-        if (Input.GetMouseButtonDown(0) && esperaTiempo >= espera && Time.timeScale != 0f)
+            if (Input.GetMouseButtonDown(0) && esperaTiempo >= espera && Time.timeScale != 0f)
         {
             for (int i = 0; i < disparos; i++)
             {
@@ -50,19 +50,15 @@ public class EscopetaRaycast : MonoBehaviour
                     }
                     GameObject efectoDeBala = Instantiate(impactoBala, golpe.point, Quaternion.identity) as GameObject;
                     GameObject Particula = Instantiate(impactoBala, golpe.point, Quaternion.identity) as GameObject;
-                    FindObjectOfType<AudioCerebro>().Play("Disparo");
                     Destroy(efectoDeBala, 1);
 
                     CrearLaser(golpe.point);
-
-                    
                 }
 
 
                 else
                 {
                     CrearLaser(camara.position + DireccionDeBalas() * rangoDisparo);
-                    FindObjectOfType<AudioCerebro>().Play("Disparo");
                 }
                 esperaTiempo = 0;
             }

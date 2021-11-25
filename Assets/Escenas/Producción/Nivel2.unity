@@ -4122,7 +4122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4fcedb642c9b9d4e9eb7ce733171f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nivel: WB1
+  nivel: Nivel3
 --- !u!65 &679514734
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6981,6 +6981,81 @@ CapsuleCollider:
   m_Height: 0.75
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1059923356
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1059923360}
+  - component: {fileID: 1059923359}
+  - component: {fileID: 1059923358}
+  - component: {fileID: 1059923357}
+  m_Layer: 0
+  m_Name: TutorialAscensor
+  m_TagString: TutorialTeclas
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1059923357
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059923356}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.395174, y: 5, z: 2.6300611}
+  m_Center: {x: -6.0593314, y: -2, z: 2.4392545}
+--- !u!65 &1059923358
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059923356}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.1403284, y: 5, z: 18.4892}
+  m_Center: {x: -0.9854255, y: -2, z: 8.744911}
+--- !u!54 &1059923359
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059923356}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!4 &1059923360
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059923356}
+  m_LocalRotation: {x: -0, y: -0.69921756, z: -0, w: 0.71490896}
+  m_LocalPosition: {x: 38.05, y: -1.6, z: 0.03}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1094836251
 GameObject:
   m_ObjectHideFlags: 0
@@ -9251,7 +9326,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1516341734}
   m_LocalRotation: {x: -0, y: 0.18997775, z: -0, w: 0.98178846}
-  m_LocalPosition: {x: 150.4, y: -2.32, z: -69.2}
+  m_LocalPosition: {x: 116.71, y: -2.32, z: -73.96}
   m_LocalScale: {x: 2.3473096, y: 4.4960337, z: 5.366095}
   m_Children: []
   m_Father: {fileID: 0}
@@ -9269,7 +9344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4fcedb642c9b9d4e9eb7ce733171f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nivel: WB1
+  nivel: Nivel3
 --- !u!1001 &1536524014
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10399,7 +10474,7 @@ PrefabInstance:
       objectReference: {fileID: 1382397506}
     - target: {fileID: 3650029971529749584, guid: 588032cd05d76234d9996fd8fb866536, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5754383560370579596, guid: 588032cd05d76234d9996fd8fb866536, type: 3}
       propertyPath: m_IsActive
@@ -10443,16 +10518,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 588032cd05d76234d9996fd8fb866536, type: 3}
---- !u!1 &1773038308 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4024539815574391826, guid: 588032cd05d76234d9996fd8fb866536, type: 3}
-  m_PrefabInstance: {fileID: 1773038307}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1773038309 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5217930881408228708, guid: 588032cd05d76234d9996fd8fb866536, type: 3}
-  m_PrefabInstance: {fileID: 1773038307}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1775406349
 GameObject:
   m_ObjectHideFlags: 0
@@ -11371,70 +11436,6 @@ CapsuleCollider:
   m_Height: 0.75
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &2010148348
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2010148350}
-  - component: {fileID: 2010148349}
-  m_Layer: 0
-  m_Name: Sonidos
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2010148349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2010148348}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3eb1f1137cf7e64bad82b2858b8f7f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sonidos:
-  - nombre: Disparo
-    clip: {fileID: 8300000, guid: a44cb487b7537c3458a96f17345cf6c3, type: 3}
-    existe: 1
-    ubicacion: {fileID: 1773038309}
-    volumen: 1
-    pitch: 0.65
-    dimensiones: 1
-    loop: 0
-    playOnAwake: 0
-    source: {fileID: 0}
-  - nombre: Movimiento
-    clip: {fileID: 8300000, guid: 8f6f57e99e5eb0a4ab24832ef0f7cc01, type: 3}
-    existe: 1
-    ubicacion: {fileID: 1773038308}
-    volumen: 1
-    pitch: 0.9
-    dimensiones: 1
-    loop: 1
-    playOnAwake: 1
-    source: {fileID: 0}
---- !u!4 &2010148350
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2010148348}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2011917723 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3413138722658076009, guid: b4c298ea90720d84fa49b9c5216a38a2, type: 3}
