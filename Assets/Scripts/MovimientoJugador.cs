@@ -19,15 +19,18 @@ public class MovimientoJugador : MonoBehaviour
     public bool estacionario, saltando;
     private Vector3 velocidad, movimientoTotal;
     [HideInInspector]
-    public bool enSuelo, poseido, charco, tiempo, frenesi, oportunidad, inmovilizado;
+    public bool enSuelo, poseido, charco, tiempo, frenesi, oportunidad, inmovilizado, moviendo;
     public GameObject caminar;
 
     public Vector3 escalerasVector, escalera;
     private RaycastHit limiteEscalera;
     private Vector2 cero = new Vector2(0, 0);
 
+    private int movPal;
+
     private bool OnSlope()
     {
+        movPal = 0;
         LayerMask mascara = 1 << 6;
 
 
@@ -75,6 +78,7 @@ public class MovimientoJugador : MonoBehaviour
             MovimientoCuerpo();
         }
         Condicion();
+        Estados();
     }
 
     void MovimientoCuerpo()
@@ -99,9 +103,13 @@ public class MovimientoJugador : MonoBehaviour
           }
         */
 
-        if(xMov != cero ||zMov != cero)
+        if((xMov != cero ||zMov != cero)&&!inmovilizado)
         {
-            
+            moviendo = true;
+        }
+        else
+        {
+            moviendo = false;
         }
 
 
@@ -160,6 +168,7 @@ public class MovimientoJugador : MonoBehaviour
         {
             Vector3 posesor = (eden.transform.position - transform.position).normalized;
             cuerpo.velocity = posesor * 5;
+            moviendo = false;
         }
     }
     void Condicion()
@@ -188,6 +197,23 @@ public class MovimientoJugador : MonoBehaviour
                 inmovilizado = false;
                 tiempoInmovilizado = 0;
             }
+        }
+    }
+
+    void Estados()
+    {
+        if (moviendo)
+        {
+            if (movPal == 0)
+            {
+                FindObjectOfType<AudioCerebro>().Play("Movimiento");
+                movPal++;
+                Debug.Log("Suena");
+            }
+        }
+        else
+        {
+            movPal = 0;
         }
     }
 
