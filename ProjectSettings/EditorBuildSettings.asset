@@ -47,9 +47,6 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Escenas/Producci\xF3n/Nivel2.unity"
     guid: 76ac603dcdd954f46bcb845924d39b9c
-  - enabled: 1
-    path: "Assets/Escenas/Producci\xF3n/Nivel3.unity"
-    guid: ed272ff0a88f33e46b4d96a719ffebc1
   - enabled: 0
     path: "Assets/Escenas/Producci\xF3n/WB1.unity"
     guid: d548fde93e5d4794bad91624dc344245

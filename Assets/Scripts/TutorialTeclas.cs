@@ -1,17 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class TutorialTeclas : MonoBehaviour
 {
     private int contador, conteoTecla;
-    public GameObject mouseObj, controlesObj, saltoObj, disparoObj, tiempoObj, ascensorObj;
+    public GameObject mouseObj, controlesObj, saltoObj, disparoObj, tiempoObj;
     public GameObject puntero, tiempoHUD;
     public TiempoJugador tutoria;
     public MovimientoJugador movimiento;
-    private string escena;
-    private Scene escenaActual;
     private float tiempo;
     private bool temporizado, siguiente, espacio, disparo;
     // Start is called before the first frame update
@@ -23,12 +20,6 @@ public class TutorialTeclas : MonoBehaviour
         {
             puntero.SetActive(false);
             tiempoHUD.SetActive(false);
-        }
-        escenaActual = SceneManager.GetActiveScene();
-        escena = escenaActual.name;
-        if (escena == "Nivel2")
-        {
-            contador = 5;
         }
     }
 
@@ -75,10 +66,6 @@ public class TutorialTeclas : MonoBehaviour
                 tutoria.tutorialTiempo = false;
                 tiempo = 3;
                 break;
-            case 5:
-                ascensorObj.SetActive(true);
-                tiempo = 4;
-                break;
         }
         temporizado = true;
         contador++;
@@ -123,7 +110,6 @@ public class TutorialTeclas : MonoBehaviour
                 disparoObj.SetActive(false);
                 mouseObj.SetActive(false);
                 tiempoObj.SetActive(false);
-                ascensorObj.SetActive(false);
                 temporizado = false;
                 if (siguiente)
                 {

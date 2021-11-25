@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class NoDestruir : MonoBehaviour
 {
     [HideInInspector]
-    public float sensibilidadMouse, volumen, multiplicadorSensibilidad, multAncho, multAltura;
+    public float sensibilidadMouse, volumen, volumenSonido,multiplicadorSensibilidad, multAncho, multAltura;
     [HideInInspector]
     public bool pantallaCompleta;
     [HideInInspector]
@@ -27,6 +27,7 @@ public class NoDestruir : MonoBehaviour
         sensibilidadMouse = 70;
         pantallaCompleta = Screen.fullScreen;
         volumen = 0;
+        volumenSonido = 50;
         maxAncho = 1920;
         maxAltura = 1080;
         escenaActual = SceneManager.GetActiveScene();
