@@ -20,9 +20,11 @@ public class MovimientoJugador : MonoBehaviour
     private Vector3 velocidad, movimientoTotal;
     [HideInInspector]
     public bool enSuelo, poseido, charco, tiempo, frenesi, oportunidad, inmovilizado;
+    public GameObject caminar;
 
     public Vector3 escalerasVector, escalera;
     private RaycastHit limiteEscalera;
+    private Vector2 cero = new Vector2(0, 0);
 
     private bool OnSlope()
     {
@@ -78,9 +80,31 @@ public class MovimientoJugador : MonoBehaviour
     void MovimientoCuerpo()
     {
         //Comprobar si estás en el suelo
-
         Vector2 xMov = new Vector2(Input.GetAxisRaw("Horizontal") * transform.right.x, Input.GetAxisRaw("Horizontal") * transform.right.z);
         Vector2 zMov = new Vector2(Input.GetAxisRaw("Vertical") * transform.forward.x, Input.GetAxisRaw("Vertical") * transform.forward.z);
+        /*int contador = 0;
+          if (contador == 0)
+          {
+              if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
+              {
+                  FindObjectOfType<AudioCerebro>().Play("Movimiento");
+                  contador++;
+                  Debug.Log("Suena");
+              }
+          }
+          if (contador == 1)
+          {
+              Debug.Log("Suma");  
+              contador = 0;
+          }
+        */
+
+        if(xMov != cero ||zMov != cero)
+        {
+            
+        }
+
+
         Vector2 velocidad = (xMov + zMov).normalized * velocidadMovimiento;
         float graviton = cuerpo.velocity.y + gravedad * Time.deltaTime;
         Vector3 gravedadTotal = new Vector3(0, graviton, 0);

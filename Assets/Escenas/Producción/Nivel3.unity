@@ -1503,6 +1503,70 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1721040317
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1721040319}
+  - component: {fileID: 1721040318}
+  m_Layer: 0
+  m_Name: Sonidos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1721040318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721040317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3eb1f1137cf7e64bad82b2858b8f7f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sonidos:
+  - nombre: Disparo
+    clip: {fileID: 8300000, guid: a44cb487b7537c3458a96f17345cf6c3, type: 3}
+    existe: 1
+    ubicacion: {fileID: 1773038309}
+    volumen: 1
+    pitch: 0.65
+    dimensiones: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - nombre: Movimiento
+    clip: {fileID: 8300000, guid: 8f6f57e99e5eb0a4ab24832ef0f7cc01, type: 3}
+    existe: 1
+    ubicacion: {fileID: 1773038308}
+    volumen: 1
+    pitch: 0.9
+    dimensiones: 1
+    loop: 1
+    playOnAwake: 1
+    source: {fileID: 0}
+--- !u!4 &1721040319
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721040317}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1773038307
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1648,6 +1712,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 588032cd05d76234d9996fd8fb866536, type: 3}
+--- !u!1 &1773038308 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4024539815574391826, guid: 588032cd05d76234d9996fd8fb866536, type: 3}
+  m_PrefabInstance: {fileID: 1773038307}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1773038309 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5217930881408228708, guid: 588032cd05d76234d9996fd8fb866536, type: 3}
+  m_PrefabInstance: {fileID: 1773038307}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2061936089
 GameObject:
   m_ObjectHideFlags: 0

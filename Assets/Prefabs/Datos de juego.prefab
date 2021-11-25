@@ -173,12 +173,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sensibilidadMouse: 0
   volumen: 0
+  volumenSonido: 0
+  multiplicadorSensibilidad: 0
+  multAncho: 0
+  multAltura: 0
   pantallaCompleta: 0
   numeroCalidad: 0
   numeroResolucion: 0
   anchoDatos: 0
   alturaDatos: 0
+  maxAncho: 0
+  maxAltura: 0
   objetoMusica: {fileID: 2585122813436567321}
   musicos: {fileID: 1470133456282997652}
   nombreDeEscena: 
   ultimaEscena: 
+  siguienteEscena: 
