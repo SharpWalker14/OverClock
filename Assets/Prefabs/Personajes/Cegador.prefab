@@ -473,6 +473,7 @@ GameObject:
   - component: {fileID: 778673615588175397}
   - component: {fileID: 8101344801120971853}
   - component: {fileID: 6642038637183231902}
+  - component: {fileID: 3406881916823968601}
   m_Layer: 10
   m_Name: Cegador
   m_TagString: Untagged
@@ -634,6 +635,25 @@ MonoBehaviour:
   modelado: {fileID: 6809064929782434090}
   "feedbackDa\xF1o": {fileID: 2100000, guid: a86088909080e9349b19b2464c4ffd1b, type: 2}
   tiempoFiltro: 0.2
+--- !u!95 &3406881916823968601
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673700239819412263}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3e1c1132a5c329d42b7d8949661782f6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &673700239878695443
 GameObject:
   m_ObjectHideFlags: 0
@@ -771,6 +791,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d23779e495f27e47a62e683cb435899, type: 3}
+--- !u!33 &7105170872788311093 stripped
+MeshFilter:
+  m_CorrespondingSourceObject: {fileID: -5754084199372789682, guid: 5d23779e495f27e47a62e683cb435899, type: 3}
+  m_PrefabInstance: {fileID: 5962697374736168059}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6809064929782434090 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5d23779e495f27e47a62e683cb435899, type: 3}
@@ -779,10 +804,5 @@ GameObject:
 --- !u!4 &6139946531046871952 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5d23779e495f27e47a62e683cb435899, type: 3}
-  m_PrefabInstance: {fileID: 5962697374736168059}
-  m_PrefabAsset: {fileID: 0}
---- !u!33 &7105170872788311093 stripped
-MeshFilter:
-  m_CorrespondingSourceObject: {fileID: -5754084199372789682, guid: 5d23779e495f27e47a62e683cb435899, type: 3}
   m_PrefabInstance: {fileID: 5962697374736168059}
   m_PrefabAsset: {fileID: 0}
