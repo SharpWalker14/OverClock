@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 4566727253571525035}
   - component: {fileID: 634899419798885902}
   - component: {fileID: 3398927860447453892}
+  - component: {fileID: 1507915642546237032}
   m_Layer: 0
   m_Name: Tumor3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &4566727253571525035
 Transform:
@@ -82,3 +83,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1507915642546237032
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3759263864786092817}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -87880074840957694, guid: 5c691fba8dd6b9245a10ce194d3cea95, type: 3}
