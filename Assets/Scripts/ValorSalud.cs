@@ -6,6 +6,7 @@ public class ValorSalud : MonoBehaviour
 {
     // En el HUD tiene que mostrar lo que es la variable vida (Si es jugador).
     public float vida;
+    private float maxVida;
     public bool jugador;
     [HideInInspector]
     public bool armadura;
@@ -24,6 +25,10 @@ public class ValorSalud : MonoBehaviour
         if (jugador == false)
         {
             objetivo = GameObject.FindGameObjectWithTag("Player");
+        }
+        else
+        {
+            maxVida=vida;
         }
     }
 
@@ -105,6 +110,10 @@ public class ValorSalud : MonoBehaviour
             }
 
             Destroy(gameObject);
+        }
+        else if((vida>maxVida)&&jugador)
+        {
+            vida=maxVida;
         }
     }
     void DañoArma()
