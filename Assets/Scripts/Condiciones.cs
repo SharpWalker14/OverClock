@@ -9,6 +9,7 @@ public class Condiciones : MonoBehaviour
     private NoDestruir datos;
     private GameObject jugador;
     public string nivel;
+    public bool final;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,7 +41,14 @@ public class Condiciones : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-            SceneManager.LoadScene("VictoriaProd");
+            if (final)
+            {
+                SceneManager.LoadScene("VictoriaFinal");
+            }
+            else
+            {
+                SceneManager.LoadScene("VictoriaProd");
+            }
         }
     }
 }
