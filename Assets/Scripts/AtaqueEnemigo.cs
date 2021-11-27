@@ -13,6 +13,8 @@ public class AtaqueEnemigo : MonoBehaviour
     public MovimientoEnemigo movimiento;
     public MeshFilter vista;
     public Mesh normal, ataque;
+    public GameObject sonidoAtaque;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -91,6 +93,7 @@ public class AtaqueEnemigo : MonoBehaviour
     {
         if (animacion)
         {
+            sonidoAtaque.SetActive(true);
             vista.mesh = ataque;
             tiempoAnimacion += Time.deltaTime;
             if (tiempoAnimacion >= 1)
@@ -100,6 +103,7 @@ public class AtaqueEnemigo : MonoBehaviour
         }
         else
         {
+            sonidoAtaque.SetActive(false);
             vista.mesh = normal;
             tiempoAnimacion = 0;
         }
