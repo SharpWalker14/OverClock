@@ -42,6 +42,8 @@ GameObject:
   - component: {fileID: 8331684744828524930}
   - component: {fileID: 8992307584872489422}
   - component: {fileID: 4140201046492745356}
+  - component: {fileID: 3921687681852365816}
+  - component: {fileID: 3388144184403715963}
   m_Layer: 0
   m_Name: vaso
   m_TagString: Untagged
@@ -113,3 +115,32 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3921687681852365816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7267568401239231644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11e0a61ce5d40ef408a61c8661a8b515, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tipoHuevo: 0
+  objeto: {fileID: 0}
+  numeroPot: 0
+--- !u!64 &3388144184403715963
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7267568401239231644}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3020144295808178362, guid: aff28ae8658545c409a03c48df9dbcaf, type: 3}
