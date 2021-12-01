@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4548233206158273864}
   - component: {fileID: 626362730277511917}
   - component: {fileID: 3410842146191496743}
+  - component: {fileID: 5935966327520241456}
   m_Layer: 0
   m_Name: Huevo1Roto
   m_TagString: Untagged
@@ -82,3 +83,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5935966327520241456
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3770993571541514226}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 77.460205, y: 78.42146, z: 67.285385}
+  m_Center: {x: 4.5303464, y: 39.21531, z: 1.5101075}

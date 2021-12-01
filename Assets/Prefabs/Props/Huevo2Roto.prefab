@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7171143958122695878}
   - component: {fileID: 6064905016871256931}
   - component: {fileID: 8344653009095522217}
+  - component: {fileID: 4754067069641897288}
   m_Layer: 0
   m_Name: Huevo2Roto
   m_TagString: Untagged
@@ -82,3 +83,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4754067069641897288
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7552208659106223740}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 52.0033, y: 45.646885, z: 46.836506}
+  m_Center: {x: 0.91955066, y: 22.825886, z: 1.6092136}
