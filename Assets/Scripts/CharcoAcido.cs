@@ -41,11 +41,11 @@ public class CharcoAcido : MonoBehaviour
 
     public void RelentizadorCharco()
     {
-        if (contacto == true && tiempoDeRelentizar < 6f)
+        if (contacto == true && tiempoDeRelentizar < 8f)
         {
             player.GetComponent<MovimientoJugador>().charco = true;
         }
-        else if(tiempoDeRelentizar >= 6f)
+        else if(tiempoDeRelentizar >= 8f)
         {
             Destruccion();
         }

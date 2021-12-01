@@ -2499,6 +2499,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0d0fad603fa2794781ef831c029e7b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pausar: 0
   pausaMenu: {fileID: 2006486743}
 --- !u!114 &1571897554
 MonoBehaviour:
@@ -4618,8 +4619,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -156.1, y: -324.3}
-  m_SizeDelta: {x: 76, y: 76}
+  m_AnchoredPosition: {x: -111, y: -279}
+  m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4080188192589907884
 CanvasRenderer:
@@ -5265,8 +5266,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -90.70001, y: -285.5}
-  m_SizeDelta: {x: 76, y: 76}
+  m_AnchoredPosition: {x: -43.8, y: -279}
+  m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2929376473609739724
 CanvasRenderer:

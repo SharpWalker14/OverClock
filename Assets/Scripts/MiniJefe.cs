@@ -39,9 +39,16 @@ public class MiniJefe : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Estados();
-        Rango();
-        AuraAtaque();
+        if (jugador != null)
+        {
+            Estados();
+            Rango();
+            AuraAtaque();
+        }
+        else
+        {
+            patrones = Estado.cansancio;
+        }
     }
     void Estados()
     {
@@ -67,8 +74,9 @@ public class MiniJefe : MonoBehaviour
                 Descanso();
                 break;
         }
+
     }
-    
+
     void Rango()
     {
         //Distancia entre jugador y el centro, tambien el ángulo

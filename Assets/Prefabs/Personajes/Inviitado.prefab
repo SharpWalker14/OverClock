@@ -46,6 +46,12 @@ MonoBehaviour:
   origenRotatorio: {fileID: 1945321189596318266}
   alcance: 20
   angulo: 0
+  rotacionY: 0
+  rotacionX: 0
+  comienzoMirador: 0
+  intentaMuro: 0
+  intentaObjetivo: 0
+  alcanceTotal: 0
   objetivo: {fileID: 0}
   puntosRango:
   - {fileID: 1945321190207459633}
@@ -119,7 +125,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1945321189596318267}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 35.51733, y: -3.1, z: -1.4141567}
+  m_LocalPosition: {x: 61.234035, y: -3.1, z: -26.157013}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1945321190796177006}
@@ -248,7 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ee2c4ddd14f7d24aa8484e9bd9cf4e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valor: 8
+  valor: 4
   estadoHorda: 0
 --- !u!114 &9184900847882042794
 MonoBehaviour:

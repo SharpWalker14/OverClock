@@ -62,7 +62,7 @@ public class MovimientoJugador : MonoBehaviour
         inmovilizado = false;
         poseido = false;
         gameObject.transform.parent = null;
-        acido = velocidadMovimiento / 2;
+        acido = velocidadMovimiento / 3.5f;
         normal = velocidadMovimiento;
         tiempoSalto = 0;
         

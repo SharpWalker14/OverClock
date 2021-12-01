@@ -22,7 +22,7 @@ public class CortinaHumo : MonoBehaviour
     void Temporizador()
     {
         tiempo += Time.deltaTime;
-        if (tiempo >= 6f)
+        if (tiempo >= 10f)
         {
             Destroy(gameObject);
         }

@@ -407,6 +407,12 @@ MonoBehaviour:
   origenRotatorio: {fileID: 1780202805299127372}
   alcance: 1
   angulo: 0
+  rotacionY: 0
+  rotacionX: 0
+  comienzoMirador: 0
+  intentaMuro: 0
+  intentaObjetivo: 0
+  alcanceTotal: 0
   objetivo: {fileID: 0}
   puntosRango:
   - {fileID: 1780202803280805703}
@@ -778,7 +784,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ee2c4ddd14f7d24aa8484e9bd9cf4e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valor: 5
+  valor: 4
   estadoHorda: 0
 --- !u!114 &9024357117030470620
 MonoBehaviour:
