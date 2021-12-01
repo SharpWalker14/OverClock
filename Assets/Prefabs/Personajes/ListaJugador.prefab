@@ -6010,6 +6010,7 @@ MonoBehaviour:
   multiX: 0
   multiY: 0
   "jugadorGr\xE1ficos": {fileID: 3483176941321734887}
+  pausado: {fileID: 296342283}
 --- !u!1 &7999916937697084717
 GameObject:
   m_ObjectHideFlags: 0

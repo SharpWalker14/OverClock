@@ -7,6 +7,7 @@ public class CámaraPrimeraPersona : MonoBehaviour
     [HideInInspector]
     public float sensibilidad, multiX, multiY;
     public Transform jugadorGráficos;
+    public Pausa pausado;
     float rotaciónX = 0f;
     private GameObject nucleo;
     private NoDestruir datos;
@@ -20,7 +21,10 @@ public class CámaraPrimeraPersona : MonoBehaviour
 
     void Update()
     {
-        Rotacion();
+        if (pausado.pausar == false)
+        {
+            Rotacion();
+        }
         FijarSensibilidad();
     }
 

@@ -170,13 +170,13 @@ public class MovimientoJugador : MonoBehaviour
 
     public void Empuje(Vector3 empujeTotal)
     {
-        cuerpo.velocity = empujeTotal * 2;
+        cuerpo.velocity = empujeTotal * 4;
     }
 
     void Empujon()
     {
         tiempoEmpuje += Time.deltaTime;
-        if (tiempoEmpuje>=0.5f)
+        if (tiempoEmpuje>=0.25f)
         {
             tiempoEmpuje = 0;
             empujado = false;
