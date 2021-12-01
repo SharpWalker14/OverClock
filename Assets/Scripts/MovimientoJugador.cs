@@ -11,7 +11,7 @@ public class MovimientoJugador : MonoBehaviour
     [HideInInspector]
     public float acido, normal, tiempoInmovilizado;
     public DetectarSuelo controlarSuelo, controlarSalto;
-    private float alturaJugador = 1.7f, tiempoSalto;
+    private float alturaJugador = 1.7f, tiempoSalto, tiempoEmpuje;
     private Transform controlSuelo;
     public LayerMask sueloFiltro;
     [HideInInspector]
@@ -19,7 +19,7 @@ public class MovimientoJugador : MonoBehaviour
     public bool estacionario, saltando;
     private Vector3 velocidad, movimientoTotal;
     [HideInInspector]
-    public bool enSuelo, poseido, charco, tiempo, frenesi, oportunidad, inmovilizado, moviendo;
+    public bool enSuelo, poseido, charco, tiempo, frenesi, oportunidad, inmovilizado, moviendo, empujado;
     public GameObject pies;
 
     public Vector3 escalerasVector, escalera;
@@ -57,6 +57,7 @@ public class MovimientoJugador : MonoBehaviour
 
     void Start()
     {
+        empujado = false;
         saltando = false;
         inmovilizado = false;
         poseido = false;
@@ -73,6 +74,10 @@ public class MovimientoJugador : MonoBehaviour
         if (poseido)
         {
             Posesion();
+        }
+        else if(empujado)
+        {
+            Empujon();
         }
         else
         {
@@ -123,7 +128,7 @@ public class MovimientoJugador : MonoBehaviour
         escalerasVector = Vector3.ProjectOnPlane(movimientoTotal, limiteEscalera.normal);
 
 
-        if (!inmovilizado)
+        if (!inmovilizado && !empujado)
         {
             if (Input.GetKeyDown(KeyCode.Space) && controlarSalto.tocado)
             {
@@ -134,7 +139,7 @@ public class MovimientoJugador : MonoBehaviour
             if (saltando)
             {
                 tiempoSalto += Time.deltaTime;
-                cuerpo.velocity = movimientoTotal+gravedadTotal;
+                cuerpo.velocity = movimientoTotal + gravedadTotal;
                 if (controlarSalto.tocado && tiempoSalto >= 0.1f)
                 {
                     saltando = false;
@@ -157,9 +162,25 @@ public class MovimientoJugador : MonoBehaviour
 
             }
         }
-        else
+        else if (inmovilizado && !empujado)
         {
             cuerpo.velocity = gravedadTotal;
+        }
+    }
+
+    public void Empuje(Vector3 empujeTotal)
+    {
+        cuerpo.velocity = empujeTotal * 10;
+    }
+
+    void Empujon()
+    {
+        tiempoEmpuje += Time.deltaTime;
+        if (tiempoEmpuje>=0.05f)
+        {
+            tiempoEmpuje = 0;
+            empujado = false;
+            inmovilizado = true;
         }
     }
 
