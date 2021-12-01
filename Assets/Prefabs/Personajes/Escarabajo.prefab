@@ -512,7 +512,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a627c92ddbef4f746af726666e7fe99c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: 300
+  vida: 500
   jugador: 0
   armadura: 0
   liviana: 0
@@ -561,7 +561,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eee5fa8fa3df3bf4ebea323e6cf339cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "da\xF1o": 10
+  "da\xF1o": 12
   frecuencia: 1
   aturdidor: 1
   deteccionAtaque: {fileID: 2011522952600136950}
