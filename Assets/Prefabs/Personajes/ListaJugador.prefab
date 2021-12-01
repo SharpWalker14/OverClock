@@ -1391,6 +1391,7 @@ MonoBehaviour:
   oportunidad: 0
   inmovilizado: 0
   moviendo: 0
+  empujado: 0
   pies: {fileID: 3685847218527951977}
   escalerasVector: {x: 0, y: 0, z: 0}
   escalera: {x: 0, y: 0, z: 0}
@@ -1432,7 +1433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90f86973238bdf54784d40417c90592e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tiempoMaximo: 90
+  tiempoMaximo: 60
   tiempo: 0
   tiempoCongelar: 0
   tiempoFrenesi: 0

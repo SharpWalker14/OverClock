@@ -30,7 +30,7 @@ public class EscopetaRaycast : MonoBehaviour
     void Disparo()
     {
        
-            if (Input.GetMouseButtonDown(0) && esperaTiempo >= espera && Time.timeScale != 0f)
+        if (Input.GetMouseButtonDown(0) && esperaTiempo >= espera && Time.timeScale != 0f)
         {
             for (int i = 0; i < disparos; i++)
             {
@@ -42,6 +42,10 @@ public class EscopetaRaycast : MonoBehaviour
                         if(golpe.collider.GetComponent<ValorSalud>().liviana==false&& golpe.collider.GetComponent<ValorSalud>().pesada == false)
                         {
                             golpe.collider.GetComponent<ValorSalud>().CambioDeVida(-daño);
+                        }
+                        else if(golpe.collider.GetComponent<ValorSalud>().liviana == true || golpe.collider.GetComponent<ValorSalud>().pesada == true)
+                        {
+                            golpe.collider.GetComponent<ValorSalud>().Inmunencia();
                         }
                     }
                     if (golpe.collider.GetComponent<Huevo>() != null)

@@ -184,6 +184,7 @@ MonoBehaviour:
   original: {fileID: 2100000, guid: 659c2a8592ac9b14195e7a9f3327c407, type: 2}
   modelado: {fileID: 8242513537684599801}
   "feedbackDa\xF1o": {fileID: 2100000, guid: a86088909080e9349b19b2464c4ffd1b, type: 2}
+  feedbackImmune: {fileID: 2100000, guid: 535ca54d222d4954db010d7e356102f8, type: 2}
   tiempoFiltro: 0.2
 --- !u!1 &1479878057680527866
 GameObject:

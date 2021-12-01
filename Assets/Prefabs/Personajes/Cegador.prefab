@@ -379,7 +379,7 @@ GameObject:
   - component: {fileID: 673700239671960736}
   - component: {fileID: 4714685679675713141}
   - component: {fileID: 5727119155847474930}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Area de ataque
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -636,6 +636,7 @@ MonoBehaviour:
   original: {fileID: 2100000, guid: bcb57d4937b60644a826f08e27d8fd59, type: 2}
   modelado: {fileID: 6809064929782434090}
   "feedbackDa\xF1o": {fileID: 2100000, guid: a86088909080e9349b19b2464c4ffd1b, type: 2}
+  feedbackImmune: {fileID: 2100000, guid: 535ca54d222d4954db010d7e356102f8, type: 2}
   tiempoFiltro: 0.2
 --- !u!95 &3406881916823968601
 Animator:
@@ -699,7 +700,7 @@ GameObject:
   m_Component:
   - component: {fileID: 543158435686876411}
   - component: {fileID: 5287722005883893111}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Sonido de ataque
   m_TagString: Untagged
   m_Icon: {fileID: 0}

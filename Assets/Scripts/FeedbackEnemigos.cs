@@ -6,38 +6,53 @@ public class FeedbackEnemigos : MonoBehaviour
 {
     public Material original;
     public GameObject modelado;
-    public Material feedbackDaño;
+    public Material feedbackDaño, feedbackImmune;
     public float tiempoFiltro;
     private float tiempo;
-    private bool filtrado;
+    private bool filtroTiro, filtroInmune;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        RecibirDaño();
+        Feedbacks();
     }
 
     public void Inicia()
     {
         tiempo = 0;
-        filtrado = true;
+        filtroTiro = true;
+    }
+    public void InmunidadEmpiezo()
+    {
+        tiempo = 0;
+        filtroInmune = true;
     }
 
-    public void RecibirDaño()
+    public void Feedbacks()
     {
-        if (filtrado)
+        if (filtroTiro)
         {
             tiempo += Time.deltaTime;
             modelado.GetComponent<MeshRenderer>().material = feedbackDaño;
             if (tiempo >= tiempoFiltro)
             {
-                filtrado = false;
+                filtroTiro = false;
+                modelado.GetComponent<MeshRenderer>().material = original;
+            }
+        }
+        else if(filtroInmune)
+        {
+            tiempo += Time.deltaTime;
+            modelado.GetComponent<MeshRenderer>().material = feedbackImmune;
+            if (tiempo >= tiempoFiltro)
+            {
+                filtroTiro = false;
                 modelado.GetComponent<MeshRenderer>().material = original;
             }
         }
@@ -45,5 +60,6 @@ public class FeedbackEnemigos : MonoBehaviour
         {
             modelado.GetComponent<MeshRenderer>().material = original;
         }
+
     }
 }

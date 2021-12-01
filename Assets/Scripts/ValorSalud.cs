@@ -123,6 +123,11 @@ public class ValorSalud : MonoBehaviour
         VidaPersonaje();
     }
 
+    public void Inmunencia()
+    {
+        GetComponent<FeedbackEnemigos>().InmunidadEmpiezo();
+    }
+
     void OnTriggerStay(Collider col)
     {
         
@@ -141,6 +146,10 @@ public class ValorSalud : MonoBehaviour
         if (jugador == false && other.gameObject.tag == "ArmaAtaque" && pesada == false)
         {
             DañoArma();
+        }
+        else if (jugador == false && other.gameObject.tag == "ArmaAtaque" && pesada == true)
+        {
+            Inmunencia();
         }
     }
 }
