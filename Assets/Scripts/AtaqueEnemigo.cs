@@ -7,13 +7,14 @@ public class AtaqueEnemigo : MonoBehaviour
     public int daño;
     public float frecuencia;
     public bool aturdidor;
-    private float conteoAtaque, tiempoAtaque, tiempoAnimacion, tiempoAturdidor;
-    private bool preparaAtaque, animacion;
+    private float conteoAtaque, tiempoAtaque, tiempoAnimacion, tiempoAturdidor, escogerSonidoAtaque;
+    public bool preparaAtaque, animacion;
     public Detector deteccionAtaque;
     public MovimientoEnemigo movimiento;
     public MeshFilter vista;
     public Mesh normal, ataque;
-    public GameObject sonidoAtaque;
+    private int detente = 0;
+    public GameObject sonidoAtaqueUno, sonidoAtaqueDos, sonidoAtaqueTres;
 
     // Start is called before the first frame update
     void Start()
@@ -93,7 +94,23 @@ public class AtaqueEnemigo : MonoBehaviour
     {
         if (animacion)
         {
-            sonidoAtaque.SetActive(true);
+            if (detente == 0)
+            {
+                escogerSonidoAtaque = Random.Range(1, 2);
+                detente++;
+                switch (escogerSonidoAtaque)
+                {
+                    case 1:
+                        sonidoAtaqueUno.SetActive(true);
+                        break;
+                    case 2:
+                        sonidoAtaqueDos.SetActive(true);
+                        break;
+                    case 3:
+                        sonidoAtaqueTres.SetActive(true);
+                        break;
+                }
+            }
             vista.mesh = ataque;
             tiempoAnimacion += Time.deltaTime;
             if (tiempoAnimacion >= 1)
@@ -103,9 +120,21 @@ public class AtaqueEnemigo : MonoBehaviour
         }
         else
         {
-            sonidoAtaque.SetActive(false);
+            switch (escogerSonidoAtaque)
+            {
+                case 1:
+                    sonidoAtaqueUno.SetActive(false);
+                    break;
+                case 2:
+                    sonidoAtaqueDos.SetActive(false);
+                    break;
+                case 3:
+                    sonidoAtaqueTres.SetActive(false);
+                    break;
+            }
             vista.mesh = normal;
             tiempoAnimacion = 0;
+            detente = 0;
         }
     }
 }

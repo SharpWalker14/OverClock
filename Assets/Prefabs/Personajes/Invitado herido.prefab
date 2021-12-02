@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8075355611630896581
 Transform:
   m_ObjectHideFlags: 0
@@ -87,7 +87,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -733,6 +733,7 @@ MonoBehaviour:
   guardarAceleracion: 0
   guardarVida: 0
   radar: {fileID: 1780202804685222835}
+  sonidoMovimiento: {fileID: 6781027280498824140}
   puntoPatrulla: []
   patrullero: {fileID: 1780202803832930329}
   guardarPatrulla: []
@@ -752,12 +753,16 @@ MonoBehaviour:
   "da\xF1o": 5
   frecuencia: 0.8
   aturdidor: 0
+  preparaAtaque: 0
+  animacion: 0
   deteccionAtaque: {fileID: 1780202804916523977}
   movimiento: {fileID: 1780202805299127370}
   vista: {fileID: 5940669603494250360}
   normal: {fileID: -2841969272438934730, guid: ee73b1ccb61cac7499bb68fcc718f7a5, type: 3}
   ataque: {fileID: -4522116333415366894, guid: 0479e99ea5bb59848bde08d0c8273120, type: 3}
-  sonidoAtaque: {fileID: 176037696719951987}
+  sonidoAtaqueUno: {fileID: 176037696719951987}
+  sonidoAtaqueDos: {fileID: 176037696719951987}
+  sonidoAtaqueTres: {fileID: 176037696719951987}
 --- !u!136 &7314327612737673072
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -803,6 +808,36 @@ MonoBehaviour:
   "feedbackDa\xF1o": {fileID: 2100000, guid: a86088909080e9349b19b2464c4ffd1b, type: 2}
   feedbackImmune: {fileID: 2100000, guid: 535ca54d222d4954db010d7e356102f8, type: 2}
   tiempoFiltro: 0.2
+--- !u!1 &6781027280498824140
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7368060435160443140}
+  m_Layer: 0
+  m_Name: pies
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7368060435160443140
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6781027280498824140}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7340484843134994653}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7174746417415804468
 GameObject:
   m_ObjectHideFlags: 0

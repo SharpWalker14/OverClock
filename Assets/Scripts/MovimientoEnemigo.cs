@@ -12,7 +12,7 @@ public class MovimientoEnemigo : MonoBehaviour
     public float guardarVelocidad, guardarAceleracion, guardarVida;
     public EnemigoSentidos radar;
     private int fijador;
-
+    public GameObject sonidoMovimiento;
     public GameObject[] puntoPatrulla;
 
 
@@ -50,6 +50,7 @@ public class MovimientoEnemigo : MonoBehaviour
             if (radar.objetivo != null)
             {
                 Movimiento();
+                Animar();
             }
         }
     }
@@ -108,6 +109,18 @@ public class MovimientoEnemigo : MonoBehaviour
             float rotacion = Mathf.Atan2(mira.x, mira.z);
             rotacion = rotacion * (180 / Mathf.PI);
             transform.localEulerAngles = new Vector3(0, rotacion, 0);
+        }
+    }
+
+    void Animar()
+    {
+        if (inteligencia.speed != 0)
+        {
+            sonidoMovimiento.SetActive(true);
+        }
+        else if (inteligencia.speed == 0)
+        {
+            sonidoMovimiento.SetActive(false);
         }
     }
 
