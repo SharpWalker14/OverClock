@@ -11,7 +11,7 @@ public class AtaqueEnemigo : MonoBehaviour
     public bool preparaAtaque, animacion;
     public Detector deteccionAtaque;
     public MovimientoEnemigo movimiento;
-    public MeshFilter vista;
+    //public MeshFilter vista;
     public Mesh normal, ataque;
     private int detente = 0;
     public GameObject sonidoAtaqueUno, sonidoAtaqueDos, sonidoAtaqueTres;
@@ -111,7 +111,7 @@ public class AtaqueEnemigo : MonoBehaviour
                         break;
                 }
             }
-            vista.mesh = ataque;
+            //vista.mesh = ataque;
             tiempoAnimacion += Time.deltaTime;
             if (tiempoAnimacion >= 1)
             {
