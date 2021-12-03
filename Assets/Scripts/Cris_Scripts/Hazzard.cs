@@ -9,14 +9,14 @@ public class Hazzard : MonoBehaviour
     public Detector ataqueCerca;
     public float daño=1;
     public ValorSalud cambiante;
-    public GameObject jugadorObj, areaObj;
+    public GameObject jugadorObj, areaObj, modelado;
     private RaycastHit pared, piso, jugadorRay;
     private float intentaMuro, intentaObjetivo, tiempo;
     public float rangoDeteccion;
     public bool enRangoVision, linea;
     public MeshFilter vista;
     public Mesh ataque;
-
+    public Animator animacion;
     public Detector deteccion;
     public BoxCollider colision;
 
@@ -24,6 +24,7 @@ public class Hazzard : MonoBehaviour
     {
         jugadorObj = GameObject.FindGameObjectWithTag("Player");
         jugadorM = jugadorObj.GetComponent<MovimientoJugador>();
+        animacion = modelado.GetComponent<Animator>();
     }
 
     void Update()
@@ -97,8 +98,10 @@ public class Hazzard : MonoBehaviour
         if (enRangoVision)
         {
             jugadorM.eden = gameObject;
-            vista.mesh = ataque;
+           // vista.mesh = ataque;
             cambiante.liviana = false;
+            animacion.SetBool("Atraer", true);
+            Debug.Log("a");
         }
     }
 
