@@ -6,10 +6,8 @@ using UnityEngine.Audio;
 
 public class Opciones : MonoBehaviour
 {
-    public Text sensibilidadTexto;
-    public Text volumenTexto;
-    public Slider sensibilidadSlider;
-    public Slider volumenSlider;
+    public Text sensibilidadTexto, volumenTexto, sonidoTexto;
+    public Slider sensibilidadSlider, volumenSlider, sonidoSlider;
     public GameObject nucleo;
     public NoDestruir datos;
     public Toggle modificadorPantalla;
@@ -22,15 +20,18 @@ public class Opciones : MonoBehaviour
 
     void Start()
     {
-        //
-        resoluciones = Screen.resolutions;
-        resolucionDropdown.ClearOptions();
-
+        //resoluciones = Screen.resolutions;
         
-
-
-        //
-
+        resoluciones = new Resolution[3];
+        int dividor = 1;
+        for (int i = 0; i < resoluciones.Length; i++)
+        {
+            resoluciones[i].width = 1920 / dividor;
+            resoluciones[i].height = 1080 / dividor;
+            dividor += 1;
+        }
+        
+        resolucionDropdown.ClearOptions();
         //volumenSlider.value = datos.volumen;
     }
 
@@ -52,7 +53,7 @@ public class Opciones : MonoBehaviour
         }
         else if (datos != null)
         {
-            AjustadorSensibilidad();
+            AjustadorSlider();
         }
     }
 
@@ -63,6 +64,7 @@ public class Opciones : MonoBehaviour
         sensibilidadSlider.value = datos.sensibilidadMouse;
         volumenSlider.value = datos.volumen;
         calidadDropdown.value = datos.numeroCalidad;
+        sonidoSlider.value = datos.volumenSonido;
         modificadorPantalla.isOn = datos.pantallaCompleta;
         List<string> options = new List<string>();
 
@@ -78,7 +80,6 @@ public class Opciones : MonoBehaviour
                 resolucionActualIndex = i;
             }
         }
-
         resolucionDropdown.AddOptions(options);
         resolucionDropdown.value = resolucionActualIndex;
     }
@@ -89,7 +90,7 @@ public class Opciones : MonoBehaviour
         datos.Pantalla(estaCompleto);
     }
 
-    void AjustadorSensibilidad()
+    void AjustadorSlider()
     {
 
         //sensibilidadSlider.maxValue = 150f;
@@ -97,8 +98,12 @@ public class Opciones : MonoBehaviour
         //sensibilidadSlider.value = ControladorDeJuego.sensibilidadMouse;
         sensibilidadTexto.text = "" + (sensibilidadSlider.value - (sensibilidadSlider.value % 1));
         datos.sensibilidadMouse = sensibilidadSlider.value;
+
         volumenTexto.text = "" + (((volumenSlider.value+0.001) - ((volumenSlider.value + 0.001) % 0.01)) * 100)+"%";
         datos.volumen = volumenSlider.value;
+
+        sonidoTexto.text = "" + (((sonidoSlider.value+0.001) - ((sonidoSlider.value + 0.001) % 0.01)) * 100)+"%";
+        datos.volumenSonido = sonidoSlider.value;
     }
 
     public void ConfiguracionVolumen(float volumen)

@@ -6,14 +6,15 @@ using UnityEngine.SceneManagement;
 public class NoDestruir : MonoBehaviour
 {
     [HideInInspector]
-    public float sensibilidadMouse, volumen, volumenSonido,multiplicadorSensibilidad, multAncho, multAltura;
+    public float sensibilidadMouse, volumen, volumenSonido, multiplicadorSensibilidad, multAncho, multAltura;
     [HideInInspector]
     public bool pantallaCompleta;
     [HideInInspector]
-    public int numeroCalidad, numeroResolucion, anchoDatos, alturaDatos, maxAncho, maxAltura;
+    public int numeroCalidad, numeroResolucion, anchoDatos, alturaDatos, maxAncho, maxAltura, cantidadSonidos;
     private Scene escenaActual;
     public GameObject objetoMusica;
     private GameObject objetivoMusica;
+    public GameObject[] objetivosSonidos;
     public AudioSource musicos;
     public string nombreDeEscena, ultimaEscena, siguienteEscena;
     // Start is called before the first frame update
@@ -21,19 +22,22 @@ public class NoDestruir : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
         objetivoMusica = GameObject.FindGameObjectWithTag("Música");
+        objetivosSonidos=GameObject.FindGameObjectsWithTag("Sonidos");
+        cantidadSonidos = objetivosSonidos.Length;
         objetoMusica.transform.position = objetivoMusica.transform.position;
         //Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
         Calidades(0);
         sensibilidadMouse = 70;
         pantallaCompleta = Screen.fullScreen;
         volumen = 0;
-        volumenSonido = 50;
+        volumenSonido = 0.5f;
         maxAncho = 1920;
         maxAltura = 1080;
         escenaActual = SceneManager.GetActiveScene();
         nombreDeEscena = escenaActual.name;
         anchoDatos = Screen.width;
         alturaDatos = Screen.height;
+
         //Screen.SetResolution(anchoDatos, alturaDatos, pantallaCompleta);
 
 
@@ -55,6 +59,10 @@ public class NoDestruir : MonoBehaviour
             objetivoMusica = null;
             objetivoMusica = GameObject.FindGameObjectWithTag("Música");
             objetoMusica.transform.position = objetivoMusica.transform.position;
+
+            objetivosSonidos=GameObject.FindGameObjectsWithTag("Sonidos");
+
+
             ultimaEscena = nombreDeEscena;
             nombreDeEscena = escenaActual.name;
         }
@@ -71,6 +79,16 @@ public class NoDestruir : MonoBehaviour
             Screen.fullScreen = false;
         }
         musicos.volume = volumen;
+        objetivosSonidos = GameObject.FindGameObjectsWithTag("Sonidos");
+        if (objetivosSonidos.Length != cantidadSonidos)
+        {
+            foreach (GameObject objetosonido in objetivosSonidos)
+            {
+                objetosonido.GetComponent<AudioSource>().volume = volumenSonido;
+            }
+            cantidadSonidos = objetivosSonidos.Length;
+        }
+
     }
 
     void MultiplicaSens()

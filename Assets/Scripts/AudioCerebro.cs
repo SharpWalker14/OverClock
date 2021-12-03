@@ -21,6 +21,7 @@ public class AudioCerebro : MonoBehaviour
                 s.source.loop = s.loop;
                 s.source.spatialBlend = s.dimensiones;
                 s.source.playOnAwake = s.playOnAwake;
+                gameObject.tag = "Sonidos";
             }
             else
             {
@@ -32,8 +33,10 @@ public class AudioCerebro : MonoBehaviour
                 s.source.loop = s.loop;
                 s.source.spatialBlend = s.dimensiones;
                 s.source.playOnAwake = s.playOnAwake;
+                s.ubicacion.tag = "Sonidos";
+
             }
-        
+
         }
     }
 

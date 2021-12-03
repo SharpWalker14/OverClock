@@ -21,6 +21,7 @@ TagManager:
   - TutorialTeclas
   - Arma melee
   - Potenciador
+  - Sonidos
   layers:
   - Default
   - TransparentFX
