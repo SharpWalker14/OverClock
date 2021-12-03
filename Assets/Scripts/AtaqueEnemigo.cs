@@ -132,7 +132,7 @@ public class AtaqueEnemigo : MonoBehaviour
                     sonidoAtaqueTres.SetActive(false);
                     break;
             }
-            vista.mesh = normal;
+            //vista.mesh = normal;
             tiempoAnimacion = 0;
             detente = 0;
         }
