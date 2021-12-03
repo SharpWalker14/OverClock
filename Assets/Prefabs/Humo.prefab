@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5218575754706468488}
   - component: {fileID: 1684363584984750040}
   - component: {fileID: 796533186789015457}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4818,7 +4818,7 @@ GameObject:
   - component: {fileID: 8241158820305987612}
   - component: {fileID: 182298823966913449}
   - component: {fileID: 5756719892022681939}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Explosion
   m_TagString: Explosion2
   m_Icon: {fileID: 0}
@@ -4893,7 +4893,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2750998417286990928}
   - component: {fileID: 2366231203573489981}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Humo
   m_TagString: CharcoAcido
   m_Icon: {fileID: 0}
@@ -4941,7 +4941,7 @@ GameObject:
   - component: {fileID: 7478006401753524811}
   - component: {fileID: 4458270840820362794}
   - component: {fileID: 6881266926509371238}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Colision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
