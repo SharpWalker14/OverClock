@@ -39,11 +39,11 @@ public class FeedbackEnemigos : MonoBehaviour
         if (filtroTiro)
         {
             tiempo += Time.deltaTime;
-            modelado.GetComponent<MeshRenderer>().material = feedbackDaño;
+            modelado.GetComponent<SkinnedMeshRenderer>().material = feedbackDaño;
             if (tiempo >= tiempoFiltro)
             {
                 filtroTiro = false;
-                modelado.GetComponent<MeshRenderer>().material = original;
+                modelado.GetComponent<SkinnedMeshRenderer>().material = original;
             }
         }
         else if(filtroInmune)
