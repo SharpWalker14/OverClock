@@ -88,6 +88,9 @@ public class TutorialTeclas : MonoBehaviour
                 ataque = true;
                 conteoTecla = 3;
                 break;
+            case 7:
+                conteoTecla = 0;
+                break;
         }
         temporizado = true;
         contador++;

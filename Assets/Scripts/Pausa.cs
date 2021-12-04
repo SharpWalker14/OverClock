@@ -40,6 +40,10 @@ public class Pausa : MonoBehaviour
         pausar = true;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        /*
+        
+        
+        */
     }
     public void Reanudar()
     {
@@ -49,5 +53,9 @@ public class Pausa : MonoBehaviour
         pausar = false;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        /*
+
+
+        */
     }
 }

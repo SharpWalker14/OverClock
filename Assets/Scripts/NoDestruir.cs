@@ -17,13 +17,14 @@ public class NoDestruir : MonoBehaviour
     public GameObject[] objetivosSonidos;
     public AudioSource musicos;
     public string nombreDeEscena, ultimaEscena, siguienteEscena;
+    public Pausa tipoPausa;
     // Start is called before the first frame update
     void Start()
     {
+        tipoPausa = (Pausa)FindObjectOfType(typeof(Pausa));
         DontDestroyOnLoad(gameObject);
         objetivoMusica = GameObject.FindGameObjectWithTag("Música");
         objetivosSonidos=GameObject.FindGameObjectsWithTag("Sonidos");
-        cantidadSonidos = objetivosSonidos.Length;
         objetoMusica.transform.position = objetivoMusica.transform.position;
         //Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
         Calidades(0);
@@ -59,9 +60,9 @@ public class NoDestruir : MonoBehaviour
             objetivoMusica = null;
             objetivoMusica = GameObject.FindGameObjectWithTag("Música");
             objetoMusica.transform.position = objetivoMusica.transform.position;
-
-            objetivosSonidos=GameObject.FindGameObjectsWithTag("Sonidos");
-
+            tipoPausa = null;
+            objetivosSonidos = GameObject.FindGameObjectsWithTag("Sonidos");
+            tipoPausa = (Pausa)FindObjectOfType(typeof(Pausa));
 
             ultimaEscena = nombreDeEscena;
             nombreDeEscena = escenaActual.name;
@@ -88,7 +89,20 @@ public class NoDestruir : MonoBehaviour
             }
             cantidadSonidos = objetivosSonidos.Length;
         }
-
+        foreach (GameObject objetosonido in objetivosSonidos)
+        {
+            if (tipoPausa != null)
+            {
+                if (tipoPausa.pausar)
+                {
+                    objetosonido.GetComponent<AudioSource>().Pause();
+                }
+                else
+                {
+                    objetosonido.GetComponent<AudioSource>().UnPause();
+                }
+            }
+        }
     }
 
     void MultiplicaSens()

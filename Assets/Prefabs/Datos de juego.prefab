@@ -41,7 +41,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: a99a9d33574420247a0ce84f6c96d0be, type: 2}
-  m_audioClip: {fileID: 8300000, guid: f4b6f1e250ab783419d7925e8a1b0490, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1ea1889111e00124aa8e4e5e01805dae, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -173,12 +173,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sensibilidadMouse: 0
   volumen: 0
+  volumenSonido: 0
+  multiplicadorSensibilidad: 0
+  multAncho: 0
+  multAltura: 0
   pantallaCompleta: 0
   numeroCalidad: 0
   numeroResolucion: 0
   anchoDatos: 0
   alturaDatos: 0
+  maxAncho: 0
+  maxAltura: 0
+  cantidadSonidos: 0
   objetoMusica: {fileID: 2585122813436567321}
+  objetivosSonidos: []
   musicos: {fileID: 1470133456282997652}
   nombreDeEscena: 
   ultimaEscena: 
+  siguienteEscena: 
+  tipoPausa: {fileID: 0}

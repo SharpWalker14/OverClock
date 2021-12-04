@@ -17,10 +17,12 @@ public class MiniJefe : MonoBehaviour
     private Vector3[] posPat;
     public enum Estado { esperar, correr, atacar, cansancio };
     public Estado patrones;
+    private Pausa tipoPausa;
     private float distanciaMax, frenar;
     // Start is called before the first frame update
     void Start()
     {
+        tipoPausa = (Pausa)FindObjectOfType(typeof(Pausa));
         armadura = GetComponent<ValorSalud>();
         tiempoCorrer = 0;
         tiempoReposo = 0;
@@ -44,15 +46,18 @@ public class MiniJefe : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (jugador != null)
+        if (tipoPausa.pausar == false)
         {
-            Estados();
-            Rango();
-            AuraAtaque();
-        }
-        else
-        {
-            patrones = Estado.cansancio;
+            if (jugador != null)
+            {
+                Estados();
+                Rango();
+                AuraAtaque();
+            }
+            else
+            {
+                patrones = Estado.cansancio;
+            }
         }
     }
     void Estados()

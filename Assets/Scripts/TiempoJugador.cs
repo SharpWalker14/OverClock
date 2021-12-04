@@ -85,7 +85,7 @@ public class TiempoJugador : MonoBehaviour
     {
         if (muerte == false)
         {
-            tiempo -= Time.deltaTime;
+            tiempo -= Time.deltaTime * 1.1f;
             if (tiempo <= 0)
             {
                 salud.CambioDeVida(-salud.vida);

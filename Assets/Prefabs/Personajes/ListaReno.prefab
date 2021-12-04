@@ -390,6 +390,7 @@ GameObject:
   - component: {fileID: 4499396005967741950}
   - component: {fileID: 367962557896956520}
   - component: {fileID: 367962557896956521}
+  - component: {fileID: 7177049069511470816}
   m_Layer: 10
   m_Name: Reno
   m_TagString: Untagged
@@ -451,10 +452,10 @@ MonoBehaviour:
   pesada: 1
   charcoAcido: {fileID: 0}
   cortinaHumo: {fileID: 0}
-  porDosObjecto: {fileID: 0}
+  porDosObjecto: {fileID: 5367659412949508569, guid: 63d68657adb4ad44f92892baf9d4653b, type: 3}
   enemigodSuicida: 0
   enemigoHumo: 0
-  regalo: {fileID: 0}
+  regalo: {fileID: 7177049069511470816}
   explosionAcido: 0
   explosionHumo: 0
   ataqueMelee: 0
@@ -525,6 +526,20 @@ MonoBehaviour:
   "feedbackDa\xF1o": {fileID: 2100000, guid: a86088909080e9349b19b2464c4ffd1b, type: 2}
   feedbackImmune: {fileID: 2100000, guid: 535ca54d222d4954db010d7e356102f8, type: 2}
   tiempoFiltro: 0.2
+--- !u!114 &7177049069511470816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6209511648321736497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ee2c4ddd14f7d24aa8484e9bd9cf4e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  valor: 0
+  estadoHorda: 0
 --- !u!1 &6461738968460343642
 GameObject:
   m_ObjectHideFlags: 0
