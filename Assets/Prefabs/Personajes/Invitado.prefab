@@ -251,7 +251,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1945321189596318267}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 61.234035, y: -3.1, z: -26.157013}
+  m_LocalPosition: {x: 36.744038, y: -3.1, z: -6.7270126}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1945321190796177006}
@@ -353,7 +353,6 @@ MonoBehaviour:
   animacion: 0
   deteccionAtaque: {fileID: 1945321189712592319}
   movimiento: {fileID: 1945321189596318268}
-  vista: {fileID: 0}
   normal: {fileID: -2841969272438934730, guid: ee73b1ccb61cac7499bb68fcc718f7a5, type: 3}
   ataque: {fileID: -4522116333415366894, guid: 0479e99ea5bb59848bde08d0c8273120, type: 3}
   sonidoAtaqueUno: {fileID: 6871998228473222564}

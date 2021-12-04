@@ -6,14 +6,14 @@ using UnityEngine.SceneManagement;
 public class TutorialTeclas : MonoBehaviour
 {
     private int contador, conteoTecla;
-    public GameObject mouseObj, controlesObj, saltoObj, disparoObj, tiempoObj, ascensorObj;
+    public GameObject mouseObj, controlesObj, saltoObj, disparoObj, tiempoObj, ascensorObj, combateObj;
     public GameObject puntero, tiempoHUD;
     public TiempoJugador tutoria;
     public MovimientoJugador movimiento;
     private string escena;
     private Scene escenaActual;
     private float tiempo;
-    private bool temporizado, siguiente, espacio, disparo;
+    private bool temporizado, siguiente, espacio, disparo, ataque;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +29,10 @@ public class TutorialTeclas : MonoBehaviour
         if (escena == "Nivel2")
         {
             contador = 5;
+        }
+        if (escena == "Nivel3")
+        {
+            contador = 6;
         }
     }
 
@@ -79,6 +83,11 @@ public class TutorialTeclas : MonoBehaviour
                 ascensorObj.SetActive(true);
                 tiempo = 4;
                 break;
+            case 6:
+                combateObj.SetActive(true);
+                ataque = true;
+                conteoTecla = 3;
+                break;
         }
         temporizado = true;
         contador++;
@@ -86,7 +95,7 @@ public class TutorialTeclas : MonoBehaviour
     
     void Temporizador()
     {
-        if (espacio || disparo)
+        if (espacio || disparo || ataque)
         {
             if (espacio)
             {
@@ -102,10 +111,18 @@ public class TutorialTeclas : MonoBehaviour
                     conteoTecla--;
                 }
             }
+            else if (ataque)
+            {
+                if (Input.GetMouseButtonDown(1))
+                {
+                    conteoTecla--;
+                }
+            }
             if (conteoTecla == 0)
             {
                 espacio = false;
                 disparo = false;
+                ataque = false;
             }
         }
         else if (temporizado)
@@ -124,6 +141,7 @@ public class TutorialTeclas : MonoBehaviour
                 mouseObj.SetActive(false);
                 tiempoObj.SetActive(false);
                 ascensorObj.SetActive(false);
+                combateObj.SetActive(false);
                 temporizado = false;
                 if (siguiente)
                 {
