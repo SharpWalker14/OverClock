@@ -8014,6 +8014,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 7508234977342646839}
     m_Modifications:
     - target: {fileID: 3518117143385304524, guid: 834897ef0d9930146b16bfddee6b9886, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3518117143385304524, guid: 834897ef0d9930146b16bfddee6b9886, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
