@@ -570,7 +570,6 @@ MonoBehaviour:
   animacion: 0
   deteccionAtaque: {fileID: 2011522952600136950}
   movimiento: {fileID: 2011522952988760949}
-  vista: {fileID: 0}
   normal: {fileID: 743541397402690647, guid: 7817b5d14a37c7344b8070af6ddb6630, type: 3}
   ataque: {fileID: -3329151391964408338, guid: 3749cc4c5a37e5e46bcb0b4a660ceec1, type: 3}
   sonidoAtaqueUno: {fileID: 4834573846321018654}
@@ -694,7 +693,7 @@ GameObject:
   - component: {fileID: 7399857709008366574}
   m_Layer: 0
   m_Name: Sonido de ataque(1)
-  m_TagString: Untagged
+  m_TagString: Sonidos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -983,7 +982,7 @@ GameObject:
   - component: {fileID: 2051575734252515774}
   m_Layer: 0
   m_Name: Sonido de ataque(2)
-  m_TagString: Untagged
+  m_TagString: Sonidos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

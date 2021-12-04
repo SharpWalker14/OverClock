@@ -818,7 +818,7 @@ GameObject:
   - component: {fileID: 267615420829440169}
   m_Layer: 0
   m_Name: Sonido de ataque
-  m_TagString: Untagged
+  m_TagString: Sonidos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
