@@ -70,13 +70,11 @@ public class TiempoJugador : MonoBehaviour
         {
             reloj.color = estado1;
         }
-
-        if (tiempo < etapa1 && tiempo <= etapa2)
+        else if (tiempo <= etapa2 && tiempo >= etapa3)
         {
             reloj.color = estado2;
         }
-
-        if (tiempo <= etapa3 && tiempo < etapa2)
+        else if (tiempo <= etapa3)
         {
             reloj.color = estado3;
         }

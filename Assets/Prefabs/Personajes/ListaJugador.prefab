@@ -1235,13 +1235,13 @@ MonoBehaviour:
   congelarMaximo: 0
   salud: {fileID: 8171468167559788719}
   tutorial: 0
-  estado1: {r: 1, g: 1, b: 1, a: 0}
-  estado2: {r: 1, g: 0.4764151, b: 0.4764151, a: 0}
-  estado3: {r: 1, g: 0, b: 0, a: 0}
+  estado1: {r: 1, g: 1, b: 1, a: 1}
+  estado2: {r: 1, g: 0.4764151, b: 0.4764151, a: 1}
+  estado3: {r: 1, g: 0, b: 0, a: 1}
   reloj: {fileID: 203927450835872822}
-  etapa1: 0
-  etapa2: 0
-  etapa3: 0
+  etapa1: 60
+  etapa2: 40
+  etapa3: 20
   congelado: 0
   muerte: 0
   cambioOportunidad: 0
