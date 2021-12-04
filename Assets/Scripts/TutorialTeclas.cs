@@ -162,6 +162,7 @@ public class TutorialTeclas : MonoBehaviour
         {
             ConteoTutorial();
             other.gameObject.SetActive(false);
+            Destroy(other.gameObject);
         }
     }
 }

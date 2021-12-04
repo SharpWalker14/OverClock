@@ -45,7 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sonidos:
   - nombre: Disparo
-    clip: {fileID: 8300000, guid: edcc7b0cf1d95374daac524d5c07fb79, type: 3}
+    clip: {fileID: 8300000, guid: cf895ef26972a0c439f4e230cfe9cedd, type: 3}
     existe: 1
     ubicacion: {fileID: 0}
     volumen: 0.9

@@ -30,8 +30,8 @@ public class NoDestruir : MonoBehaviour
         Calidades(0);
         sensibilidadMouse = 70;
         pantallaCompleta = Screen.fullScreen;
-        volumen = 0;
-        volumenSonido = 0.5f;
+        volumen = 0.7f;
+        volumenSonido = 0.4f;
         maxAncho = 1920;
         maxAltura = 1080;
         escenaActual = SceneManager.GetActiveScene();
