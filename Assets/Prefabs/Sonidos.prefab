@@ -55,6 +55,16 @@ MonoBehaviour:
     playOnAwake: 0
     source: {fileID: 0}
   - nombre: Movimiento
+    clip: {fileID: 8300000, guid: 8f6f57e99e5eb0a4ab24832ef0f7cc01, type: 3}
+    existe: 1
+    ubicacion: {fileID: 0}
+    volumen: 0.9
+    pitch: 0.9
+    dimensiones: 1
+    loop: 1
+    playOnAwake: 1
+    source: {fileID: 0}
+  - nombre: Cuerpo a cuerpo
     clip: {fileID: 8300000, guid: cf895ef26972a0c439f4e230cfe9cedd, type: 3}
     existe: 1
     ubicacion: {fileID: 0}
