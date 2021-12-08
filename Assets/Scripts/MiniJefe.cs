@@ -8,7 +8,7 @@ public class MiniJefe : MonoBehaviour
     public GameObject[] patrullajes;
     private ValorSalud armadura;
     public Rigidbody cuerpo;
-    public GameObject marca, puntero, empujador;
+    public GameObject marca, puntero, empujador, corriendo, embistiendo, descansando;
     private GameObject jugador;
     public float distanciero, tiempoCorrer, tiempoReposo, tiempoAtaque;
     public float velocidad, velEmbestida;
@@ -67,20 +67,33 @@ public class MiniJefe : MonoBehaviour
             case Estado.esperar:
                 gameObject.layer = 10;
                 armadura.pesada = true;
+                corriendo.SetActive(false);
+                embistiendo.SetActive(false);
+                descansando.SetActive(false);
                 break;
             case Estado.correr:
                 gameObject.layer = 14;
                 armadura.pesada = true;
+                corriendo.SetActive(true);
+                embistiendo.SetActive(false);
+                descansando.SetActive(false);
                 Movimiento();
                 break;
             case Estado.atacar:
                 gameObject.layer = 14;
                 armadura.pesada = true;
+                corriendo.SetActive(false);
+                embistiendo.SetActive(true);
+                descansando.SetActive(false);
+
                 Ataque();
                 break;
             case Estado.cansancio:
                 gameObject.layer = 10;
                 armadura.pesada = false;
+                corriendo.SetActive(false);
+                embistiendo.SetActive(false);
+                descansando.SetActive(true);
                 Descanso();
                 break;
         }

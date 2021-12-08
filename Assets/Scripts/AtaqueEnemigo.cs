@@ -96,7 +96,7 @@ public class AtaqueEnemigo : MonoBehaviour
         {
             if (detente == 0)
             {
-                escogerSonidoAtaque = Random.Range(1, 2);
+                escogerSonidoAtaque = Random.Range(1, 4);
                 detente++;
                 switch (escogerSonidoAtaque)
                 {
