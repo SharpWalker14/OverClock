@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 4786067588514156431}
   - component: {fileID: 8486009338977746986}
   - component: {fileID: 5917918758340031712}
-  m_Layer: 0
+  - component: {fileID: 8518900992046690166}
+  m_Layer: 6
   m_Name: BarraBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82,3 +83,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &8518900992046690166
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5269307984677557557}
+  m_Material: {fileID: 13400000, guid: 208903d3cd5051d41a1d0c8d8c4d6ddc, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6513057217614138847, guid: ea02be235403a234184b8517dcad6ee6, type: 3}

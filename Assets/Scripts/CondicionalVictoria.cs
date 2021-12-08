@@ -19,13 +19,17 @@ public class CondicionalVictoria : MonoBehaviour
 
     void Condicion()
     {
-        if (legionario == null)
+        if (puerta != null)
         {
-            puerta.SetActive(true);
+            if (legionario == null)
+            {
+                puerta.SetActive(true);
+            }
+            else
+            {
+                puerta.SetActive(false);
+            }
         }
-        else
-        {
-            puerta.SetActive(false);
-        }
+
     }
 }

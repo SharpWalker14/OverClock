@@ -12,7 +12,7 @@ public class ValorSalud : MonoBehaviour
     public bool armadura;
     public bool liviana, pesada;
     private GameObject objetivo;
-    public GameObject charcoAcido, cortinaHumo,porDosObjecto;
+    public GameObject charcoAcido, cortinaHumo, porDosObjecto, sonidoMuerte;
     public bool enemigodSuicida, enemigoHumo;
     public ValorTiempoEnemigo regalo;
     public bool explosionAcido, explosionHumo, ataqueMelee;
@@ -20,6 +20,12 @@ public class ValorSalud : MonoBehaviour
     private int intentos, charcos;
     void Start()
     {
+        /*
+        enemigo.transform.position = transform.position;
+        enemigo.tag = "Sonidos";
+        Instantiate(enemigo);
+
+        */
         intentos = 0;
         charcos = 0;
         if (jugador == false)

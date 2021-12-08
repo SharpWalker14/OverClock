@@ -6,11 +6,15 @@ public class Hordas : MonoBehaviour
 {
     private HordaHueco[] huecos;
     public bool especial;
+    private bool primero, segundo;
     private float tiempo;
     public GameObject meta;
+    private GameObject hordas;
     // Start is called before the first frame update
     void Start()
     {
+        primero = false;
+        segundo = false;
         huecos = FindObjectsOfType(typeof(HordaHueco)) as HordaHueco[];
     }
 
@@ -65,6 +69,7 @@ public class Hordas : MonoBehaviour
     void ColisionArea()
     {
         int contador = 0;
+        hordas = GameObject.FindGameObjectWithTag("Horda");
         for (int i = 0; i < huecos.Length; i++)
         {
             if (huecos[i].resuelto == true)
@@ -78,12 +83,28 @@ public class Hordas : MonoBehaviour
             }
             if (contador == huecos.Length)
             {
-                meta.SetActive(true);
+                primero = true;
             }
             else
             {
-                meta.SetActive(false);
+                primero = false;
             }
+        }
+        if (hordas == null)
+        {
+            segundo = true;
+        }
+        else
+        {
+            segundo = false;
+        }
+        if (primero && segundo)
+        {
+            meta.SetActive(true);
+        }
+        else
+        {
+            meta.SetActive(false);
         }
     }
 }

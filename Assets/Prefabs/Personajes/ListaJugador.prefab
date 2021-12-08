@@ -8015,6 +8015,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 1562092511166271379}
     m_Modifications:
     - target: {fileID: 69698482624654089, guid: 8759f13cd50789c4bb763b2b058b9c05, type: 3}
+      propertyPath: sonidos.Array.data[2].loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 69698482624654089, guid: 8759f13cd50789c4bb763b2b058b9c05, type: 3}
+      propertyPath: sonidos.Array.data[2].nombre
+      value: GolpeMele
+      objectReference: {fileID: 0}
+    - target: {fileID: 69698482624654089, guid: 8759f13cd50789c4bb763b2b058b9c05, type: 3}
       propertyPath: sonidos.Array.data[0].ubicacion
       value: 
       objectReference: {fileID: 1424622320235441443}
@@ -8026,6 +8034,10 @@ PrefabInstance:
       propertyPath: sonidos.Array.data[2].ubicacion
       value: 
       objectReference: {fileID: 6414418117280726595}
+    - target: {fileID: 69698482624654089, guid: 8759f13cd50789c4bb763b2b058b9c05, type: 3}
+      propertyPath: sonidos.Array.data[2].playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5768093583749684238, guid: 8759f13cd50789c4bb763b2b058b9c05, type: 3}
       propertyPath: m_RootOrder
       value: 3
