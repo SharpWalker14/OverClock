@@ -191,7 +191,7 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 1
-    rootMotionBoneName: cuerpo1_jnt
+    rootMotionBoneName: cuerpo2_jnt
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1

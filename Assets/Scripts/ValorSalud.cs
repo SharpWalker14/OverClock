@@ -7,22 +7,27 @@ public class ValorSalud : MonoBehaviour
     // En el HUD tiene que mostrar lo que es la variable vida (Si es jugador).
     public float vida;
     private float maxVida;
+    public float tiempoAnimacion;
+    private int detente;
+    public float dañoVida;
+
     public bool jugador;
     [HideInInspector]
     public bool armadura, muerto;
     public bool liviana, pesada;
     private GameObject objetivo, objetoMuerte;
-    public GameObject charcoAcido, cortinaHumo, porDosObjecto, sonidoMuerte;
+    public GameObject charcoAcido, cortinaHumo, porDosObjecto, sonidoMuerte, sonidoRecibirDaño, sonidoRecibirDaño2;
     public bool enemigodSuicida, enemigoHumo;
     public ValorTiempoEnemigo regalo;
-    public bool explosionAcido, explosionHumo, ataqueMelee;
+    public bool explosionAcido, explosionHumo, ataqueMelee, espera;
     public AudioClip[] sonido;
 
-    private int intentos, charcos, numeroSonido;
+    private int intentos, charcos, numeroSonido, escogerSonidoRecibirDaño;
 
     void Start()
     {
         muerto = false;
+        dañoVida = vida;
         if (sonido.Length != 0)
         {
             numeroSonido = Random.Range(0, sonido.Length);
@@ -46,6 +51,8 @@ public class ValorSalud : MonoBehaviour
     void Update()
     {
         DañoExplosion();
+
+        RecibirDaño();
     }
     public void CambioDeVida(float valor)
     {
@@ -86,6 +93,61 @@ public class ValorSalud : MonoBehaviour
         }
         objetoMuerte.transform.position = transform.position;
 
+    }
+
+    public void RecibirDaño()
+    {
+        if (jugador == false)
+        {
+            if (vida < dañoVida)
+            {
+                espera = true;
+            }
+            else
+            {
+                espera = false;
+            }
+
+            if(espera)
+            {
+                if (detente == 0)
+                {
+                    escogerSonidoRecibirDaño = Random.Range(1, 2);
+                    detente++;
+
+                     Debug.Log("escoger");
+                    switch (escogerSonidoRecibirDaño)
+                    {
+                       case 1:
+                          sonidoRecibirDaño.SetActive(true);
+                          break;
+                       case 2:
+                           sonidoRecibirDaño2.SetActive(true);
+                           break;
+                    }
+                }
+                tiempoAnimacion += Time.deltaTime;
+                if (tiempoAnimacion >= 0.5f)
+                {
+                    dañoVida = vida;
+                }
+            }
+            else
+            {
+                Debug.Log("we");
+                switch (escogerSonidoRecibirDaño)
+                {
+                    case 1:
+                        sonidoRecibirDaño.SetActive(false);
+                        break;
+                    case 2:
+                        sonidoRecibirDaño2.SetActive(false);
+                        break;
+                }
+                tiempoAnimacion = 0;
+                detente = 0;
+            }
+        }
     }
     void VidaPersonaje()
     {

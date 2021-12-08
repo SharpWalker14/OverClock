@@ -1,0 +1,210 @@
+fileFormatVersion: 2
+guid: 5722c5d449b033e48b39d2dade84f597
+ModelImporter:
+  serializedVersion: 21100
+  internalIDToNameTable:
+  - first:
+      74: 6790966938447581136
+    second: muerte
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: meloso(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Meloso_NEW
+      parentName: meloso(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.01, y: 0.01, z: 0.01}
+    - name: cuerpo1_jnt
+      parentName: meloso(Clone)
+      position: {x: 0, y: 0.57967365, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.01, y: 0.01, z: 0.01}
+    - name: cuerpo2_jnt
+      parentName: cuerpo1_jnt
+      position: {x: -0, y: 21.95101, z: -24.558723}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: izq_piernaA1_jnt
+      parentName: cuerpo1_jnt
+      position: {x: -7.188714, y: -0.6648806, z: 8.532856}
+      rotation: {x: -0.4802682, y: 0.115184814, z: 0.8679486, w: 0.052346848}
+      scale: {x: 1, y: 1, z: 1}
+    - name: izq_piernaA2_jnt
+      parentName: izq_piernaA1_jnt
+      position: {x: -3.7303494e-14, y: 16.747484, z: -7.1054274e-15}
+      rotation: {x: -0.25869963, y: -0.04784216, z: -0.0027567407, w: 0.96476835}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint1
+      parentName: izq_piernaA2_jnt
+      position: {x: 2.0601957, y: 16.457434, z: 9.469201}
+      rotation: {x: 0.5422047, y: -0.2664733, z: 0.11959993, w: 0.78784645}
+      scale: {x: 1, y: 1, z: 1}
+    - name: izq_piernaA3_jnt
+      parentName: joint1
+      position: {x: 1.8495886, y: 22.90103, z: -9.463021}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: izq_piernaB1_jnt
+      parentName: cuerpo1_jnt
+      position: {x: -9.268148, y: -0.6648806, z: -8.958411}
+      rotation: {x: 0.83976215, y: -0.14517197, z: -0.35085002, w: -0.38810942}
+      scale: {x: 1, y: 1, z: 1}
+    - name: izq_piernaB2_jnt
+      parentName: izq_piernaB1_jnt
+      position: {x: -2.5757174e-14, y: 15.824609, z: 1.4210855e-14}
+      rotation: {x: 0.056983996, y: 0.007340942, z: 0.022664806, w: 0.9980908}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint2
+      parentName: izq_piernaB2_jnt
+      position: {x: 0.5433317, y: 16.176006, z: 9.843304}
+      rotation: {x: 0.0077359104, y: -0.00006940379, z: -0.00020226663, w: 0.9999701}
+      scale: {x: 1, y: 1, z: 1}
+    - name: izq_piernaB3_jnt
+      parentName: joint2
+      position: {x: 0.28955972, y: 22.720943, z: -9.791233}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint3
+      parentName: cuerpo1_jnt
+      position: {x: -0, y: 6.881204, z: 22.526127}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: izq_piernaA1_jnt1
+      parentName: cuerpo1_jnt
+      position: {x: 7.18871, y: -0.664868, z: 8.53286}
+      rotation: {x: -0.06100926, y: 0.8821996, z: -0.11165407, w: -0.4533599}
+      scale: {x: 1, y: 1, z: 1}
+    - name: izq_piernaA2_jnt 1
+      parentName: izq_piernaA1_jnt1
+      position: {x: -0.000006010382, y: -16.747501, z: 0.000048067363}
+      rotation: {x: -0.26315287, y: -0.04332632, z: 0.013281386, w: 0.9636893}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint1 1
+      parentName: izq_piernaA2_jnt 1
+      position: {x: -2.0602129, y: -16.45746, z: -9.469213}
+      rotation: {x: 0.54418063, y: -0.297357, z: 0.09613535, w: 0.7785912}
+      scale: {x: 1, y: 1, z: 1}
+    - name: izq_piernaA3_jnt 1
+      parentName: joint1 1
+      position: {x: -1.8495395, y: -22.900969, z: 9.4630165}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: izq_piernaB1_jnt1
+      parentName: cuerpo1_jnt
+      position: {x: 9.26815, y: -0.664868, z: -8.95841}
+      rotation: {x: 0.9172486, y: -0.07817726, z: 0.34278843, w: 0.18718798}
+      scale: {x: 1, y: 1, z: 1}
+    - name: izq_piernaB2_jnt 1
+      parentName: izq_piernaB1_jnt1
+      position: {x: 0.0000032861367, y: -15.824629, z: -0.00005748746}
+      rotation: {x: -0.39102402, y: -0.2840857, z: 0.43403187, w: 0.76027095}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint2 1
+      parentName: izq_piernaB2_jnt 1
+      position: {x: -0.5433179, y: -16.175987, z: -9.8432}
+      rotation: {x: 0.3530323, y: 0.03110161, z: 0.08220884, w: 0.9314733}
+      scale: {x: 1, y: 1, z: 1}
+    - name: izq_piernaB3_jnt 1
+      parentName: joint2 1
+      position: {x: -0.28961378, y: -22.720913, z: 9.791204}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: cuerpo1_jnt
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 72e00a95fdeaab547ace119d8e776f37, type: 3}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 2
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
