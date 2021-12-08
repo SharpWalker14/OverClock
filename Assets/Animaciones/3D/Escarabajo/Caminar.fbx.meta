@@ -1,0 +1,466 @@
+fileFormatVersion: 2
+guid: 7c1ba3d04b4988f4f908a2ce187b405a
+ModelImporter:
+  serializedVersion: 21100
+  internalIDToNameTable:
+  - first:
+      74: -1245888001772292248
+    second: Caminar
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: "Copied Avatar Rig Configuration mis-match. Inbetween bone
+      rotation in copied configuration does not match rotation in animation file:\n\t'izq_pierna4_jnt'
+      : rotation error = 28.532696 deg\n"
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'Caminar' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'columna1_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'cintura_jnt' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'izq_pierna4_jnt'
+      has translation animation that will be discarded.\n\t'izq_pierna4_jnt' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'der_pierna4_jnt'
+      has translation animation that will be discarded.\n\t'der_pierna4_jnt' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: HitMaster
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: izq_pierna1_jnt
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: der_pierna1_jnt
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: izq_pierna2_jnt
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: der_pierna2_jnt
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: izq_pierna3_jnt
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: der_pierna3_jnt
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: columna2_jnt
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: columna3_jnt
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: cabeza1_jnt
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: cabeza2_jnt
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: izq_brazo1_jnt
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: der_brazo1_jnt
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: izq_brazo2_jnt
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: der_brazo2_jnt
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: izq_brazo3_jnt
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: der_brazo3_jnt
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: izq_brazo4_jnt
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: der_brazo4_jnt
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: izq_pierna5_jnt
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: der_pierna5_jnt
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: columna4_jnt
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: escarabajo(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Escarabajo_NEW
+      parentName: escarabajo(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.01, y: 0.01, z: 0.01}
+    - name: HitMaster
+      parentName: escarabajo(Clone)
+      position: {x: -0, y: 0.62, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.01, y: 0.01, z: 0.01}
+    - name: columna1_jnt
+      parentName: HitMaster
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: columna2_jnt
+      parentName: columna1_jnt
+      position: {x: -0, y: 11.898962, z: 0}
+      rotation: {x: -0.01572465, y: 0, z: -0, w: 0.9998764}
+      scale: {x: 1, y: 1, z: 1}
+    - name: columna3_jnt
+      parentName: columna2_jnt
+      position: {x: -0, y: 11.804196, z: -2.4424907e-14}
+      rotation: {x: 0.032700572, y: 0, z: -0, w: 0.9994652}
+      scale: {x: 1, y: 1, z: 1}
+    - name: columna4_jnt
+      parentName: columna3_jnt
+      position: {x: -0, y: 15.617251, z: 1.2878587e-14}
+      rotation: {x: 0.085379675, y: 0, z: -0, w: 0.9963485}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cabeza1_jnt
+      parentName: columna4_jnt
+      position: {x: -6.259272e-33, y: 34.23875, z: -3.5527137e-15}
+      rotation: {x: -0.050954327, y: 0, z: -0, w: 0.99870104}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cabeza2_jnt
+      parentName: cabeza1_jnt
+      position: {x: 1.9738212e-14, y: 25.02558, z: -2.220446e-14}
+      rotation: {x: 0.5412335, y: 0, z: -0, w: 0.84087235}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cabeza3_jnt
+      parentName: cabeza2_jnt
+      position: {x: -1.0692389e-14, y: 49.77104, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: izq_brazo1_jnt
+      parentName: columna4_jnt
+      position: {x: -8.6456995, y: 17.971601, z: 0.9863481}
+      rotation: {x: -0.5589522, y: 0.5153909, z: 0.370256, w: 0.5337182}
+      scale: {x: 1, y: 1, z: 1}
+    - name: izq_brazo2_jnt
+      parentName: izq_brazo1_jnt
+      position: {x: -2.0428104e-14, y: 25.175371, z: 0}
+      rotation: {x: -0.0913594, y: 0.09380266, z: 0.0922739, w: 0.9870867}
+      scale: {x: 1, y: 1, z: 1}
+    - name: izq_brazo3_jnt
+      parentName: izq_brazo2_jnt
+      position: {x: 3.5527137e-15, y: 36.83188, z: 1.4210855e-14}
+      rotation: {x: 0.006656936, y: 0.06438152, z: 0.035308927, w: 0.99727833}
+      scale: {x: 1, y: 1, z: 1}
+    - name: izq_brazo4_jnt
+      parentName: izq_brazo3_jnt
+      position: {x: -0, y: 30.920496, z: 1.4210855e-14}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: der_brazo1_jnt
+      parentName: columna4_jnt
+      position: {x: 8.6457, y: 17.971212, z: 0.98643243}
+      rotation: {x: 0.5337182, y: -0.370256, z: 0.5153909, w: 0.5589522}
+      scale: {x: 1, y: 1, z: 1}
+    - name: der_brazo2_jnt
+      parentName: der_brazo1_jnt
+      position: {x: -0.000023572942, y: -25.175486, z: -0.00088761625}
+      rotation: {x: -0.09135599, y: 0.09380226, z: 0.09227491, w: 0.987087}
+      scale: {x: 1, y: 1, z: 1}
+    - name: der_brazo3_jnt
+      parentName: der_brazo2_jnt
+      position: {x: -0.00009116299, y: -36.832367, z: 0.00023173985}
+      rotation: {x: 0.006654021, y: 0.06438131, z: 0.035306614, w: 0.9972784}
+      scale: {x: 1, y: 1, z: 1}
+    - name: der_brazo4_jnt
+      parentName: der_brazo3_jnt
+      position: {x: 0.00005785503, y: -30.920498, z: -0.00002815736}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: izq_ala1_jnt
+      parentName: columna4_jnt
+      position: {x: -12.2098, y: 39.20146, z: -25.72135}
+      rotation: {x: 0.0013909303, y: -0.02413265, z: 0.9980514, w: 0.05752455}
+      scale: {x: 1, y: 1, z: 1}
+    - name: izq_ala2_jnt
+      parentName: izq_ala1_jnt
+      position: {x: -0, y: 47.18603, z: -7.1054274e-15}
+      rotation: {x: 0.29964426, y: -0.007224527, z: 0.13242078, w: 0.9447888}
+      scale: {x: 1, y: 1, z: 1}
+    - name: izq_ala3_jnt
+      parentName: izq_ala2_jnt
+      position: {x: -3.7747583e-15, y: 52.744324, z: 1.0658141e-14}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: der_ala1_jnt
+      parentName: columna4_jnt
+      position: {x: 12.2098, y: 39.20146, z: -25.72135}
+      rotation: {x: -0.17230166, y: 0.96700233, z: 0.17363358, w: 0.07120367}
+      scale: {x: 1, y: 1, z: 1}
+    - name: der_ala2_jnt
+      parentName: der_ala1_jnt
+      position: {x: -2.842171e-14, y: -47.18603, z: 0}
+      rotation: {x: 0.29964426, y: -0.007224527, z: 0.13242078, w: 0.9447888}
+      scale: {x: 1, y: 1, z: 1}
+    - name: der_ala3_jnt
+      parentName: der_ala2_jnt
+      position: {x: -2.8865799e-15, y: -52.744324, z: -2.6645353e-15}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cintura_jnt
+      parentName: HitMaster
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: izq_pierna1_jnt
+      parentName: cintura_jnt
+      position: {x: -17.46115, y: -1.1601834, z: 5.459959}
+      rotation: {x: -0.0000000074392648, y: 0.024981627, z: 0.9996879, w: 4.1047551e-10}
+      scale: {x: 1, y: 1, z: 1}
+    - name: izq_pierna2_jnt
+      parentName: izq_pierna1_jnt
+      position: {x: -3.5527137e-15, y: 26.888708, z: 7.993606e-14}
+      rotation: {x: -0.076706305, y: -3.3288266e-30, z: 4.5735197e-29, w: 0.99705374}
+      scale: {x: 1, y: 1, z: 1}
+    - name: izq_pierna3_jnt
+      parentName: izq_pierna2_jnt
+      position: {x: 1.0658141e-13, y: 29.316784, z: -1.2434498e-14}
+      rotation: {x: 0.5414535, y: 0.000000006266486, z: -0.000000009730157, w: 0.8407307}
+      scale: {x: 1, y: 1, z: 1}
+    - name: izq_pierna4_jnt
+      parentName: izq_pierna3_jnt
+      position: {x: -1.0658141e-14, y: 7.421539, z: 3.996803e-14}
+      rotation: {x: 0.25320864, y: 0, z: -0, w: 0.9674117}
+      scale: {x: 1, y: 1, z: 1}
+    - name: izq_pierna5_jnt
+      parentName: izq_pierna4_jnt
+      position: {x: 1.0658141e-14, y: 9.040261, z: -6.217249e-15}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: der_pierna1_jnt
+      parentName: cintura_jnt
+      position: {x: 17.4611, y: -1.1602, z: 5.45996}
+      rotation: {x: -0.00000006015122, y: 0.9996879, z: -0.024981627, w: -0.0000010901506}
+      scale: {x: 1, y: 1, z: 1}
+    - name: der_pierna2_jnt
+      parentName: der_pierna1_jnt
+      position: {x: -3.5527137e-15, y: -26.888662, z: -0.0000042726197}
+      rotation: {x: -0.076706305, y: 8.912889e-18, z: -9.851287e-18, w: 0.99705374}
+      scale: {x: 1, y: 1, z: 1}
+    - name: der_pierna3_jnt
+      parentName: der_pierna2_jnt
+      position: {x: 3.5527137e-15, y: -29.316813, z: 0.000004106792}
+      rotation: {x: 0.5414535, y: -0.0000009588284, z: 0.0000005222015, w: 0.8407307}
+      scale: {x: 1, y: 1, z: 1}
+    - name: der_pierna4_jnt
+      parentName: der_pierna3_jnt
+      position: {x: -1.0658141e-14, y: -7.421569, z: -0.000016159975}
+      rotation: {x: 0.25320864, y: 1.1076136e-17, z: 4.2431705e-17, w: 0.9674117}
+      scale: {x: 1, y: 1, z: 1}
+    - name: der_pierna5_jnt
+      parentName: der_pierna4_jnt
+      position: {x: 3.5527137e-15, y: -9.040276, z: 0.0000011925764}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 45309a887022d2c48a332019dc326ed0, type: 3}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 2
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
