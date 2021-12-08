@@ -11,7 +11,7 @@ public class ValorSalud : MonoBehaviour
     [HideInInspector]
     public bool armadura;
     public bool liviana, pesada;
-    private GameObject objetivo;
+    private GameObject objetivo, objetoMuerte;
     public GameObject charcoAcido, cortinaHumo, porDosObjecto, sonidoMuerte;
     public bool enemigodSuicida, enemigoHumo;
     public ValorTiempoEnemigo regalo;
@@ -20,12 +20,11 @@ public class ValorSalud : MonoBehaviour
     private int intentos, charcos;
     void Start()
     {
-        /*
-        enemigo.transform.position = transform.position;
-        enemigo.tag = "Sonidos";
-        Instantiate(enemigo);
+        
+        sonidoMuerte.transform.position = transform.position;
+        sonidoMuerte.tag = "Sonidos";
+        objetoMuerte=Instantiate(sonidoMuerte);
 
-        */
         intentos = 0;
         charcos = 0;
         if (jugador == false)
@@ -79,6 +78,7 @@ public class ValorSalud : MonoBehaviour
             explosionHumo = false;
             VidaPersonaje();
         }
+        objetoMuerte.transform.position = transform.position;
 
     }
     void VidaPersonaje()
