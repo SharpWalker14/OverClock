@@ -162,7 +162,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2006486744
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1212,6 +1212,8 @@ MonoBehaviour:
   cortinaHumo: {fileID: 0}
   porDosObjecto: {fileID: 0}
   sonidoMuerte: {fileID: 7340445223216581556, guid: ad802effecd6b7642a0e2821c445ded9, type: 3}
+  "sonidoRecibirDa\xF1o": {fileID: 0}
+  "sonidoRecibirDa\xF1o2": {fileID: 0}
   enemigodSuicida: 0
   enemigoHumo: 0
   regalo: {fileID: 0}
