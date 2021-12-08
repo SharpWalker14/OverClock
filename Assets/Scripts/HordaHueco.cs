@@ -118,7 +118,7 @@ public class HordaHueco : MonoBehaviour
                 Instantiate(enemigo);
                 enemigo.GetComponent<MovimientoEnemigo>().tranquilo = true;
                 enemigo.GetComponent<ValorTiempoEnemigo>().estadoHorda = false;
-                enemigo.tag = null;
+                enemigo.tag = "Untagged";
             }
         }
     }
