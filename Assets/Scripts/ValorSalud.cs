@@ -9,18 +9,24 @@ public class ValorSalud : MonoBehaviour
     private float maxVida;
     public bool jugador;
     [HideInInspector]
-    public bool armadura;
+    public bool armadura, muerto;
     public bool liviana, pesada;
     private GameObject objetivo, objetoMuerte;
     public GameObject charcoAcido, cortinaHumo, porDosObjecto, sonidoMuerte;
     public bool enemigodSuicida, enemigoHumo;
     public ValorTiempoEnemigo regalo;
     public bool explosionAcido, explosionHumo, ataqueMelee;
+    public AudioClip[] sonido;
 
-    private int intentos, charcos;
+    private int intentos, charcos, numeroSonido;
+
     void Start()
     {
-        
+        muerto = false;
+        if (sonido.Length != 0)
+        {
+            numeroSonido = Random.Range(0, sonido.Length);
+        }
         sonidoMuerte.transform.position = transform.position;
         sonidoMuerte.tag = "Sonidos";
         objetoMuerte=Instantiate(sonidoMuerte);
@@ -83,8 +89,12 @@ public class ValorSalud : MonoBehaviour
     }
     void VidaPersonaje()
     {
-        if (vida <= 0)
+        if (vida <= 0 && muerto == false)
         {
+            if (sonido.Length != 0)
+            {
+                objetoMuerte.GetComponent<AudioSource>().PlayOneShot(sonido[numeroSonido]);
+            }
             if (jugador == false && intentos == 0)
             {
                 intentos++;
@@ -114,7 +124,7 @@ public class ValorSalud : MonoBehaviour
 
                 Instantiate(cortinaHumo, Humo, transform.rotation);
             }
-
+            muerto = true;
             Destroy(gameObject);
         }
         else if((vida>maxVida)&&jugador)

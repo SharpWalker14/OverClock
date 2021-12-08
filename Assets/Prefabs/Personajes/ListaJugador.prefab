@@ -1205,17 +1205,20 @@ MonoBehaviour:
   vida: 100
   jugador: 1
   armadura: 0
+  muerto: 0
   liviana: 0
   pesada: 0
   charcoAcido: {fileID: 0}
   cortinaHumo: {fileID: 0}
   porDosObjecto: {fileID: 0}
+  sonidoMuerte: {fileID: 7340445223216581556, guid: ad802effecd6b7642a0e2821c445ded9, type: 3}
   enemigodSuicida: 0
   enemigoHumo: 0
   regalo: {fileID: 0}
   explosionAcido: 0
   explosionHumo: 0
   ataqueMelee: 0
+  sonido: []
 --- !u!114 &6145628480073578907
 MonoBehaviour:
   m_ObjectHideFlags: 0
