@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6490372884773254012}
   - component: {fileID: 9076609816321607606}
   - component: {fileID: 7980260812483353495}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Prop_Sillon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
