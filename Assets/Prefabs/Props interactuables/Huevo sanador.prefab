@@ -77,7 +77,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tipoHuevo: 1
   objeto: {fileID: 6036900421880770859, guid: a1b0f317fed9b414b837d3f688d3b137, type: 3}
+  sonidoRomper: {fileID: 7340445223216581556, guid: ad802effecd6b7642a0e2821c445ded9, type: 3}
   numeroPot: 0
+  sonido: {fileID: 8300000, guid: 5efbacd6056f0da46a3165d65dcf055f, type: 3}
 --- !u!1 &5449673539901798296
 GameObject:
   m_ObjectHideFlags: 0

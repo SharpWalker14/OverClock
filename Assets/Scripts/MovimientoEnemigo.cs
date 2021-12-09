@@ -116,11 +116,11 @@ public class MovimientoEnemigo : MonoBehaviour
     {
         if (inteligencia.speed != 0)
         {
-            sonidoMovimiento.SetActive(true);
+            //sonidoMovimiento.SetActive(true);
         }
         else if (inteligencia.speed == 0)
         {
-            sonidoMovimiento.SetActive(false);
+            //sonidoMovimiento.SetActive(false);
         }
     }
 

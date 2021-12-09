@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7448742861240329020
 Transform:
   m_ObjectHideFlags: 0
@@ -322,6 +322,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: fe3fa78a24c0b404c95331e7c772f6c7, type: 3}
   - {fileID: 8300000, guid: be37d406f7660e4499f23c7b773fca63, type: 3}
   - {fileID: 8300000, guid: 93898f62f5fa97145b17a81d1a74c14f, type: 3}
+  inmuneSonido: {fileID: 0}
+  inmunidadSonar: []
 --- !u!114 &1945321189596318268
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -108,7 +108,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tipoHuevo: 0
   objeto: {fileID: 0}
+  sonidoRomper: {fileID: 7340445223216581556, guid: ad802effecd6b7642a0e2821c445ded9, type: 3}
   numeroPot: 0
+  sonido: {fileID: 8300000, guid: 5efbacd6056f0da46a3165d65dcf055f, type: 3}
 --- !u!1001 &6993650224628474930
 PrefabInstance:
   m_ObjectHideFlags: 0

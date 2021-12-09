@@ -7,12 +7,19 @@ public class Huevo : MonoBehaviour
 
     public enum Tipo { normal, sanador, potenciador };
     public Tipo tipoHuevo;
-    public GameObject objeto;
+    public GameObject objeto, sonidoRomper;
+    private GameObject objetoRomper;
     public int numeroPot;
+    public AudioClip sonido;
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (sonido != null)
+        {
+            sonidoRomper.transform.position = transform.position;
+            sonidoRomper.tag = "Sonidos";
+            objetoRomper = Instantiate(sonidoRomper);
+        }
     }
 
     // Update is called once per frame
@@ -64,6 +71,10 @@ public class Huevo : MonoBehaviour
                 objeto.GetComponent<OrbePot>().Asignacion(numeroPot);
             }
             Instantiate(objeto);
+        }
+        if (sonido != null)
+        {
+            objetoRomper.GetComponent<AudioSource>().PlayOneShot(sonido);
         }
         Destroy(gameObject);
     }

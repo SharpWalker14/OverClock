@@ -8,7 +8,7 @@ public class MiniJefe : MonoBehaviour
     public GameObject[] patrullajes;
     private ValorSalud armadura;
     public Rigidbody cuerpo;
-    public GameObject marca, puntero, empujador, corriendo, embistiendo, descansando;
+    public GameObject marca, puntero, empujador;
     private GameObject jugador;
     [HideInInspector]
     public float distanciero, tiempoCorrer, tiempoReposo, tiempoAtaque;
@@ -23,6 +23,7 @@ public class MiniJefe : MonoBehaviour
     private int sonidoNumero;
     public AudioSource embestidor;
     public AudioClip[] embestidaOpcion;
+    public Material matCorrer, matEmbestir, matDescansar;
     // Start is called before the first frame update
     void Start()
     {
@@ -71,33 +72,23 @@ public class MiniJefe : MonoBehaviour
             case Estado.esperar:
                 gameObject.layer = 10;
                 armadura.pesada = true;
-                corriendo.SetActive(false);
-                embistiendo.SetActive(false);
-                descansando.SetActive(false);
                 break;
             case Estado.correr:
                 gameObject.layer = 14;
                 armadura.pesada = true;
-                corriendo.SetActive(true);
-                embistiendo.SetActive(false);
-                descansando.SetActive(false);
+                armadura.GetComponent<FeedbackEnemigos>().original = matCorrer;
                 Movimiento();
                 break;
             case Estado.atacar:
                 gameObject.layer = 14;
                 armadura.pesada = true;
-                corriendo.SetActive(false);
-                embistiendo.SetActive(true);
-                descansando.SetActive(false);
-
+                armadura.GetComponent<FeedbackEnemigos>().original = matEmbestir;
                 Ataque();
                 break;
             case Estado.cansancio:
                 gameObject.layer = 10;
                 armadura.pesada = false;
-                corriendo.SetActive(false);
-                embistiendo.SetActive(false);
-                descansando.SetActive(true);
+                armadura.GetComponent<FeedbackEnemigos>().original = matDescansar;
                 Descanso();
                 break;
         }

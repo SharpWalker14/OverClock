@@ -566,6 +566,8 @@ MonoBehaviour:
   sonido:
   - {fileID: 8300000, guid: 0ba06542ee0107a49b0cd2a47c387221, type: 3}
   - {fileID: 8300000, guid: bce654be9ab4f184684086815acc11d0, type: 3}
+  inmuneSonido: {fileID: 0}
+  inmunidadSonar: []
 --- !u!114 &673700239819412256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -709,7 +711,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3215557558282314585
 Transform:
   m_ObjectHideFlags: 0

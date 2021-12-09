@@ -8,7 +8,7 @@ public class Hordas : MonoBehaviour
     public bool especial;
     private bool primero, segundo;
     private float tiempo;
-    public GameObject meta;
+    public GameObject meta, dialogo;
     private GameObject hordas;
     // Start is called before the first frame update
     void Start()
@@ -101,10 +101,18 @@ public class Hordas : MonoBehaviour
         if (primero && segundo)
         {
             meta.SetActive(true);
+            if (dialogo != null)
+            {
+                dialogo.SetActive(true);
+            }
         }
         else
         {
             meta.SetActive(false);
+            if (dialogo != null)
+            {
+                dialogo.SetActive(false);
+            }
         }
     }
 }
