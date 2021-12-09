@@ -16,11 +16,14 @@ public class NoDestruir : MonoBehaviour
     private GameObject objetivoMusica;
     public GameObject[] objetivosSonidos;
     public AudioSource musicos;
+    public AudioClip menu, niveles;
     public string nombreDeEscena, ultimaEscena, siguienteEscena;
     public Pausa tipoPausa;
+    private int musicaCambiar;
     // Start is called before the first frame update
     void Start()
     {
+
         tipoPausa = (Pausa)FindObjectOfType(typeof(Pausa));
         DontDestroyOnLoad(gameObject);
         objetivoMusica = GameObject.FindGameObjectWithTag("Música");
@@ -36,6 +39,18 @@ public class NoDestruir : MonoBehaviour
         maxAltura = 1080;
         escenaActual = SceneManager.GetActiveScene();
         nombreDeEscena = escenaActual.name;
+        if (escenaActual.name == "MenúConjunto")
+        {
+            musicos.clip = menu;
+            musicos.Play(0);
+            musicaCambiar = 0;
+        }
+        else
+        {
+            musicos.clip = niveles;
+            musicos.Play(0);
+            musicaCambiar = 1;
+        }
         anchoDatos = Screen.width;
         alturaDatos = Screen.height;
 
@@ -57,6 +72,25 @@ public class NoDestruir : MonoBehaviour
         escenaActual = SceneManager.GetActiveScene();
         if (nombreDeEscena != escenaActual.name)
         {
+            if (escenaActual.name == "MenúConjunto")
+            {
+                if (musicaCambiar != 0)
+                {
+                    musicos.clip = menu;
+                    musicos.Play(0);
+                    musicaCambiar = 0;
+                }
+            }
+            else
+            {
+                if (musicaCambiar != 1)
+                {
+                    musicos.clip = niveles;
+                    musicos.Play(0);
+                    musicaCambiar = 1;
+                }
+            }
+
             objetivoMusica = null;
             objetivoMusica = GameObject.FindGameObjectWithTag("Música");
             objetoMusica.transform.position = objetivoMusica.transform.position;

@@ -20,9 +20,13 @@ public class TiempoJugador : MonoBehaviour
     public bool congelado, muerte, cambioOportunidad, cambioFrenesi, cambioCongelar, tutorialTiempo;
     public FeedbackDaño feedback;
     public GameObject objOportunidad, objFrenesi, objCongelar, tiempoHUD;
+    private int numeroSonando;
+    public AudioSource susurrar;
+    public AudioClip susLigero, susIntenso;
     // Start is called before the first frame update
     void Start()
     {
+        numeroSonando = 0;
         if (tutorial)
         {
             tutorialTiempo = true;
@@ -68,14 +72,33 @@ public class TiempoJugador : MonoBehaviour
     {
         if (tiempo <= etapa1 && tiempo > etapa2)
         {
+            if (numeroSonando != 0)
+            {
+                susurrar.Stop();
+                numeroSonando = 0;
+            }
             reloj.color = estado1;
         }
         else if (tiempo <= etapa2 && tiempo >= etapa3)
         {
+            if (numeroSonando != 1)
+            {
+                susurrar.clip = susLigero;
+                susurrar.loop = false;
+                susurrar.Play(0);
+                numeroSonando = 1;
+            }
             reloj.color = estado2;
         }
         else if (tiempo <= etapa3)
         {
+            if (numeroSonando != 2)
+            {
+                susurrar.clip = susIntenso;
+                susurrar.loop = true;
+                susurrar.Play(0);
+                numeroSonando = 2;
+            }
             reloj.color = estado3;
         }
     }

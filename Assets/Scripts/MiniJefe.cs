@@ -10,6 +10,7 @@ public class MiniJefe : MonoBehaviour
     public Rigidbody cuerpo;
     public GameObject marca, puntero, empujador, corriendo, embistiendo, descansando;
     private GameObject jugador;
+    [HideInInspector]
     public float distanciero, tiempoCorrer, tiempoReposo, tiempoAtaque;
     public float velocidad, velEmbestida;
     public int ataque, empuje, moverPat, numeroPat, descansoFijar;
@@ -19,6 +20,9 @@ public class MiniJefe : MonoBehaviour
     public Estado patrones;
     private Pausa tipoPausa;
     private float distanciaMax, frenar;
+    private int sonidoNumero;
+    public AudioSource embestidor;
+    public AudioClip[] embestidaOpcion;
     // Start is called before the first frame update
     void Start()
     {
@@ -183,10 +187,14 @@ public class MiniJefe : MonoBehaviour
         transform.eulerAngles = new Vector3(0, rotacion, 0);
         if (ataque == 0)
         {
+            sonidoNumero = Random.Range(0, embestidaOpcion.Length);
+            embestidor.clip = embestidaOpcion[sonidoNumero];
+            embestidor.Play(0);
             distanciaMax = Vector3.Distance(puntero.transform.position,posActual);
             puntero.transform.position = new Vector3(0, 0, 0);
             puntero.transform.localPosition = new Vector3(0, 0, 10);
             tiempoCorrer = 0;
+            
             ataque++;
         }
         fijador.y = cuerpo.velocity.y;

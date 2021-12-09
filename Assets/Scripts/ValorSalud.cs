@@ -8,7 +8,7 @@ public class ValorSalud : MonoBehaviour
     public float vida;
     private float maxVida;
     public float tiempoAnimacion;
-    private int detente;
+    private int detente, numerador;
     public float dañoVida;
 
     public bool jugador;
@@ -21,6 +21,8 @@ public class ValorSalud : MonoBehaviour
     public ValorTiempoEnemigo regalo;
     public bool explosionAcido, explosionHumo, ataqueMelee, espera;
     public AudioClip[] sonido;
+    public AudioSource inmuneSonido;
+    public AudioClip[] inmunidadSonar;
 
     private int intentos, charcos, numeroSonido, escogerSonidoRecibirDaño;
 
@@ -112,7 +114,7 @@ public class ValorSalud : MonoBehaviour
             {
                 if (detente == 0)
                 {
-                    escogerSonidoRecibirDaño = Random.Range(1, 2);
+                    escogerSonidoRecibirDaño = Random.Range(1, 3);
                     detente++;
 
                      Debug.Log("escoger");
@@ -203,7 +205,13 @@ public class ValorSalud : MonoBehaviour
 
     public void Inmunencia()
     {
-        GetComponent<FeedbackEnemigos>().InmunidadEmpiezo();
+        if (inmunidadSonar.Length != 0)
+        {
+            GetComponent<FeedbackEnemigos>().InmunidadEmpiezo();
+            numerador = Random.Range(0, inmunidadSonar.Length);
+            inmuneSonido.clip = inmunidadSonar[numerador];
+            inmuneSonido.Play(0);
+        }
     }
 
     void OnTriggerStay(Collider col)

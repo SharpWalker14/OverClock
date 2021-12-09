@@ -543,6 +543,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vida: 150
+  tiempoAnimacion: 0
+  "da\xF1oVida": 0
   jugador: 0
   armadura: 0
   muerto: 0
@@ -560,6 +562,7 @@ MonoBehaviour:
   explosionAcido: 0
   explosionHumo: 0
   ataqueMelee: 0
+  espera: 0
   sonido:
   - {fileID: 8300000, guid: 0ba06542ee0107a49b0cd2a47c387221, type: 3}
   - {fileID: 8300000, guid: bce654be9ab4f184684086815acc11d0, type: 3}
@@ -829,7 +832,7 @@ GameObject:
   - component: {fileID: 4153273413262686906}
   m_Layer: 0
   m_Name: Quejido
-  m_TagString: Untagged
+  m_TagString: Sonidos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
