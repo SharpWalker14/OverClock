@@ -696,6 +696,7 @@ MonoBehaviour:
   patrullero: {fileID: 2011522951520681766}
   guardarPatrulla: []
   deteccionPatrulla: {fileID: 2011522952497470384}
+  animator: {fileID: 151652591222758439}
 --- !u!114 &2011522952988760950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -720,6 +721,7 @@ MonoBehaviour:
   sonidoAtaqueUno: {fileID: 4834573846321018654}
   sonidoAtaqueDos: {fileID: 8903835774103690327}
   sonidoAtaqueTres: {fileID: 4834573846321018654}
+  animator: {fileID: 151652591222758439}
 --- !u!136 &561808716276777744
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1559,11 +1561,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: escarabajo
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 45309a887022d2c48a332019dc326ed0, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 2aa4623adb4cab74a9161f56df869ef2, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45309a887022d2c48a332019dc326ed0, type: 3}
 --- !u!4 &6123466054697240157 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 45309a887022d2c48a332019dc326ed0, type: 3}
+  m_PrefabInstance: {fileID: 6012396296384094646}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &151652591222758439 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 45309a887022d2c48a332019dc326ed0, type: 3}
   m_PrefabInstance: {fileID: 6012396296384094646}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &5775799320816330261 stripped

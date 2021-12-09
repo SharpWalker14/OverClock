@@ -22,6 +22,8 @@ public class MovimientoEnemigo : MonoBehaviour
     public GameObject[] guardarPatrulla;
     public Detector deteccionPatrulla;
     private bool candado = true, candadoDraw = false;
+
+    public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
@@ -117,10 +119,12 @@ public class MovimientoEnemigo : MonoBehaviour
         if (inteligencia.speed != 0)
         {
             //sonidoMovimiento.SetActive(true);
+            animator.SetBool("SeMueve", true);
         }
         else if (inteligencia.speed == 0)
         {
             //sonidoMovimiento.SetActive(false);
+            animator.SetBool("SeMueve", false);
         }
     }
 

@@ -854,6 +854,7 @@ MonoBehaviour:
   patrullero: {fileID: 6015069485897078806}
   guardarPatrulla: []
   deteccionPatrulla: {fileID: 6015069486899051648}
+  animator: {fileID: 1804288662588846256}
 --- !u!114 &6015069487381888070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -878,6 +879,7 @@ MonoBehaviour:
   sonidoAtaqueUno: {fileID: 8785686308722697340}
   sonidoAtaqueDos: {fileID: 5206408123578968488}
   sonidoAtaqueTres: {fileID: 8785686308722697340}
+  animator: {fileID: 1804288662588846256}
 --- !u!136 &5831810357498347840
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1445,6 +1447,11 @@ PrefabInstance:
 --- !u!4 &5758470247244016330 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 72e00a95fdeaab547ace119d8e776f37, type: 3}
+  m_PrefabInstance: {fileID: 5215321558672723233}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1804288662588846256 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 72e00a95fdeaab547ace119d8e776f37, type: 3}
   m_PrefabInstance: {fileID: 5215321558672723233}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &8869292257261714596 stripped

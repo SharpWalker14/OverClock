@@ -592,6 +592,7 @@ MonoBehaviour:
   patrullero: {fileID: 673700238604105587}
   guardarPatrulla: []
   deteccionPatrulla: {fileID: 673700239572505573}
+  animator: {fileID: 8425296695375482062}
 --- !u!114 &673700239819412259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -616,6 +617,7 @@ MonoBehaviour:
   sonidoAtaqueUno: {fileID: 2993198565793122580}
   sonidoAtaqueDos: {fileID: 8748932125727787762}
   sonidoAtaqueTres: {fileID: 8131424451919493452}
+  animator: {fileID: 8425296695375482062}
 --- !u!136 &778673615588175397
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1436,15 +1438,24 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cegador_rigg
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 56341d13d484fca4d99920923dda11be, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 36852e24d3f2c5b4592358236f001f4e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56341d13d484fca4d99920923dda11be, type: 3}
---- !u!4 &2453483644058932916 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 56341d13d484fca4d99920923dda11be, type: 3}
+--- !u!95 &8425296695375482062 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 56341d13d484fca4d99920923dda11be, type: 3}
   m_PrefabInstance: {fileID: 2703918022030029151}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2293699470220390967 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5020699264974814360, guid: 56341d13d484fca4d99920923dda11be, type: 3}
+  m_PrefabInstance: {fileID: 2703918022030029151}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2453483644058932916 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 56341d13d484fca4d99920923dda11be, type: 3}
   m_PrefabInstance: {fileID: 2703918022030029151}
   m_PrefabAsset: {fileID: 0}

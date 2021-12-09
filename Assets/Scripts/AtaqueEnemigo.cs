@@ -16,6 +16,8 @@ public class AtaqueEnemigo : MonoBehaviour
     private int detente = 0;
     public GameObject sonidoAtaqueUno, sonidoAtaqueDos, sonidoAtaqueTres;
 
+    public Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -112,6 +114,7 @@ public class AtaqueEnemigo : MonoBehaviour
                 }
             }
             //vista.mesh = ataque;
+            animator.SetTrigger("Ataca");
             tiempoAnimacion += Time.deltaTime;
             if (tiempoAnimacion >= 1)
             {
