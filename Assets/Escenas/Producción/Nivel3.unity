@@ -1036,6 +1036,7 @@ GameObject:
   m_Component:
   - component: {fileID: 273185913}
   - component: {fileID: 273185912}
+  - component: {fileID: 273185914}
   m_Layer: 0
   m_Name: Tutorial
   m_TagString: Untagged
@@ -1071,6 +1072,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &273185914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273185911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4fcedb642c9b9d4e9eb7ce733171f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nivel: "Men\xFAConjunto"
+  final: 0
 --- !u!1 &287141821
 GameObject:
   m_ObjectHideFlags: 0
@@ -4944,6 +4959,10 @@ PrefabInstance:
     - target: {fileID: 2011522952988760947, guid: 50364196106247842bc4b12fc3a06f2a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2011522952988760948, guid: 50364196106247842bc4b12fc3a06f2a, type: 3}
+      propertyPath: m_Speed
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50364196106247842bc4b12fc3a06f2a, type: 3}
