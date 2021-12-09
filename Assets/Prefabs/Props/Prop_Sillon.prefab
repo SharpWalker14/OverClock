@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7907674798278556889}
   - component: {fileID: 6490372884773254012}
   - component: {fileID: 9076609816321607606}
+  - component: {fileID: 7980260812483353495}
   m_Layer: 0
   m_Name: Prop_Sillon
   m_TagString: Untagged
@@ -82,3 +83,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7980260812483353495
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7419228459098170979}
+  m_Material: {fileID: 13400000, guid: 208903d3cd5051d41a1d0c8d8c4d6ddc, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8293592510814182518, guid: f6250c4f4ff211349a4780880a033378, type: 3}
