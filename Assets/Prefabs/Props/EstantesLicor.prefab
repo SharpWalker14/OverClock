@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5683452384380216844}
   - component: {fileID: 8750624099989678505}
   - component: {fileID: 6815214009504734563}
+  - component: {fileID: 8013030311347602902}
   m_Layer: 0
   m_Name: EstantesLicor
   m_TagString: Untagged
@@ -82,3 +83,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &8013030311347602902
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5013770240834944182}
+  m_Material: {fileID: 13400000, guid: 208903d3cd5051d41a1d0c8d8c4d6ddc, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -582711562000524094, guid: 38a20ac6146ddc2488594a6458ff590b, type: 3}
