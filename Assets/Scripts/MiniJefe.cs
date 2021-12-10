@@ -148,7 +148,7 @@ public class MiniJefe : MonoBehaviour
             puntero.transform.position = new Vector3(0, 0, 0);
             puntero.transform.localPosition = new Vector3(0, 0, 10);
         }
-        fijador.y = cuerpo.velocity.y;
+        fijador.y = 0;
         cuerpo.velocity = fijador * velocidad;
         if (limitador.tocado && limitador.objetoRegistrado == patrullajes[numeroPat])
         {
@@ -188,7 +188,7 @@ public class MiniJefe : MonoBehaviour
             
             ataque++;
         }
-        fijador.y = cuerpo.velocity.y;
+        fijador.y = 0;
 
         cuerpo.velocity = fijador * velEmbestida;
 
