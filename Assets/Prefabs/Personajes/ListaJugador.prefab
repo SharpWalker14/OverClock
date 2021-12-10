@@ -2804,6 +2804,85 @@ MonoBehaviour:
   disparos: 7
   dispersionBalas: 6
   duracionLaser: 0.09
+--- !u!1 &2323657561468726060
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5653093883523572010}
+  - component: {fileID: 6048330580285807300}
+  - component: {fileID: 6495621967132437980}
+  m_Layer: 5
+  m_Name: EncontrarAscensor_Tutorial
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &5653093883523572010
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2323657561468726060}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.24999999, y: 0.24999999, z: 0.24999999}
+  m_Children: []
+  m_Father: {fileID: 1195925086554279883}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.00005722, y: -135.5}
+  m_SizeDelta: {x: 1656.5427, y: 176.604}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &6048330580285807300
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2323657561468726060}
+  m_CullTransparentMesh: 1
+--- !u!114 &6495621967132437980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2323657561468726060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.65882355, g: 0.9921569, b: 0.6431373, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 5f58ed4d91a20cc4691d675ff2ef3ec8, type: 3}
+    m_FontSize: 81
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 6
+    m_MaxSize: 162
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "ALG\xDAN ASCENSOR DEBER\xCDA FUNCIONAR"
 --- !u!1 &2384548285482410706
 GameObject:
   m_ObjectHideFlags: 0
@@ -3808,12 +3887,12 @@ RectTransform:
   m_LocalScale: {x: 0.24999999, y: 0.24999999, z: 0.24999999}
   m_Children: []
   m_Father: {fileID: 1195925086554279883}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00005722, y: -135.5}
-  m_SizeDelta: {x: 1656.5427, y: 176.604}
+  m_AnchoredPosition: {x: -0.000065565, y: -135.5}
+  m_SizeDelta: {x: 1682.3972, y: 352.3346}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1954979828463463423
 CanvasRenderer:
@@ -3845,10 +3924,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 5f58ed4d91a20cc4691d675ff2ef3ec8, type: 3}
-    m_FontSize: 81
+    m_FontSize: 120
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 6
+    m_MinSize: 1
     m_MaxSize: 162
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -3856,7 +3935,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: PRESIONA E PARA LLAMAR AL ASCENSOR
+  m_Text: "PRESIONA \"E\" CERCA DEL BOT\xD3N PARA LLAMAR AL ASCENSOR"
 --- !u!1 &3136972353504981586
 GameObject:
   m_ObjectHideFlags: 0
@@ -4401,6 +4480,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 5653093883523572010}
   - {fileID: 3169725984506961039}
   - {fileID: 3335846719319098450}
   m_Father: {fileID: 1796070962226041463}
@@ -5069,7 +5149,7 @@ RectTransform:
   m_LocalScale: {x: 0.24999999, y: 0.24999999, z: 0.24999999}
   m_Children: []
   m_Father: {fileID: 1195925086554279883}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6457,6 +6537,7 @@ MonoBehaviour:
   saltoObj: {fileID: 951951772606378218}
   disparoObj: {fileID: 3136972353504981586}
   tiempoObj: {fileID: 4229918122295982210}
+  encontrarObj: {fileID: 2323657561468726060}
   ascensorObj: {fileID: 4990103090033316768}
   combateObj: {fileID: 3003092546241837777}
   puntero: {fileID: 3650029971529749584}
@@ -8786,14 +8867,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe0e6ad4e1b525442998e7456427e921, type: 3}
---- !u!1 &3477229919994704026 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7753593389073834572, guid: fe0e6ad4e1b525442998e7456427e921, type: 3}
-  m_PrefabInstance: {fileID: 6619119557778133718}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &876522207558673255 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6337090683785081265, guid: fe0e6ad4e1b525442998e7456427e921, type: 3}
+  m_PrefabInstance: {fileID: 6619119557778133718}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3477229919994704026 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7753593389073834572, guid: fe0e6ad4e1b525442998e7456427e921, type: 3}
   m_PrefabInstance: {fileID: 6619119557778133718}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8167918619315781312
@@ -9019,13 +9100,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51470e4a85024a74fb7216332df46116, type: 3}
---- !u!1 &7480892718351938344 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1477890567346304728, guid: 51470e4a85024a74fb7216332df46116, type: 3}
-  m_PrefabInstance: {fileID: 8310264939088430576}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &3090900480087997673 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6464609893810010393, guid: 51470e4a85024a74fb7216332df46116, type: 3}
+  m_PrefabInstance: {fileID: 8310264939088430576}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7480892718351938344 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1477890567346304728, guid: 51470e4a85024a74fb7216332df46116, type: 3}
   m_PrefabInstance: {fileID: 8310264939088430576}
   m_PrefabAsset: {fileID: 0}

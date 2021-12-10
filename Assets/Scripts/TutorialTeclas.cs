@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class TutorialTeclas : MonoBehaviour
 {
     private int contador, conteoTecla;
-    public GameObject mouseObj, controlesObj, saltoObj, disparoObj, tiempoObj, ascensorObj, combateObj;
+    public GameObject mouseObj, controlesObj, saltoObj, disparoObj, tiempoObj, encontrarObj, ascensorObj, combateObj;
     public GameObject puntero, tiempoHUD;
     public TiempoJugador tutoria;
     public MovimientoJugador movimiento;
@@ -32,7 +32,7 @@ public class TutorialTeclas : MonoBehaviour
         }
         if (escena == "Nivel3")
         {
-            contador = 6;
+            contador = 7;
         }
     }
 
@@ -80,15 +80,19 @@ public class TutorialTeclas : MonoBehaviour
                 tiempo = 3;
                 break;
             case 5:
+                encontrarObj.SetActive(true);
+                tiempo = 7;
+                break;
+            case 6:
                 ascensorObj.SetActive(true);
                 tiempo = 4;
                 break;
-            case 6:
+            case 7:
                 combateObj.SetActive(true);
                 ataque = true;
                 conteoTecla = 3;
                 break;
-            case 7:
+            case 8:
                 conteoTecla = 0;
                 break;
         }
@@ -143,6 +147,7 @@ public class TutorialTeclas : MonoBehaviour
                 disparoObj.SetActive(false);
                 mouseObj.SetActive(false);
                 tiempoObj.SetActive(false);
+                encontrarObj.SetActive(false);
                 ascensorObj.SetActive(false);
                 combateObj.SetActive(false);
                 temporizado = false;

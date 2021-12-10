@@ -788,7 +788,7 @@ MonoBehaviour:
   embestidaOpcion:
   - {fileID: 8300000, guid: 3bb81a5d4d87ccc4d8c09b252e969bf0, type: 3}
   - {fileID: 8300000, guid: a862b7a8ffb9d1648b5998f4c418824a, type: 3}
-  matCorrer: {fileID: 2100000, guid: e3c33c17b54b4d74ea4c55546a960a97, type: 2}
+  matCorrer: {fileID: 2100000, guid: 15ad2050e6c63874a92c624b11f00cb7, type: 2}
   matEmbestir: {fileID: 2100000, guid: 5ff779f1a4ca74140a57531beac3b771, type: 2}
   matDescansar: {fileID: 2100000, guid: 6273eaffd9b98f140b2690bb57ff8b62, type: 2}
 --- !u!136 &367962557896956520
@@ -817,7 +817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c77ecc55af077c347904d26de32a29ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  original: {fileID: 2100000, guid: e3c33c17b54b4d74ea4c55546a960a97, type: 2}
+  original: {fileID: 2100000, guid: 15ad2050e6c63874a92c624b11f00cb7, type: 2}
   modelado: {fileID: 6954937886343341072}
   "feedbackDa\xF1o": {fileID: 2100000, guid: a86088909080e9349b19b2464c4ffd1b, type: 2}
   feedbackImmune: {fileID: 2100000, guid: 535ca54d222d4954db010d7e356102f8, type: 2}
@@ -1178,11 +1178,11 @@ PrefabInstance:
     - target: {fileID: -9213038755882996594, guid: 45309a887022d2c48a332019dc326ed0, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e3c33c17b54b4d74ea4c55546a960a97, type: 2}
+      objectReference: {fileID: 2100000, guid: 15ad2050e6c63874a92c624b11f00cb7, type: 2}
     - target: {fileID: -9213038755882996594, guid: 45309a887022d2c48a332019dc326ed0, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: e3c33c17b54b4d74ea4c55546a960a97, type: 2}
+      objectReference: {fileID: 2100000, guid: c26b3d6cf4b16454cafca8efbd7d51f5, type: 2}
     - target: {fileID: -8679921383154817045, guid: 45309a887022d2c48a332019dc326ed0, type: 3}
       propertyPath: m_RootOrder
       value: 0

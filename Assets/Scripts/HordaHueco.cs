@@ -5,6 +5,7 @@ using UnityEngine;
 public class HordaHueco : MonoBehaviour
 {
     private bool visto, enVacio;
+    private float velocidadEntendida;
     public Detector deteccion;
     [HideInInspector]
     public bool confirmado, resuelto, obsoleto;
@@ -17,6 +18,7 @@ public class HordaHueco : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        velocidadEntendida = enemigo.GetComponent<MovimientoEnemigo>().inteligencia.speed;
         obsoleto = false;
         camara = GameObject.FindGameObjectWithTag("MainCamera");
     }
@@ -114,10 +116,12 @@ public class HordaHueco : MonoBehaviour
                 enemigo.transform.position = lugares[i].transform.position;
                 enemigo.GetComponent<MovimientoEnemigo>().tranquilo = false;
                 enemigo.GetComponent<ValorTiempoEnemigo>().estadoHorda = true;
+                enemigo.GetComponent<MovimientoEnemigo>().inteligencia.speed = 6;
                 enemigo.tag = "Horda";
                 Instantiate(enemigo);
                 enemigo.GetComponent<MovimientoEnemigo>().tranquilo = true;
                 enemigo.GetComponent<ValorTiempoEnemigo>().estadoHorda = false;
+                enemigo.GetComponent<MovimientoEnemigo>().inteligencia.speed = velocidadEntendida;
                 enemigo.tag = "Untagged";
             }
         }
