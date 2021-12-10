@@ -51,10 +51,10 @@ public class NoDestruir : MonoBehaviour
             musicos.Play(0);
             musicaCambiar = 1;
         }
-        anchoDatos = Screen.width;
-        alturaDatos = Screen.height;
+        anchoDatos = 1280;
+        alturaDatos = 720;
 
-        //Screen.SetResolution(anchoDatos, alturaDatos, pantallaCompleta);
+        Screen.SetResolution(anchoDatos, alturaDatos, pantallaCompleta);
 
 
     }

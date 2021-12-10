@@ -23,6 +23,7 @@ TagManager:
   - Potenciador
   - Sonidos
   - Horda
+  - Interactuar
   layers:
   - Default
   - TransparentFX
