@@ -222,7 +222,7 @@ MonoBehaviour:
   patrullero: {fileID: 1945321190796177007}
   guardarPatrulla: []
   deteccionPatrulla: {fileID: 1945321189609392889}
-  animator: {fileID: 0}
+  animator: {fileID: 270595775797962405}
 --- !u!114 &1945321189596318271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,7 +247,7 @@ MonoBehaviour:
   sonidoAtaqueUno: {fileID: 6871998228473222564}
   sonidoAtaqueDos: {fileID: 6871998228473222564}
   sonidoAtaqueTres: {fileID: 6871998228473222564}
-  animator: {fileID: 0}
+  animator: {fileID: 270595775797962405}
 --- !u!136 &7478808142850078982
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -293,6 +293,7 @@ MonoBehaviour:
   "feedbackDa\xF1o": {fileID: 2100000, guid: a86088909080e9349b19b2464c4ffd1b, type: 2}
   feedbackImmune: {fileID: 2100000, guid: 535ca54d222d4954db010d7e356102f8, type: 2}
   tiempoFiltro: 0.2
+  animator: {fileID: 270595775797962405}
 --- !u!1 &1945321189609392868
 GameObject:
   m_ObjectHideFlags: 0
@@ -1066,10 +1067,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: BaseInvitado
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 4213cf8429e01124cb2d459f56349c26, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f9818d3bfcbacc743bf6839715ef5c6e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4213cf8429e01124cb2d459f56349c26, type: 3}
 --- !u!4 &6134313601182563551 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4213cf8429e01124cb2d459f56349c26, type: 3}
+  m_PrefabInstance: {fileID: 5957080080183728948}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &270595775797962405 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 4213cf8429e01124cb2d459f56349c26, type: 3}
   m_PrefabInstance: {fileID: 5957080080183728948}
   m_PrefabAsset: {fileID: 0}

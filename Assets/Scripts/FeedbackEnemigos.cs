@@ -11,6 +11,7 @@ public class FeedbackEnemigos : MonoBehaviour
     private float tiempo;
     private bool filtroTiro, filtroInmune;
 
+    public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +28,8 @@ public class FeedbackEnemigos : MonoBehaviour
     {
         tiempo = 0;
         filtroTiro = true;
+
+        animator.SetTrigger("Dañado");
     }
     public void InmunidadEmpiezo()
     {

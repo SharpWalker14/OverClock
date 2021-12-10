@@ -464,6 +464,7 @@ MonoBehaviour:
   "feedbackDa\xF1o": {fileID: 2100000, guid: a86088909080e9349b19b2464c4ffd1b, type: 2}
   feedbackImmune: {fileID: 2100000, guid: 535ca54d222d4954db010d7e356102f8, type: 2}
   tiempoFiltro: 0.2
+  animator: {fileID: 6951814201587022500}
 --- !u!1 &1479878057680527866
 GameObject:
   m_ObjectHideFlags: 0
@@ -1220,6 +1221,11 @@ PrefabInstance:
 --- !u!1 &8242028244790833635 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4363202421310949674, guid: ad30241769d74a74ba62c9f6e5342dc7, type: 3}
+  m_PrefabInstance: {fileID: 3536270767356151605}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &6951814201587022500 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: ad30241769d74a74ba62c9f6e5342dc7, type: 3}
   m_PrefabInstance: {fileID: 3536270767356151605}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &3934425319756390622 stripped

@@ -767,6 +767,7 @@ MonoBehaviour:
   "feedbackDa\xF1o": {fileID: 2100000, guid: a86088909080e9349b19b2464c4ffd1b, type: 2}
   feedbackImmune: {fileID: 2100000, guid: 535ca54d222d4954db010d7e356102f8, type: 2}
   tiempoFiltro: 0.2
+  animator: {fileID: 151652591222758439}
 --- !u!1 &2011522953435942026
 GameObject:
   m_ObjectHideFlags: 0
