@@ -964,7 +964,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   original: {fileID: 2100000, guid: cddce3438d1c7bb40ba37489f03f888e, type: 2}
-  modelado: {fileID: 0}
+  modelado: {fileID: 8779859071731217369}
   "feedbackDa\xF1o": {fileID: 2100000, guid: a86088909080e9349b19b2464c4ffd1b, type: 2}
   feedbackImmune: {fileID: 2100000, guid: 535ca54d222d4954db010d7e356102f8, type: 2}
   tiempoFiltro: 0.2
@@ -1081,5 +1081,10 @@ Transform:
 --- !u!95 &7403197351818530168 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 4213cf8429e01124cb2d459f56349c26, type: 3}
+  m_PrefabInstance: {fileID: 4023937050515419369}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8779859071731217369 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5624914723767485232, guid: 4213cf8429e01124cb2d459f56349c26, type: 3}
   m_PrefabInstance: {fileID: 4023937050515419369}
   m_PrefabAsset: {fileID: 0}
