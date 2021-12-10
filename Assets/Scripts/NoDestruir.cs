@@ -32,7 +32,7 @@ public class NoDestruir : MonoBehaviour
         //Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
         Calidades(0);
         sensibilidadMouse = 70;
-        pantallaCompleta = Screen.fullScreen;
+        pantallaCompleta = false;
         volumen = 0.7f;
         volumenSonido = 0.4f;
         maxAncho = 1920;

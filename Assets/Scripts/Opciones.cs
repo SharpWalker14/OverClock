@@ -24,11 +24,22 @@ public class Opciones : MonoBehaviour
         
         resoluciones = new Resolution[3];
         int dividor = 1;
+        int dividendo;
         for (int i = 0; i < resoluciones.Length; i++)
         {
-            resoluciones[i].width = 1920 / dividor;
-            resoluciones[i].height = 1080 / dividor;
-            dividor += 1;
+            dividendo = dividor - 1;
+            if (i % 2 == 0)
+            {
+                resoluciones[i].width = 1920 / dividor;
+                resoluciones[i].height = 1080 / dividor;
+                dividor += 1;
+            }
+            else
+            {
+                resoluciones[i].width = (1920 * 2) / (dividor + dividendo);
+                resoluciones[i].height = (1080 * 2) / (dividor + dividendo);
+            }
+
         }
         
         resolucionDropdown.ClearOptions();
