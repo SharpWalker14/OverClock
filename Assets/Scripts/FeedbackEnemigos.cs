@@ -29,7 +29,10 @@ public class FeedbackEnemigos : MonoBehaviour
         tiempo = 0;
         filtroTiro = true;
 
-        animator.SetTrigger("Dañado");
+        if (animator != null)
+        {
+            animator.SetTrigger("Dañado");
+        }
     }
     public void InmunidadEmpiezo()
     {

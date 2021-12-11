@@ -116,7 +116,7 @@ public class HordaHueco : MonoBehaviour
                 enemigo.transform.position = lugares[i].transform.position;
                 enemigo.GetComponent<MovimientoEnemigo>().tranquilo = false;
                 enemigo.GetComponent<ValorTiempoEnemigo>().estadoHorda = true;
-                enemigo.GetComponent<MovimientoEnemigo>().inteligencia.speed = 6;
+                enemigo.GetComponent<MovimientoEnemigo>().inteligencia.speed = 7;
                 enemigo.tag = "Horda";
                 Instantiate(enemigo);
                 enemigo.GetComponent<MovimientoEnemigo>().tranquilo = true;

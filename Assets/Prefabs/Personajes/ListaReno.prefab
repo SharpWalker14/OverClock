@@ -721,7 +721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a627c92ddbef4f746af726666e7fe99c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: 4500
+  vida: 3000
   tiempoAnimacion: 0
   "da\xF1oVida": 0
   jugador: 0
@@ -822,6 +822,7 @@ MonoBehaviour:
   "feedbackDa\xF1o": {fileID: 2100000, guid: a86088909080e9349b19b2464c4ffd1b, type: 2}
   feedbackImmune: {fileID: 2100000, guid: 535ca54d222d4954db010d7e356102f8, type: 2}
   tiempoFiltro: 0.2
+  animator: {fileID: 0}
 --- !u!114 &7177049069511470816
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class BotonAscensor : MonoBehaviour
 {
-    public Detector interruptor;
+    public Detector interruptor, cercaniaJugador;
     public GameObject objeto, dialogo, destructorObjeto;
     public Material objetoEncendido, objetoApagado;
+    public TutorialTeclas ver;
     private bool encendido;
     // Start is called before the first frame update
     void Start()
@@ -22,18 +23,25 @@ public class BotonAscensor : MonoBehaviour
 
     void VerInterruptor()
     {
-        if (interruptor.tocado && encendido == false)
+        if (cercaniaJugador.tocado && encendido == false)
         {
             dialogo.SetActive(true);
+            if (ver.contador == 6)
+            {
+                ver.tiempo = 0;
+            }
+        }
+        else
+        {
+            dialogo.SetActive(false);
+        }
+        if (interruptor.tocado && encendido == false)
+        {
             if (Input.GetKeyDown(KeyCode.E))
             {
                 Destroy(destructorObjeto);
                 encendido = true;
             }
-        }
-        else if (interruptor.tocado == false && encendido == false)
-        {
-            dialogo.SetActive(false);
         }
         if (encendido)
         {

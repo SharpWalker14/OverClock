@@ -5,14 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class TutorialTeclas : MonoBehaviour
 {
-    private int contador, conteoTecla;
+    [HideInInspector]
+    public int contador, conteoTecla;
     public GameObject mouseObj, controlesObj, saltoObj, disparoObj, tiempoObj, encontrarObj, ascensorObj, combateObj;
     public GameObject puntero, tiempoHUD;
     public TiempoJugador tutoria;
     public MovimientoJugador movimiento;
     private string escena;
     private Scene escenaActual;
-    private float tiempo;
+    [HideInInspector]
+    public float tiempo;
     private bool temporizado, siguiente, espacio, disparo, ataque;
     // Start is called before the first frame update
     void Start()
@@ -81,7 +83,7 @@ public class TutorialTeclas : MonoBehaviour
                 break;
             case 5:
                 encontrarObj.SetActive(true);
-                tiempo = 7;
+                tiempo = 6;
                 break;
             case 6:
                 ascensorObj.SetActive(true);
