@@ -8,7 +8,7 @@ public class NoDestruir : MonoBehaviour
     [HideInInspector]
     public float sensibilidadMouse, volumen, volumenSonido, multiplicadorSensibilidad, multAncho, multAltura;
     [HideInInspector]
-    public bool pantallaCompleta;
+    public bool pantallaCompleta, tutorial;
     [HideInInspector]
     public int numeroCalidad, numeroResolucion, anchoDatos, alturaDatos, maxAncho, maxAltura, cantidadSonidos;
     private Scene escenaActual;
@@ -90,7 +90,6 @@ public class NoDestruir : MonoBehaviour
                     musicaCambiar = 1;
                 }
             }
-
             objetivoMusica = null;
             objetivoMusica = GameObject.FindGameObjectWithTag("Música");
             objetoMusica.transform.position = objetivoMusica.transform.position;

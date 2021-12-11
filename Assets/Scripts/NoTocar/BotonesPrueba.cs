@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BotonesPrueba : MonoBehaviour
 {
@@ -44,7 +45,6 @@ public class BotonesPrueba : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             temporizador.tiempo = temporizador.tiempoMaximo;
-
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
@@ -56,6 +56,18 @@ public class BotonesPrueba : MonoBehaviour
             {
                 temporizador.congelado = true;
             }
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            SceneManager.LoadScene("Nivel1");
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            SceneManager.LoadScene("Nivel2");
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha6))
+        {
+            SceneManager.LoadScene("Nivel3");
         }
     }
 }

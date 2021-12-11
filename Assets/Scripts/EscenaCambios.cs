@@ -10,7 +10,7 @@ public class EscenaCambios : MonoBehaviour
     //el nombre de la escena donde se desea ir
     private void Update() //Este Update solo sirve para ejecutar el reinicio de escena
     {
-        if(Input.GetKeyDown(KeyCode.R))
+        if(Input.GetKeyDown(KeyCode.Alpha0))
         {
             ReiniciarEscena();
         }

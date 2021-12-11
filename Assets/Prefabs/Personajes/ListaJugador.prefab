@@ -488,8 +488,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -309.9, y: -113.29}
-  m_SizeDelta: {x: 127.59, y: 69.6214}
+  m_AnchoredPosition: {x: -301, y: -123.1}
+  m_SizeDelta: {x: 127.59, y: 138.4005}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5951757731293126750
 CanvasRenderer:
@@ -532,14 +532,21 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'R: REINICIAR
+  m_Text: '0: REINICIAR
 
     1: MODO DIOS
 
     2: REINICIAR TIEMPO
 
     3: CONGELAR
-    TIEMPO'
+    TIEMPO
+
+
+    4: NIVEL 1
+
+    5: NIVEL 2
+
+    6: NIVEL 3'
 --- !u!1 &298268693857400726
 GameObject:
   m_ObjectHideFlags: 0
@@ -6532,6 +6539,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fae8c0f68d9340e4db76828d4c72fc3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  contador: 0
+  conteoTecla: 0
   mouseObj: {fileID: 7783191232483598910}
   controlesObj: {fileID: 1865594125399773105}
   saltoObj: {fileID: 951951772606378218}
@@ -6544,6 +6553,7 @@ MonoBehaviour:
   tiempoHUD: {fileID: 7387761501946948700}
   tutoria: {fileID: 6145628480073578907}
   movimiento: {fileID: 2828007403714214066}
+  tiempo: 0
 --- !u!1 &6374730077855075450
 GameObject:
   m_ObjectHideFlags: 0
