@@ -21,7 +21,7 @@ public class CámaraPrimeraPersona : MonoBehaviour
 
     void Update()
     {
-        if (pausado.pausar == false)
+        if (pausado.pausar == false && Pausa.juegoPausado == false)
         {
             Rotacion();
         }

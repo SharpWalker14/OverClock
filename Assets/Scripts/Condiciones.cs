@@ -10,6 +10,8 @@ public class Condiciones : MonoBehaviour
     private GameObject jugador;
     public string nivel;
     public bool final;
+
+    public VictoriaScript victoriaDatos;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,15 +41,22 @@ public class Condiciones : MonoBehaviour
     {
         if (col.gameObject == jugador)
         {
+            Pausa.juegoPausado = true;
+            Time.timeScale = 0f;
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+            victoriaDatos.victoriaMenú.SetActive(true);
+
+
             if (final)
             {
-                SceneManager.LoadScene("VictoriaFinal");
+                victoriaDatos.victoriaFinal.SetActive(true);
+                //SceneManager.LoadScene("VictoriaFinal");
             }
             else
             {
-                SceneManager.LoadScene("VictoriaProd");
+                victoriaDatos.victoriaNoFinal.SetActive(true);
+                //SceneManager.LoadScene("VictoriaProd");
             }
         }
     }

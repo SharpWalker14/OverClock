@@ -2800,6 +2800,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3044288903684494637, guid: 588032cd05d76234d9996fd8fb866536, type: 3}
   m_PrefabInstance: {fileID: 190898522}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &190898524 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4340379408174042367, guid: 588032cd05d76234d9996fd8fb866536, type: 3}
+  m_PrefabInstance: {fileID: 190898522}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da8c940d229c7ec448f35e9a457054bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &197065161
 GameObject:
   m_ObjectHideFlags: 0
@@ -10548,6 +10559,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nivel: Nivel3
   final: 0
+  victoriaDatos: {fileID: 190898524}
 --- !u!65 &679514734
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21516,6 +21528,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nivel: Nivel3
   final: 0
+  victoriaDatos: {fileID: 190898524}
 --- !u!1001 &1525327703
 PrefabInstance:
   m_ObjectHideFlags: 0

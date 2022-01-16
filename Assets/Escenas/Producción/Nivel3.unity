@@ -1082,6 +1082,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nivel: "Men\xFAConjunto"
   final: 0
+  victoriaDatos: {fileID: 0}
 --- !u!1 &287141821
 GameObject:
   m_ObjectHideFlags: 0
@@ -5743,6 +5744,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nivel: "Men\xFAConjunto"
   final: 1
+  victoriaDatos: {fileID: 1923650355}
 --- !u!1 &1522049605
 GameObject:
   m_ObjectHideFlags: 0
@@ -7145,6 +7147,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 588032cd05d76234d9996fd8fb866536, type: 3}
+--- !u!114 &1923650355 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4340379408174042367, guid: 588032cd05d76234d9996fd8fb866536, type: 3}
+  m_PrefabInstance: {fileID: 1923650354}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da8c940d229c7ec448f35e9a457054bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1979056569
 GameObject:
   m_ObjectHideFlags: 0
