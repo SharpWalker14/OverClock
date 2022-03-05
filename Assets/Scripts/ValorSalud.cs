@@ -136,7 +136,7 @@ public class ValorSalud : MonoBehaviour
             }
             else
             {
-                Debug.Log("we");
+                //Debug.Log("we");
                 switch (escogerSonidoRecibirDaño)
                 {
                     case 1:
