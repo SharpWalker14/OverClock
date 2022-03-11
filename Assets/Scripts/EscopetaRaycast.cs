@@ -16,6 +16,7 @@ public class EscopetaRaycast : MonoBehaviour
     public float dispersionBalas;
     private float esperaTiempo = 100;
     public float duracionLaser = 0.3f;
+    public bool mvcEnemigos = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,18 +35,34 @@ public class EscopetaRaycast : MonoBehaviour
         {
             for (int i = 0; i < disparos; i++)
             {
-
                 if (Physics.Raycast(camara.position, DireccionDeBalas(), out golpe, rangoDisparo, ~(2 << 8)))
                 {
-                    if (golpe.collider.GetComponent<ValorSalud>() != null)
+                    if (mvcEnemigos == false)
                     {
-                        if(golpe.collider.GetComponent<ValorSalud>().liviana==false&& golpe.collider.GetComponent<ValorSalud>().pesada == false)
+                        if (golpe.collider.GetComponent<ValorSalud>() != null)
                         {
-                            golpe.collider.GetComponent<ValorSalud>().CambioDeVida(-daño);
+                            if (golpe.collider.GetComponent<ValorSalud>().liviana == false && golpe.collider.GetComponent<ValorSalud>().pesada == false)
+                            {
+                                golpe.collider.GetComponent<ValorSalud>().CambioDeVida(-daño);
+                            }
+                            else if (golpe.collider.GetComponent<ValorSalud>().liviana == true || golpe.collider.GetComponent<ValorSalud>().pesada == true)
+                            {
+                                golpe.collider.GetComponent<ValorSalud>().Inmunencia();
+                            }
                         }
-                        else if(golpe.collider.GetComponent<ValorSalud>().liviana == true || golpe.collider.GetComponent<ValorSalud>().pesada == true)
+                    }
+                    else
+                    {
+                        if (golpe.collider.GetComponent<Modelo>() != null)
                         {
-                            golpe.collider.GetComponent<ValorSalud>().Inmunencia();
+                            if (golpe.collider.GetComponent<Modelo>().liviana == false && golpe.collider.GetComponent<Modelo>().pesada == false)
+                            {
+                                golpe.collider.GetComponent<Controlador>().CambioVida(-daño);
+                            }
+                            else if (golpe.collider.GetComponent<Modelo>().liviana == true || golpe.collider.GetComponent<Modelo>().pesada == true)
+                            {
+                                golpe.collider.GetComponent<Controlador>().Inmunencia();
+                            }
                         }
                     }
                     if (golpe.collider.GetComponent<Huevo>() != null)
