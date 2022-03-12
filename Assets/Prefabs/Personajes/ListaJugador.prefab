@@ -3054,6 +3054,7 @@ MonoBehaviour:
   disparos: 7
   dispersionBalas: 6
   duracionLaser: 0.09
+  mvcEnemigos: 0
 --- !u!1 &2323657561468726060
 GameObject:
   m_ObjectHideFlags: 0
