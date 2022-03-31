@@ -36,6 +36,9 @@ EditorBuildSettings:
     path: "Assets/Old/Escenas/PreProducci\xF3n/EscenaDePrueba2.unity"
     guid: 5b64d6844c3a05f4baef978ef5704863
   - enabled: 1
+    path: Assets/Escenas/ShowRoom/ShowRoom.unity
+    guid: ffcf7477c3b877549a90e7126af4177b
+  - enabled: 1
     path: "Assets/Old/Escenas/Producci\xF3n/DerrotaProd.unity"
     guid: b69381bc344dcb244af512883762dfdf
   - enabled: 1
